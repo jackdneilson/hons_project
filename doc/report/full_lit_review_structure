@@ -1,0 +1,106 @@
+Background
+	What is SOCMINT
+		OSINT vs SOCMINT
+		Sources
+		Differences to tradition HUMINT/OSINT
+	Uses of SOCMINT
+		NSA / PRISM
+		Statistics
+		Single person identification
+		Academic Work
+	Current Applications
+		PRISM specifics
+		Security services - trend analysis
+		Boston bombing
+	What is facial recog
+		General overview
+		Why it's used
+		Why theory is useful
+	Uses of facial recog
+		Security services
+		Facebook tags
+		Private security (concerts)
+		Military (Afghanistan/Iraq IRIS enrolment)
+	Constrained vs Unconstrained
+		Constrained
+		Unconstrained
+		Challenges (w/o solutions, leave for later)
+Theory
+	Prior Work
+		Seminal work (GCHQ papers)
+
+	Individual data vs Group
+		Group theory (stats, trends)
+		Indivual theory (Boston bombings)
+		Challenges of individual ID
+		False positives / negatives rate, mitigations
+	Amount of information available
+		Facebook usercount
+		Twitter usercount
+		avg. information / profile
+		Information value
+		Information accuracy
+	Ease of use / Accessibility
+		Twitter ToS (public accessible)
+		Facebook (Accessible but against ToS)
+		Volume of information
+		Relevancy of information
+	Uses once gathered
+		Stats / trends per individual
+		Identification
+		0-risk tracking
+		Connection enumeration
+		Location data
+		Political / Ideological alignments
+	Challenges and constraints (for individual vs government)
+		Money
+		Time
+		Expensive computation
+		Expiry date of information
+		Constraints placed by social networks
+		
+	Prior knowledge attacks
+		General description of attacks
+		Prior knowledge specific (why they work, numbers for increased effectiveness)
+		Attack vectors (e-mail, webpage, etc.)
+		Hardened / Trained targets
+	HUMINT
+		Usefulness generally
+		Usefulness when attacking
+		Difficulty of defense
+	Social Engineering
+		Prior examples (mitnick)
+		Use (no situation where it isn't useful)
+		Standalone attacks
+		Attacks bolstered by SocEng
+		Effectiveness rates (hard/soft targets)
+	Spearphish
+		Specifics
+		Why e-mail
+		Why it works
+		Effectiveness rates (hard/soft targets)
+		Effectiveness once applied (attack depth / damage to network)
+
+	Facial Recognition
+		Overview (call back)
+		Current Applications
+	Challenges of Facial Recog
+		Computationally expensive
+		Confounding factors
+			Occlusion
+			Lighting
+			Pose
+			Variation
+		Difficulty of implementation
+		Current research
+		Current industry-ready tools
+	Advances in recent years
+		Conv. neural networks
+		GPU computing
+		ReLU functions etc. for feature detection
+	Unconstrained
+		Why it's difficult
+		Size of dataset
+		Accuracy of recall
+		Prior work (dataset generation)
+Summary

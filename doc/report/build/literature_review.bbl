@@ -1,12 +1,37 @@
 \begin{thebibliography}{xx}
 
-\harvarditem[Evans et~al.]{Evans, Meissner, Brandon, Russano \harvardand\
-  Kleinman}{2010}{criminalvshumint}
-Evans, J.~R., Meissner, C.~A., Brandon, S.~E., Russano, M.~B. \harvardand\
-  Kleinman, S.~M.  \harvardyearleft 2010\harvardyearright , `Criminal versus
-  humint interrogations: The importance of psychological science to improving
-  interrogative practice', {\em The Journal of Psychiatry \& Law} {\bf
-  38}(1-2),~215--249.
-\newline\harvardurl{https://doi.org/10.1177/009318531003800110}
+\harvarditem{Antonius \harvardand\ Rich}{2013}{socmintpublicsafety}
+Antonius, N. \harvardand\ Rich, L.  \harvardyearleft 2013\harvardyearright ,
+  `Discovering collection and analysis techniques for social media to improve
+  public safety',  {\bf 3},~42.
+
+\harvarditem{Kilburn \harvardand\ Krieger}{2014}{policesocmint}
+Kilburn, M. \harvardand\ Krieger, L.  \harvardyearleft 2014\harvardyearright ,
+  `Policing in an information age: The prevalence of state and local law
+  enforcement agencies utilising the world wide web to connect with the
+  community', {\em International Journal of Police Science \& Management} {\bf
+  16}(3),~221--227.
+\newline\harvardurl{https://doi.org/10.1350/ijps.2014.16.3.341}
+
+\harvarditem{Klontz \harvardand\ Jain}{2013}{bostonbombingcasestudy}
+Klontz, J.~C. \harvardand\ Jain, A.~K.  \harvardyearleft 2013\harvardyearright
+  , `A case study on unconstrained facial recognition using the boston marathon
+  bombings suspects', {\em Michigan State University, Tech. Rep} {\bf
+  119}(120),~1.
+
+\harvarditem[Omand et~al.]{Omand, Bartlett \harvardand\
+  Miller}{2012}{socmintoverview}
+Omand, S.~D., Bartlett, J. \harvardand\ Miller, C.  \harvardyearleft
+  2012\harvardyearright , `Introducing social media intelligence (socmint)',
+  {\em Intelligence and National Security} {\bf 27}(6),~801--823.
+\newline\harvardurl{https://doi.org/10.1080/02684527.2012.716965}
+
+\harvarditem{Ruiz}{2018}{gchqmasssurveillance}
+Ruiz, J.  \harvardyearleft 2018\harvardyearright , Gchq and mass surveillance,
+  Technical report, Open Rights Group.
+
+\harvarditem{Unknown}{2013}{prismslides}
+Unknown  \harvardyearleft 2013\harvardyearright , `Prism slides', Leaked to
+  several newspapers by Edward Snowden in late 2013.
 
 \end{thebibliography}

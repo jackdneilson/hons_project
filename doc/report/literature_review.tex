@@ -2,6 +2,8 @@
 \usepackage[margin=30mm]{geometry}
 \usepackage[comma]{natbib}
 \usepackage{todonotes}
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
 \bibliographystyle{agsm}
 
 \begin{document}
@@ -16,13 +18,18 @@ Social media intelligence (SOCMINT) is an emergent field in intelligence gatheri
 
 As it stands, social media intelligence sources are woefully underutilised. After the 2011 riots in London that were organised in large part on social media, Her Majesty's Inspectorate of Constabulary stated that the police services were "insufficiently equipped" to effectively use SOCMINT in their response \citep{socmintpublicsafety}. This is not to say that the value of SOCMINT is not realised however, as many intelligence agencies are investing in tools to effectively gather and analyse SOCMINT \citep{socmintpublicsafety} or are performing case studies in to potential uses \citep{bostonbombingcasestudy}.
 
-While traditional human intelligence (HUMINT) focuses on building rapport and a foundation of trust in order to 
+While traditional human intelligence (HUMINT) focuses on building rapport and a foundation of trust in order to extract information from people of interest \citep{humintinterrogators}, users of social networking websites are much more likely to divulge personal information due to a misplaced senes of privacy \citep{socialmediacontent}. This makes SOCMINT attractive when attempting to gather data with little investment. The amount of data available to gather is vast in comparison to HUMINT sources \citep{socmintoverview}, making mass collection and analysis viable \citep{prismslides}. The nature of SOCMINT makes it easier to analyse than HUMINT, which relies on "tells" and small social cues \citep{humintinterrogators}.
 
 \subsubsection{Uses of SOCMINT}
+As previously stated, SOCMINT has seen some emergent use particularly in the security services. The Greek Ministry of Defence has developed a framework to identify individuals fitting certain psychiatric profiles from their social media accounts to allow for early identification of potential insider threats \citep{behaviourdetection}. By identifying factors that multiple intelligence agencies agree make a person more likely to pose an insider threat or negatively influence society (See appendix \cite{appendix:threatgraph}), they were able to map usage habits (intensity, content, popularity) to these factors to draw conclusions about clusters of users. So far, the research has been helpful in insider threat prevention, delinquent behaviour prediction and forensic analysis support.
 
-\subsubsection{Current Applications}
+\todo{Maybe write about PRISM?}
 
 \subsubsection{Facial Recognition}
+Facial recognition is a much more mature area of research than SOCMINT with many examples of industry usage. Facebook uses facial recognition to automate "tagging" photos with the identity of the persons pictured \citep{facebookfacialrecog}, and large companies are now releasing datasets such as YouTube Faces \citep{faceregiondescriptors} in an effort to advance the field.
+
+This is not to say that facial recognition is not without controversy however, as many privacy advocates have pointed out that accurate face regonition could infringe on their right to privacy \citep{gchqmasssurveillance}}. David Wood and Lucas Introne have posed that accurate facial recognition could lead to increased levels of surveillance, with no way to "opt out" \citep{facialrecogpolitics}.
+
 
 \subsubsection{Uses of Facial Recognition}
 
@@ -30,6 +37,16 @@ While traditional human intelligence (HUMINT) focuses on building rapport and a 
 
 \subsection{Theory}
 \subsubsection{Prior Work}
+
+
+\subsection{SOCMINT}
+\subsubsection{Prior Knowledge Attacks}
+
+\subsubsection{HUMINT}
+
+\subsubsection{Social Engineering}
+
+\subsubsection{Spearphish}
 
 \subsubsection{Individual vs Group Data}
 
@@ -41,17 +58,10 @@ While traditional human intelligence (HUMINT) focuses on building rapport and a 
 
 \subsubsection{Challenges and Constraints}
 
-\subsection{SOCMINT}
-\subsubsection{Prior Knowledge Attacks}
-
-\subsubsection{HUMINT}
-
-\subsubsection{Social Engineering}
-
-\subsubsection{Spearphish}
-
 \subsection{Facial Recognition}
-\todo{Overview and current applications}
+\subsubsection{Current Applications}
+
+\subsubsection{State of the Art}	
 
 \subsubsection{Challenges}
 
@@ -60,4 +70,14 @@ While traditional human intelligence (HUMINT) focuses on building rapport and a 
 \subsubsection{Unconstrained Facial Recognition}
 
 \bibliography{citations}
+
+\begin{appendices}
+\section{Threat Graph}
+\label{appendix:threatgraph}
+\includepdf{res/threat_graph.pdf}
+Graph of insider threat factors \citep{behaviourdetection}.
+
+
+\end{appendices}
+
 \end{document}

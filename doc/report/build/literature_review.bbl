@@ -5,6 +5,29 @@ Antonius, N. \harvardand\ Rich, L.  \harvardyearleft 2013\harvardyearright ,
   `Discovering collection and analysis techniques for social media to improve
   public safety',  {\bf 3},~42.
 
+\harvarditem{Becker \harvardand\ Ortiz}{2008}{facebookfacialrecog}
+Becker, B.~C. \harvardand\ Ortiz, E.~G.  \harvardyearleft 2008\harvardyearright
+  , Evaluation of face recognition techniques for application to facebook, {\em
+  in} `Automatic Face \& Gesture Recognition, 2008. FG'08. 8th IEEE
+  International Conference on', IEEE, pp.~1--6.
+
+\harvarditem[Cui et~al.]{Cui, Li, Xu, Shan \harvardand\
+  Chen}{2013}{faceregiondescriptors}
+Cui, Z., Li, W., Xu, D., Shan, S. \harvardand\ Chen, X.  \harvardyearleft
+  2013\harvardyearright , Fusing robust face region descriptors via multiple
+  metric learning for face recognition in the wild, {\em in} `Proceedings of
+  the IEEE Conference on Computer Vision and Pattern Recognition',
+  pp.~3554--3561.
+
+\harvarditem{Introna \harvardand\ Wood}{2002}{facialrecogpolitics}
+Introna, L. \harvardand\ Wood, D.  \harvardyearleft 2002\harvardyearright ,
+  `Picturing algorithmic surveillance: The politics of facial recognition
+  systems', {\em Surveillance \& Society} {\bf 2}(2/3).
+
+\harvarditem{Kandias \harvardand\ Stavrou}{2015}{behaviourdetection}
+Kandias, M. \harvardand\ Stavrou, V.  \harvardyearleft 2015\harvardyearright ,
+  `Personal traits analysis as a means to predict insiders'.
+
 \harvarditem{Kilburn \harvardand\ Krieger}{2014}{policesocmint}
 Kilburn, M. \harvardand\ Krieger, L.  \harvardyearleft 2014\harvardyearright ,
   `Policing in an information age: The prevalence of state and local law
@@ -19,6 +42,13 @@ Klontz, J.~C. \harvardand\ Jain, A.~K.  \harvardyearleft 2013\harvardyearright
   bombings suspects', {\em Michigan State University, Tech. Rep} {\bf
   119}(120),~1.
 
+\harvarditem{Livingstone}{2008}{socialmediacontent}
+Livingstone, S.  \harvardyearleft 2008\harvardyearright , `Taking risky
+  opportunities in youthful content creation: teenagers' use of social
+  networking sites for intimacy, privacy and self-expression', {\em New Media
+  \& Society} {\bf 10}(3),~393--411.
+\newline\harvardurl{https://doi.org/10.1177/1461444808089415}
+
 \harvarditem[Omand et~al.]{Omand, Bartlett \harvardand\
   Miller}{2012}{socmintoverview}
 Omand, S.~D., Bartlett, J. \harvardand\ Miller, C.  \harvardyearleft
@@ -29,6 +59,13 @@ Omand, S.~D., Bartlett, J. \harvardand\ Miller, C.  \harvardyearleft
 \harvarditem{Ruiz}{2018}{gchqmasssurveillance}
 Ruiz, J.  \harvardyearleft 2018\harvardyearright , Gchq and mass surveillance,
   Technical report, Open Rights Group.
+
+\harvarditem[Russano et~al.]{Russano, Narchet, Kleinman \harvardand\
+  Meissner}{2014}{humintinterrogators}
+Russano, M.~B., Narchet, F.~M., Kleinman, S.~M. \harvardand\ Meissner, C.~A.
+  \harvardyearleft 2014\harvardyearright , `Structured interviews of
+  experienced humint interrogators', {\em Applied cognitive psychology} {\bf
+  28}(6),~847--859.
 
 \harvarditem{Unknown}{2013}{prismslides}
 Unknown  \harvardyearleft 2013\harvardyearright , `Prism slides', Leaked to

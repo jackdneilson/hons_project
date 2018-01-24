@@ -11,6 +11,18 @@ Becker, B.~C. \harvardand\ Ortiz, E.~G.  \harvardyearleft 2008\harvardyearright
   in} `Automatic Face \& Gesture Recognition, 2008. FG'08. 8th IEEE
   International Conference on', IEEE, pp.~1--6.
 
+\harvarditem[Best-Rowden et~al.]{Best-Rowden, Han, Otto, Klare \harvardand\
+  Jain}{2014}{facialrecogidentifyingpoi}
+Best-Rowden, L., Han, H., Otto, C., Klare, B.~F. \harvardand\ Jain, A.~K.
+  \harvardyearleft 2014\harvardyearright , `Unconstrained face recognition:
+  Identifying a person of interest from a media collection', {\em IEEE
+  Transactions on Information Forensics and Security} {\bf 9}(12),~2144--2157.
+
+\harvarditem{Bowyer}{2004}{facialrecogsecurityvsprivacy}
+Bowyer, K.~W.  \harvardyearleft 2004\harvardyearright , `Face recognition
+  technology: security versus privacy', {\em IEEE Technology and Society
+  Magazine} {\bf 23}(1),~9--19.
+
 \harvarditem[Cui et~al.]{Cui, Li, Xu, Shan \harvardand\
   Chen}{2013}{faceregiondescriptors}
 Cui, Z., Li, W., Xu, D., Shan, S. \harvardand\ Chen, X.  \harvardyearleft
@@ -35,6 +47,14 @@ Kilburn, M. \harvardand\ Krieger, L.  \harvardyearleft 2014\harvardyearright ,
   community', {\em International Journal of Police Science \& Management} {\bf
   16}(3),~221--227.
 \newline\harvardurl{https://doi.org/10.1350/ijps.2014.16.3.341}
+
+\harvarditem[Klare et~al.]{Klare, Klein, Taborsky, Blanton, Cheney, Allen,
+  Grother, Mah \harvardand\ Jain}{2015}{unconstrainedfacialrecogbenchmark}
+Klare, B.~F., Klein, B., Taborsky, E., Blanton, A., Cheney, J., Allen, K.,
+  Grother, P., Mah, A. \harvardand\ Jain, A.~K.  \harvardyearleft
+  2015\harvardyearright , Pushing the frontiers of unconstrained face detection
+  and recognition: Iarpa janus benchmark a, {\em in} `Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition', pp.~1931--1939.
 
 \harvarditem{Klontz \harvardand\ Jain}{2013}{bostonbombingcasestudy}
 Klontz, J.~C. \harvardand\ Jain, A.~K.  \harvardyearleft 2013\harvardyearright

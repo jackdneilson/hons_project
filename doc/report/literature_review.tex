@@ -37,14 +37,27 @@ Facial recognition is also enjoying a heavy amount of attention from the securit
 \subsubsection{Constrained vs Unconstrained}
 While facial recognition software has come a long way, achieving accuracy rates of up to 99\% on small, consistent data sets \citep{facialrecogidentifyingpoi}, it is still in it's infancy when it comes to identifying people in "unconstrained" images. Images taken in the wild may have large variations in pose, facial occlusion and ambient lighting. This makes it difficult to identify facial features or markers (such as iris distinace, nasal distance, blemishes) which in turn has a negative impact on accuracy rates \citep{unconstrainedfacialrecogbenchmark}. When looking at applications of face recognition software with unconstrained datasets, matches are typically achieved when the test image has similar pose, facial occlusion and lighting as the sample image (See appendix \ref{appendix:bostonbomber}).
 
+\todo{Do stuff here}
 \subsection{Theory}
 \subsubsection{Prior Work}
 
+\subsection{Prior Knowledge Attacks}
+\subsubsection{Social Engineering}
+Social engineering in the context of information security refers to the ability of a person to gain access to information or control systems through a user or administrator, rather than through any technical oversight \citep{socialengineeringvulnerabilites}. It is a popular technique against "hardened" targets as technical prevention measures have proven to be ineffective \citep{advancedsocialengineering} making the human users and administrators the weakest link in the proverbial chain. In addition, it is difficult to train users in defenses against social engineering attacks. People believe they would not fall for such a trick despite research showing that humans perform poorly when attempting to detect deception \citep{advancedsocialengineering}\citep{socialengineeringvulnerabilites}. 
 
-\subsection{SOCMINT}
-\subsubsection{Prior Knowledge Attacks}
+Social engineering using e-mail as a medium is ubiquitous \citep{socialengineeringvulnerabilites}. As a generel strategy, the person wishing to gather information will send one or more people an e-mail in hopes of a response (whether that be in the form of visiting a website, replying with their username or password, opening a file etc). Recent studies in realistic environments have had success rates of up to 23\% \citep{socialengineeringvulnerabilites} \- this is especially worrying given that even 1 repsondant could compromise an entire company.
 
+Examples of social engineering are not hard to find. In his book \textit{The Art of Deception} Kevin Mitnick describes a young Stanley Rifkin using social engineering to make the biggest bank heist of all time, stealing over 10,000,000 USD \citep{mitnick}. Social engineering attacks are certainly not difficult to perform - recently, a 13 your old child used social engineering to breach the private e-mail of the then-chief of the CIA, John Brennen \citep{cia13yearold}
 
+\subsubsection{Spearphishing}
+Spearphish attacks are a subsection of social engineering attacks wherein an attacker sends a malicous e-mail to a user that has been crafted using information that would make it seem authentic \citep{spearphishing}. For example, a normal social engineering attack using e-mail might send boilerplate messages to all personnel in a department to attempt to gain access to a network account. By contrast, a spearphish attack may use the names of specific people in the department, the location of the department, a spoofed e-mail header to make it seem as if the message came from within the department, and so on.
+
+Social engineering attacks have proven to be effective at accessing sensitive information even when significant effort has been expended to secure it. A recent spearphishing campaign was conducted against 500 US military cadets - over 80\% clicked the link in the e-mail \citep{spearphishing}. Spearphish attacks are even more effective than "blind" phishing because of the additional information included in the e-mail which lulls the user in to a false sense of security (particularly when the information could be wrongfully considered "sensitive", for example including a manager's name and phone number).
+
+Spearphish attacks in particular are difficult to mitigate against. They target the human element in information security making technological defenses insufficient \citep{spearphishing}. Education on spearphishing is not adequate to mitigate the potential threat either, as shown by William Pelgrin's exercise. He sent 10,000 New York State employees a phishing e-mail, and had a success rate of 15\% (that is, 15\% of users clicked the link in the e-mail then attempted to enter their passwords). The experiment was repeated after four months, with some success shown as the experiment had a success rate of 8\% \citep{spearphishingresults}. It must be remembered however that even a single successful spearphish attack could lead to a breach of information security.
+
+\subsection{Intelligence Gathering}
+\subsubsection{SOCMINT}
 \subsubsection{HUMINT}
 Human intelligence (HUMINT) pertains to the gathering of intelligence from individual human subjects. Information may be divulged non-consensually e.g. in the case of interrogation \citep{criminalvshumint}, or consensually in the case of clandestine information gathering \citep{clandestinehumint}. 
 
@@ -53,11 +66,6 @@ Non-consensual information gathering via interview or interrogation has only rec
 Consensual information gathering sits in a much more grey area. Presenting yourself as somebody else may not be illegal depending on the circumstances, however it poses several moral questions. Clandestine intelligence gathering is still an extremely effective strategy, particularly when attempting to gather sensitive information which may be more heavily protected e.g. airgapped, firewalled \citep{clandestinehumint}. This makes it attractive during wartime or times of civil unrest \citep{humintni}\citep{humintcyberage}
 
 Using a human intelligence approaches when gathering information has several downsides. It is a high risk strategy, as should a person be found out the consequences can be severe \citep{humintni}. The potential reward of sensitive information may be deemed to not be worth the risk. It goes without saying that HUMINT does not scale particularly well - it is a useful tool when attempting to extract information from a single person or small group, but it is much less useful when gathering information about larger groups. It relies on trust being built and may be ineffective when attempting to gather information from targets trained in tradecraft \citep{humintni}\citep{clandestinehumint}\citep{humintcyberage}.
-
-\subsubsection{Social Engineering}
-
-
-\subsubsection{Spearphish}
 
 \subsubsection{Individual vs Group Data}
 
@@ -69,6 +77,10 @@ Using a human intelligence approaches when gathering information has several dow
 \todo{PRISM}
 
 \subsubsection{Challenges and Constraints}
+
+
+
+
 
 \subsection{Facial Recognition}
 \subsubsection{Current Applications}

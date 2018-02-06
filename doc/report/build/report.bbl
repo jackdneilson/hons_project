@@ -5,6 +5,10 @@ Antonius, N. \harvardand\ Rich, L.  \harvardyearleft 2013\harvardyearright ,
   `Discovering collection and analysis techniques for social media to improve
   public safety',  {\bf 3},~42.
 
+\harvarditem{Bakhshi}{2008}{socialengineeringvulnerabilites}
+Bakhshi, T.  \harvardyearleft 2008\harvardyearright , `A practical assessment
+  of social engineering vulnerablities'.
+
 \harvarditem{Becker \harvardand\ Ortiz}{2008}{facebookfacialrecog}
 Becker, B.~C. \harvardand\ Ortiz, E.~G.  \harvardyearleft 2008\harvardyearright
   , Evaluation of face recognition techniques for application to facebook, {\em
@@ -22,6 +26,13 @@ Best-Rowden, L., Han, H., Otto, C., Klare, B.~F. \harvardand\ Jain, A.~K.
 Bowyer, K.~W.  \harvardyearleft 2004\harvardyearright , `Face recognition
   technology: security versus privacy', {\em IEEE Technology and Society
   Magazine} {\bf 23}(1),~9--19.
+
+\harvarditem[Caputo et~al.]{Caputo, Pfleeger, Freeman \harvardand\
+  Johnson}{2014}{spearphishing}
+Caputo, D.~D., Pfleeger, S.~L., Freeman, J.~D. \harvardand\ Johnson, M.~E.
+  \harvardyearleft 2014\harvardyearright , `Going spear phishing: Exploring
+  embedded training and awareness', {\em IEEE Security \& Privacy} {\bf
+  12}(1),~28--38.
 
 \harvarditem{Charters}{2018}{humintni}
 Charters, D.~A.  \harvardyearleft 2018\harvardyearright , `Professionalizing
@@ -82,12 +93,23 @@ Klontz, J.~C. \harvardand\ Jain, A.~K.  \harvardyearleft 2013\harvardyearright
   bombings suspects', {\em Michigan State University, Tech. Rep} {\bf
   119}(120),~1.
 
+\harvarditem[Krombholz et~al.]{Krombholz, Hobel, Huber \harvardand\
+  Weippl}{2015}{advancedsocialengineering}
+Krombholz, K., Hobel, H., Huber, M. \harvardand\ Weippl, E.  \harvardyearleft
+  2015\harvardyearright , `Advanced social engineering attacks', {\em Journal
+  of Information Security and applications} {\bf 22},~113--122.
+
 \harvarditem{Livingstone}{2008}{socialmediacontent}
 Livingstone, S.  \harvardyearleft 2008\harvardyearright , `Taking risky
   opportunities in youthful content creation: teenagers' use of social
   networking sites for intimacy, privacy and self-expression', {\em New Media
   \& Society} {\bf 10}(3),~393--411.
 \newline\harvardurl{https://doi.org/10.1177/1461444808089415}
+
+\harvarditem{Mitnick \harvardand\ Simon}{2011}{mitnick}
+Mitnick, K.~D. \harvardand\ Simon, W.~L.  \harvardyearleft
+  2011\harvardyearright , {\em The art of deception: Controlling the human
+  element of security}, John Wiley \& Sons.
 
 \harvarditem{Musco}{2017}{clandestinehumint}
 Musco, S.  \harvardyearleft 2017\harvardyearright , `The art of meddling: a
@@ -102,6 +124,10 @@ Omand, S.~D., Bartlett, J. \harvardand\ Miller, C.  \harvardyearleft
   {\em Intelligence and National Security} {\bf 27}(6),~801--823.
 \newline\harvardurl{https://doi.org/10.1080/02684527.2012.716965}
 
+\harvarditem{Parmar}{2012}{spearphishingresults}
+Parmar, B.  \harvardyearleft 2012\harvardyearright , `Protecting against
+  spear-phishing',  {\bf 2012},~8–11.
+
 \harvarditem{Ruiz}{2018}{gchqmasssurveillance}
 Ruiz, J.  \harvardyearleft 2018\harvardyearright , Gchq and mass surveillance,
   Technical report, Open Rights Group.
@@ -112,6 +138,11 @@ Russano, M.~B., Narchet, F.~M., Kleinman, S.~M. \harvardand\ Meissner, C.~A.
   \harvardyearleft 2014\harvardyearright , `Structured interviews of
   experienced humint interrogators', {\em Applied cognitive psychology} {\bf
   28}(6),~847--859.
+
+\harvarditem{Timm}{2015}{cia13yearold}
+Timm, T.  \harvardyearleft 2015\harvardyearright , `The cia director was hacked
+  by a 13-year-old, but he still wants your data', Published in the Guardian
+  newspaper.
 
 \harvarditem{Unknown}{2013}{prismslides}
 Unknown  \harvardyearleft 2013\harvardyearright , `Prism slides', Leaked to

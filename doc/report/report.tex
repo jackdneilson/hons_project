@@ -45,7 +45,7 @@ While facial recognition software has come a long way, achieving accuracy rates 
 \subsubsection{Social Engineering}
 Social engineering in the context of information security refers to the ability of a person to gain access to information or control systems through a user or administrator, rather than through any technical oversight \citep{socialengineeringvulnerabilites}. It is a popular technique against "hardened" targets as technical prevention measures have proven to be ineffective \citep{advancedsocialengineering} making the human users and administrators the weakest link in the proverbial chain. In addition, it is difficult to train users in defenses against social engineering attacks. People believe they would not fall for such a trick despite research showing that humans perform poorly when attempting to detect deception \citep{advancedsocialengineering}\citep{socialengineeringvulnerabilites}. 
 
-Social engineering using e-mail as a medium is ubiquitous \citep{socialengineeringvulnerabilites}. As a generel strategy, the person wishing to gather information will send one or more people an e-mail in hopes of a response (whether that be in the form of visiting a website, replying with their username or password, opening a file etc). Recent studies in realistic environments have had success rates of up to 23\% \citep{socialengineeringvulnerabilites} \- this is especially worrying given that even 1 repsondant could compromise an entire company.
+Social engineering using e-mail as a medium is ubiquitous \citep{socialengineeringvulnerabilites}. As a generel strategy, the person wishing to gather information will send one or more people an e-mail in hopes of a response (whether that be in the form of visiting a website, replying with their username or password, opening a file etc). Recent studies in realistic environments have had success rates of up to 23\% \citep{socialengineeringvulnerabilites} - this is especially worrying given that even 1 repsondant could compromise an entire company.
 
 Examples of social engineering are not hard to find. In his book \textit{The Art of Deception} Kevin Mitnick describes a young Stanley Rifkin using social engineering to make the biggest bank heist of all time, stealing over 10,000,000 USD \citep{mitnick}. Social engineering attacks are certainly not difficult to perform - recently, a 13 your old child used social engineering to breach the private e-mail of the then-chief of the CIA, John Brennen \citep{cia13yearold}
 
@@ -113,22 +113,22 @@ Table of potential matches, note the correct identification from the picture tak
 \newpage
 \section{Methodology}
 \subsection{Overview}
-The software implemented will be in the form of a python command line program, which allows users to specify an input image and data set to check it against. Additional identifying information such as name, date of birth etc. should also be utilised if given. The data sets the software references must come from social networking websites (or in the case of this proof of concept, a data set which is an accurate representation). 
+The software implemented will be in the form of a Python command line program, which allows users to specify an input image and data set to check it against. Additional identifying information such as name, date of birth etc. should also be utilised if given. The data sets the software references must come from social networking websites (or in the case of this proof of concept, a data set which is an accurate representation). 
 
-As its output, the software must show the 5 most similar faces in the dataset to allow for human verification. They should be presented with information that was gained from their social media profiles such as age, gender, name etc., as well as the similarity to the test image. In the case that the software is being ran headlessly, the results should be available in a file format including an image of the match and a representation of their social media profile.
+As its output, the software must show the five most similar faces in the data set to allow for human verification. They should be presented with information that was gained from their social media profiles such as age, gender, name etc., as well as the similarity to the test image. In the case that the software is being ran headlessly, the results should be available in a file format which includes an image of the match and a representation of their social media profile.
 
 \subsection{Functional Requirements}
 \subsubsection{Face Recognition}
 The software must implement a method of facial recognition, to rank a set of faces by similarity to a given test image. The test face must be extracted from the input image. The top 5 matches should be outputted, along with relevant identifying information.
 
 \subsubsection{Social Media Integration}
-The software must have the ability to use social networking websites as it's dataset when comparing a test face. It would be desirable for the software to have the capability to use other identifying information alongside the test image to narrow the search space. Due to limited time and resources, test accounts may be used as a proof of concept.
+The software must have the ability to use social networking websites as it's data set when comparing a test face. It would be desirable for the software to have the capability to use other identifying information alongside the test image to narrow the search space. Due to limited time and resources, test accounts may be used as a proof of concept.
 
 \subsubsection{Headless}
-The software should be able to function without a GUI, as due to the extremely large dataset deployment to a large server or cloud may be required.
+The software should be able to function without a GUI, since the requirement of being able to use extremely large data sets may require deployment to a large server cluster or to a cloud.
 
 \subsubsection{Multithreaded}
-Where applicable, the software should make full use of parallelisation to increase it's speed and resource utilisation. This is particularly important when working with large data sets.
+Where applicable, the software should make full use of parallelisation to increase its speed and resource utilisation. This is particularly important when working with large data sets.
 
 \subsubsection{Deployment}
 The software should make use of packaging systems, notably pip, to allow for easy deployment.

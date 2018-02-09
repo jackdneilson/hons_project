@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  7 FEB 2018 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  9 FEB 2018 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,25 +586,54 @@ File: res/boston_bomber.png Graphic file (type png)
 Package pdftex.def Info: res/boston_bomber.png used on input line 108.
 (pdftex.def)             Requested size: 443.57848pt x 602.01378pt.
  [8 <./res/threat_graph.png (PNG copy)>] [9 <./res/boston_bomber.png>] [10] [11
-] [12] (build/report.aux) ) 
+]
+Overfull \hbox (7.38905pt too wide) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 ing/consuming  
+ []
+
+
+Overfull \hbox (7.38905pt too wide) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 ing/consuming  
+ []
+
+
+Overfull \hbox (7.38905pt too wide) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 ing/consuming  
+ []
+
+
+Overfull \hbox (7.38905pt too wide) in paragraph at lines 178--178
+\OT1/cmr/m/n/10 ing/consuming  
+ []
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+[12] [13] (build/report.aux) ) 
 Here is how much of TeX's memory you used:
- 13684 strings out of 494902
- 270636 string characters out of 6179890
- 316538 words of memory out of 5000000
- 16715 multiletter control sequences out of 15000+600000
+ 13732 strings out of 494902
+ 271746 string characters out of 6179890
+ 343141 words of memory out of 5000000
+ 16763 multiletter control sequences out of 15000+600000
  8847 words of font info for 31 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,9n,76p,860b,700s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on build/report.pdf (12 pages, 3967799 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on build/report.pdf (13 pages, 3969448 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

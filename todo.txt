@@ -1,7 +1,1 @@
 New dataset by modifying images (radndomly) overlay image over background with xfroms (rotate, noise, scale, alpha) overlay with primitives to simulate occlusion
-
-Write about other databases
-
-Loop for multiple faces
-
-Write about method and problems

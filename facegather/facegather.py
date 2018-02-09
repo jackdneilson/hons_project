@@ -14,18 +14,29 @@ img_queue_lock = threading.Lock()
 
 
 # Load an image in to memory from local or remote sources
-def load_image(uri, remote=True):
+def load_images(uri, remote=True):
     if remote:
         resp = requests.get(uri)
         img_array = misc.imread(BytesIO(resp.content))
-        return img_array
+        return fr.face_encodings(img_array)
     else:
-        img = fr.load_image_file(uri)
-    return fr.face_encodings(img)[0]
+        img_array = fr.load_image_file(uri)
+    return fr.face_encodings(img_array)
 
 
-def search(test_face, uri, no_threads=1, max_loaded=IMAGE_LOAD_MAX):
+def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loaded=IMAGE_LOAD_MAX):
+    # Load default values in case called with "None"
+    if no_producer_threads is None:
+        no_producer_threads = 1
+    if no_consumer_threads is None:
+        no_consumer_threads = 1
+    if max_loaded is None:
+        max_loaded = IMAGE_LOAD_MAX
+
     result = collections.deque(maxlen=5)
+    result.extend([-1, -1, -1, -1, -1])
+    result_lock = threading.Lock()
+    min_result_value = -1
     img_uri_queue_counter = threading.Semaphore(max_loaded)
 
     print('Getting profile information...', end='', flush=True)
@@ -36,13 +47,18 @@ def search(test_face, uri, no_threads=1, max_loaded=IMAGE_LOAD_MAX):
     print('Done')
 
     print('Processing images...', end='', flush=True)
-    for i in range(0, no_threads):
-        thread = ImageProcessor(img_uri_queue_counter)
-        thread.start()
+    for i in range(0, no_producer_threads):
+        processor = ImageProcessor(img_uri_queue_counter)
+        processor.start()
 
-    recogniser = FaceRecogniser(test_face, img_uri_queue_counter, result)
-    recogniser.start()
-    recogniser.join()
+    recogniser_list = []
+    for i in range(0, no_consumer_threads):
+        recogniser = FaceRecogniser(test_face, img_uri_queue_counter, result, result_lock, min_result_value)
+        recogniser.start()
+        recogniser_list.append(recogniser)
+
+    for recogniser in recogniser_list:
+        recogniser.join()
     print('Done')
 
     # TODO: Return result
@@ -62,6 +78,8 @@ class ImageProcessor(threading.Thread):
         threading.Thread.__init__(self)
         self.counter = counter
 
+    # Take a URI from the queue, download image from that location then add face mappings and profile uri to the queue
+    # to be consumed by a FaceRecogniser
     def run(self):
         while True:
             img_uri_queue_lock.acquire()
@@ -73,9 +91,10 @@ class ImageProcessor(threading.Thread):
             img_uri = img_uri_queue.get()
             img_uri_queue_lock.release()
 
-            img = load_image(img_uri[0])
+            img_array = load_images(img_uri[0])
             img_queue_lock.acquire()
-            img_queue.put([img, img_uri[1]])
+            for img in img_array:
+                img_queue.put([img, img_uri[1]])
             img_queue_lock.release()
 
 
@@ -83,12 +102,15 @@ class ImageProcessor(threading.Thread):
 class FaceRecogniser(threading.Thread):
     finished_flag = False
 
-    def __init__(self, test_face, counter, result):
+    def __init__(self, test_face, counter, result, result_lock, min_result_value):
         threading.Thread.__init__(self)
         self.test_face = test_face
         self.counter = counter
         self.result = result
+        self.result_lock = result_lock
+        self.min_result_value = min_result_value
 
+    # Take a face mapping from the queue, then test for similarity.
     def run(self):
         while not img_queue.empty() or not FaceRecogniser.finished_flag:
             img_queue_lock.acquire()
@@ -96,6 +118,12 @@ class FaceRecogniser(threading.Thread):
             img = img_queue.get()
             img_queue_lock.release()
 
-            # TODO: Write logic for recognising and ranking (remember list)
-            similarity = fr.compare_faces([self.test_face], img[0])
-            self.result.insert()
+            self.result_lock.acquire()
+            if fr.face_distance([self.test_face], img[0]) > self.min_result_value:
+                # TODO: insert in to deque
+                similarity = fr.face_distance([self.test_face], img[0])
+                for pos, r in self.result:
+                    if r[2] < similarity:
+                        self.result.pop()
+                        self.result.insert(pos, [r[0], r[1], similarity])
+            self.result_lock.release()

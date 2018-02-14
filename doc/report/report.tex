@@ -133,21 +133,6 @@ Where applicable, the software should make full use of parallelisation to increa
 \subsubsection{Deployment}
 The software should make use of packaging systems, notably pip, to allow for easy deployment.
 
-\subsubsection{Facial Recognition Libraries}
-Due to time constrants, reimplementing facial recognition capabilities is not feasible. Therefore, the software should make use of already existing facial recognition libraries, in particular dlib or OpenCV.
-
-\subsubsection{Language}
-The software should be written in Python to allow for easy use of face recognition programs and rapid prototyping.
-
-\subsubsection{Time Spent}
-The software must be able to complete the above task in the same time or less than a human.
-
-\subsubsection{Documentation}
-The software should have at a minimum a man page and usage information. More documentation would be beneficial.
-
-\subsubsection{Testing}
-The software will be tested using a comination of \todo{Include final list of databases}
-
 \subsection{Non-functional Requirements}
 \subsubsection{Accuracy}
 The software should have a \textit{relatively} high success rate when identifying a person from a social media collection. Note that typical facial reocgnition performance in unconstrained environments achieve a maximum success rate of ~30\%.
@@ -164,9 +149,25 @@ The software should attempt a best guess when using an input image with less tha
 \subsubsection{Usability}
 The software is being developed for use by information security professionals in the form of a command line tool. This is ubiquitous in the industry, so no more than a cursory glance over the usage information should be needed to begin using the tool.
 
+\subsubsection{Facial Recognition Libraries}
+Due to time constrants, reimplementing facial recognition capabilities is not feasible. Therefore, the software should make use of already existing facial recognition libraries, in particular dlib or OpenCV.
+
+\subsubsection{Language}
+The software should be written in Python to allow for easy use of face recognition programs and rapid prototyping.
+
+\subsubsection{Time Spent}
+The software must be able to complete the above task in the same time or less than a human.
+
+\subsubsection{Documentation}
+The software should have at a minimum a man page and usage information. More documentation would be beneficial.
+
+\subsubsection{Testing}
+The software will be tested using a comination of \todo{Include final list of databases}
+
 
 \section{Implementation}
-
+\section{Face Recognition}
+\todo{Talk about face recog libraries}
 
 
 
@@ -176,6 +177,9 @@ The software is being developed for use by information security professionals in
 \todo{Maximum loaded images}
 \todo{Results from thread mutable object Deque}
 \todo{Multiple workers for producing/consuming}
+\todo{Remote image fetching using PIL}
+\todo{Command line args}
+
 
 
 

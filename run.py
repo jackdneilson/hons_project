@@ -1,29 +1,36 @@
 from facegather import facegather
 import face_recognition
-import os
 import argparse
 
 
-# TODO: Implement server
-def main():
-    parser = argparse.ArgumentParser
-    parser.add_argument("test_face")
-    parser.add_argument("service")
+parser = argparse.ArgumentParser(
+    description='A python3 program to gather social media intelligence using facial recognition')
+parser.add_argument("test_face", help='Location of the test face')
+parser.add_argument("service", help='Social network service to search')
 
-    parser.add_argument("--pthreads")
-    parser.add_argument("--cthreads")
-    parser.add_argument("--maxload")
+parser.add_argument("--pthreads", help='Number of image processing threads')
+parser.add_argument("--cthreads", help='Number of image comparison threads')
+parser.add_argument("--maxload", help='Maximum number of images pre-loaded into memory')
 
-    args = parser.parse_args()
+args = parser.parse_args()
 
-    # TODO: Generate URI from service name
-    result = facegather.search(args.test_face, args.service, args.pthreads, args.cthreads, args.maxload)
+uri = ''
+if args.service == 'demo':
+    uri = 'http://localhost:8081/static'
 
-    test_face = facegather.load_images(os.getcwd() + '/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg', remote=False)[0]
-    test_face2 = facegather.load_images(os.getcwd() + '/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0002.jpg', remote=False)[0]
+    test_face = facegather.load_images(uri + '/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg')[0]
+    test_face2 = facegather.load_images(uri + '/lfw/Aaron_Peirsol/Aaron_Peirsol_0002.jpg')[0]
     result = face_recognition.face_distance([test_face], test_face2)
     print(result)
-    # results = someshit.search(test_face, , no_threads=4)
-    # def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loaded=IMAGE_LOAD_MAX):
+
+    test_face = facegather.load_images(
+        '/home/jack/Documents/hons_project/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg',
+        remote=False)[0]
+    test_face2 = facegather.load_images(
+        '/home/jack/Documents/hons_project/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0002.jpg',
+        remote=False)[0]
+    result = face_recognition.face_distance([test_face], test_face2)
+    print(result)
 
 
+    # result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)

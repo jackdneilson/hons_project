@@ -1,10 +1,10 @@
-from scipy import misc
-from io import BytesIO
+from PIL import Image
 import requests
 import face_recognition as fr
 import threading
 import queue
 import collections
+import numpy
 
 IMAGE_LOAD_MAX = 20
 img_uri_queue = queue.Queue()
@@ -16,14 +16,18 @@ img_queue_lock = threading.Lock()
 # Load an image in to memory from local or remote sources
 def load_images(uri, remote=True):
     if remote:
-        resp = requests.get(uri)
-        img_array = misc.imread(BytesIO(resp.content))
-        return fr.face_encodings(img_array)
+        print('Retrieving image from ' + uri)
+        resp = requests.get(uri, stream=True)
+        resp.raw.decode_content = True
+        img = Image.open(resp.raw)
+        return fr.face_encodings(numpy.array(img))
     else:
+        print('Retrieving image from ' + uri)
         img_array = fr.load_image_file(uri)
     return fr.face_encodings(img_array)
 
 
+# Search a data set at the given URI for the best matches to the test face
 def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loaded=IMAGE_LOAD_MAX):
     # Load default values in case called with "None"
     if no_producer_threads is None:
@@ -41,9 +45,8 @@ def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loa
 
     print('Getting profile information...', end='', flush=True)
     profiles = _get_profiles(uri)
-    # TODO: Parse profiles to fill queue
     for profile in profiles:
-        img_uri_queue.put([profile.img_link, profile.link])
+        img_uri_queue.put([profile.img_link, profile])
     print('Done')
 
     print('Processing images...', end='', flush=True)
@@ -71,7 +74,7 @@ def _get_profiles(uri, name=None, dob=None):
     return resp.json()
 
 
-# Class based thread to take an image URI from the queue, download it, and preprocess it to be ready for facial
+# Class based thread to take an image URI from the queue, download it, and pre-process it to be ready for facial
 # recognition by 1 or more FaceRecogniser threads
 class ImageProcessor(threading.Thread):
     def __init__(self, counter):
@@ -120,10 +123,10 @@ class FaceRecogniser(threading.Thread):
 
             self.result_lock.acquire()
             if fr.face_distance([self.test_face], img[0]) > self.min_result_value:
-                # TODO: insert in to deque
-                similarity = fr.face_distance([self.test_face], img[0])
+                distance = fr.face_distance([self.test_face], img[0])
                 for pos, r in self.result:
-                    if r[2] < similarity:
+                    if r[2] < distance:
                         self.result.pop()
-                        self.result.insert(pos, [r[0], r[1], similarity])
+                        self.result.insert(pos, [r[0], r[1], distance])
+                self.min_result_value = self.result[4][2]
             self.result_lock.release()

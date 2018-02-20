@@ -1,14 +1,11 @@
 import cherrypy as cp
-import os
+from subprocess import check_output
+
 
 class EnumerateFiles(object):
     @cp.expose
     def index(self):
-        for root, dirs, files in os.walk('/home/jack/Documents/hons_project/test'):
-            print(root)
-            print(dirs)
-        # TODO: Enumerate filesystem as a JSON object
-        return os.stat(os.getcwd())
+        return check_output("tree -J ./test", shell=True)
 
 
 if __name__ == '__main__':

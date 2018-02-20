@@ -32,5 +32,8 @@ if args.service == 'demo':
     result = face_recognition.face_distance([test_face], test_face2)
     print(result)
 
-
-    # result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
+elif args.service == 'test':
+    uri = 'http://localhost:8081'
+    result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
+    print(result)
+# result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)

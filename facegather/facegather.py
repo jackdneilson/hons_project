@@ -28,7 +28,7 @@ def load_images(uri, remote=True):
 
 
 # Search a data set at the given URI for the best matches to the test face
-def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loaded=IMAGE_LOAD_MAX):
+def search(test_face, uri, no_producer_threads=None, no_consumer_threads=None, max_loaded=None):
     # Load default values in case called with "None"
     if no_producer_threads is None:
         no_producer_threads = 1
@@ -43,22 +43,25 @@ def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loa
     min_result_value = -1
     img_uri_queue_counter = threading.Semaphore(max_loaded)
 
-    print('Getting profile information...', end='', flush=True)
+    print('Getting profile information...')
     profiles = _get_profiles(uri)
     for profile in profiles:
-        img_uri_queue.put([profile.img_link, profile])
+        img_uri_queue.put([uri + '/' + profile['image_location'], profile])
+        print('Loaded ' + profile['name'])
     print('Done')
 
-    print('Processing images...', end='', flush=True)
+    print('Processing images...')
     for i in range(0, no_producer_threads):
         processor = ImageProcessor(img_uri_queue_counter)
         processor.start()
+        print('processor started')
 
     recogniser_list = []
     for i in range(0, no_consumer_threads):
         recogniser = FaceRecogniser(test_face, img_uri_queue_counter, result, result_lock, min_result_value)
         recogniser.start()
         recogniser_list.append(recogniser)
+        print('recogniser started')
 
     for recogniser in recogniser_list:
         recogniser.join()
@@ -69,7 +72,10 @@ def search(test_face, uri, no_producer_threads=1, no_consumer_threads=1, max_loa
 
 
 # TODO: Use more identifying information
-def _get_profiles(uri, name=None, dob=None):
+def _get_profiles(uri, name=None):
+    if name is not None:
+        uri += '?name='
+        uri += name
     resp = requests.get(uri)
     return resp.json()
 
@@ -86,6 +92,7 @@ class ImageProcessor(threading.Thread):
     def run(self):
         while True:
             img_uri_queue_lock.acquire()
+            print('Acquired img_uri_queue_lock')
             self.counter.acquire()
             if img_uri_queue.empty():
                 FaceRecogniser.finished_flag = True

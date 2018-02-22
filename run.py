@@ -36,4 +36,3 @@ elif args.service == 'test':
     uri = 'http://localhost:8081'
     result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
     print(result)
-# result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)

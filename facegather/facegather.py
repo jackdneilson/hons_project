@@ -1,10 +1,12 @@
 from PIL import Image
+from time import sleep
 import requests
 import face_recognition as fr
 import threading
 import queue
 import numpy
 import sortedcontainers
+import sentinels
 
 IMAGE_LOAD_MAX = 200
 DEFAULT_THRESHOLD = 0.5
@@ -49,7 +51,6 @@ def search(test_face_location,
 
     profile_queue_counter = threading.Semaphore(max_loaded)
     print('Getting profile information...')
-    profiles = ''
     if name is None:
         profiles = _get_profiles(uri)
     else:
@@ -60,15 +61,21 @@ def search(test_face_location,
     print('Done')
 
     print('Processing images...')
+    processor_list = []
     for i in range(0, int(no_producer_threads)):
         processor = ImageProcessor(profile_queue_counter)
         processor.start()
+        processor_list.append(processor)
 
     recogniser_list = []
     for i in range(0, int(no_consumer_threads)):
         recogniser = FaceRecogniser(test_face_location, profile_queue_counter, result, result_lock, threshold)
         recogniser.start()
         recogniser_list.append(recogniser)
+
+    for processor in processor_list:
+        processor.join()
+    img_queue.put(sentinels.NOTHING)
 
     for recogniser in recogniser_list:
         recogniser.join()
@@ -77,7 +84,6 @@ def search(test_face_location,
     return result
 
 
-# TODO: Use more identifying information
 def _get_profiles(uri, name=None):
     if name is not None:
         uri += '?name='
@@ -99,8 +105,6 @@ class ImageProcessor(threading.Thread):
         while True:
             self.waiting_counter.acquire()
             if profile_queue.empty():
-                sentinel = Sentinel()
-                img_queue.put(sentinel)
                 return
             profile = profile_queue.get()
 
@@ -126,7 +130,8 @@ class FaceRecogniser(threading.Thread):
         while True:
             self.counter.release()
             img = img_queue.get()
-            if img is Sentinel:
+            if img == sentinels.NOTHING:
+                img_queue.put(sentinels.NOTHING)
                 return
 
             # if fr.face_distance([self.test_face], img[0]) < self.result[-1][0]:
@@ -134,13 +139,8 @@ class FaceRecogniser(threading.Thread):
             #    print(distance)
             #    self.result.add([distance, img[1]])
             #    self.result.pop()
-            if fr.face_distance([self.test_face], img[0] < self.threshold):
+            if fr.face_distance([self.test_face], img[0]) < self.threshold:
                 distance = fr.face_distance([self.test_face], img[0])
                 self.result_lock.acquire()
                 self.result.add([distance, img[1]])
                 self.result_lock.release()
-
-
-class Sentinel:
-    def __init__(self):
-        super()

@@ -1,5 +1,4 @@
 from PIL import Image
-from time import sleep
 import requests
 import face_recognition as fr
 import threading
@@ -54,7 +53,7 @@ def search(test_face_location,
     if name is None:
         profiles = _get_profiles(uri)
     else:
-        profiles = _get_profiles(uri + '/?name=' + name)
+        profiles = _get_profiles(uri + '?name=' + name)
     for profile in profiles:
         profile_queue.put([uri + '/' + profile['image_location'], profile])
         print('Loaded ' + profile['name'])

@@ -11,6 +11,7 @@ parser.add_argument("service", help='Social network service to search')
 parser.add_argument("--pthreads", help='Number of image processing threads')
 parser.add_argument("--cthreads", help='Number of image comparison threads')
 parser.add_argument("--maxload", help='Maximum number of images pre-loaded into memory')
+parser.add_argument("--name", help='Name of person of interest')
 
 args = parser.parse_args()
 
@@ -33,6 +34,10 @@ if args.service == 'demo':
     print(result)
 
 elif args.service == 'test':
-    uri = 'http://localhost:8081'
-    result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
+    uri = 'http://localhost:8081/'
+    result = ''
+    if args.name is not None:
+        result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload, name=args.name)
+    else:
+        result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
     print(result)

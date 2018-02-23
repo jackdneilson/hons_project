@@ -27,7 +27,13 @@ def load_images(uri, remote=True):
 
 
 # Search a data set at the given URI for the best matches to the test face
-def search(test_face_location, uri, no_producer_threads=None, no_consumer_threads=None, max_loaded=None, threshold=None):
+def search(test_face_location,
+           uri,
+           no_producer_threads=None,
+           no_consumer_threads=None,
+           max_loaded=None,
+           threshold=None,
+           name=None):
     # Load default values in case called with "None"
     if no_producer_threads is None:
         no_producer_threads = 1
@@ -39,16 +45,15 @@ def search(test_face_location, uri, no_producer_threads=None, no_consumer_thread
         threshold = DEFAULT_THRESHOLD
 
     result = sortedcontainers.SortedListWithKey(key=lambda val: val[0])
-    result.update([[1, None],
-                   [1, None],
-                   [1, None],
-                   [1, None],
-                   [1, None]])
     result_lock = threading.Lock()
 
     profile_queue_counter = threading.Semaphore(max_loaded)
     print('Getting profile information...')
-    profiles = _get_profiles(uri)
+    profiles = ''
+    if name is None:
+        profiles = _get_profiles(uri)
+    else:
+        profiles = _get_profiles(uri + '/?name=' + name)
     for profile in profiles:
         profile_queue.put([uri + '/' + profile['image_location'], profile])
         print('Loaded ' + profile['name'])
@@ -94,8 +99,8 @@ class ImageProcessor(threading.Thread):
         while True:
             self.waiting_counter.acquire()
             if profile_queue.empty():
-                print('Finished')
-                FaceRecogniser.finished_flag = True
+                sentinel = Sentinel()
+                img_queue.put(sentinel)
                 return
             profile = profile_queue.get()
 
@@ -118,21 +123,24 @@ class FaceRecogniser(threading.Thread):
 
     # Take a face mapping from the queue, then test for similarity.
     def run(self):
-        while not img_queue.empty() or not FaceRecogniser.finished_flag:
+        while True:
             self.counter.release()
-
             img = img_queue.get()
-            self.result_lock.acquire()
-            #if fr.face_distance([self.test_face], img[0]) < self.result[-1][0]:
+            if img is Sentinel:
+                return
+
+            # if fr.face_distance([self.test_face], img[0]) < self.result[-1][0]:
             #    distance = fr.face_distance([self.test_face], img[0])
             #    print(distance)
             #    self.result.add([distance, img[1]])
             #    self.result.pop()
-
             if fr.face_distance([self.test_face], img[0] < self.threshold):
                 distance = fr.face_distance([self.test_face], img[0])
+                self.result_lock.acquire()
                 self.result.add([distance, img[1]])
+                self.result_lock.release()
 
-            self.result_lock.release()
 
-
+class Sentinel:
+    def __init__(self):
+        super()

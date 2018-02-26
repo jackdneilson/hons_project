@@ -93,22 +93,7 @@ Using a human intelligence approaches when gathering information has several dow
 
 \subsubsection{Unconstrained Facial Recognition}
 
-\newpage
-\bibliography{citations}
 
-\newpage
-\begin{appendices}
-\section{Threat Graph}
-\label{appendix:threatgraph}
-\includegraphics[width=\linewidth]{res/threat_graph.png}
-Graph of insider threat factors \citep{behaviourdetection}.
-
-\section{"Boston Bomber" Identification}
-\label{appendix:bostonbomber}
-\includegraphics[width=\linewidth]{res/boston_bomber.png}
-Table of potential matches, note the correct identification from the picture taken from social media with similar pose and lighting \citep{bostonbombingcasestudy}.
-
-\end{appendices}
 
 \newpage
 \section{Methodology}
@@ -166,29 +151,53 @@ The software will be tested using a comination of \todo{Include final list of da
 
 
 \section{Implementation}
-\section{Face Recognition}
+\subsection{Face Recognition}
 \todo{Talk about face recog libraries}
 
+\subsection{Challenges}
+\subsubsection{Loading Images from Memory}
+Since the application retrieves images remotely over the internet, it makes sense to manipulate the images directly from memory. This avoids filesystem reads and writes, which are several magnitudes slower than memory reads and writes. The time save is massive, especially when repeated over thousands of images.
+
+Unfortunately the face recognition library does not support loading images from memory, instead providing a method (load\_image\_file(uri)) to load images from the local file system. Upon inspection this method loads an image file from disk in to a Python Imaging Library (PIL) Image object, then casts it to a numpy array to allow for encoding operations. To mirror this method for use with images loaded to memory, the application uses the PIL Image.open() method on the raw response stream from the social network web server to create an Image object, then casts it to a numpy array. This achieves the same result as loading the image from the local file system significantly more efficiently.
+
+\subsubsection{Maximum Loaded Images}
+A potential problem when using the producer / consumer model is that producers may produce too much data, filling all available memory and leading to a crash. To solve this, a maximum loaded images parameter can be supplied when running the application, which will cap the number of face encodings loaded into memory at that number. 
+
+\subsubsection{Multiple Threads for Producing and Consuming}
+As it stands, the application has been developed with mulitple threads in mind. The user can define how many threads should be used for downloading images and producing face mappings via the --cthreads argument, and how many threads should be used to compare face mappings via the --pthreads argument. This allows for much higher processor utilisation than a single threaded application, as all CPU cores can be utilised.
+
+While the application processes images orders of magnitude faster than it would had it been single-threaded, it may still be too inefficient for use on particularly large data sets. It is also difficult to scale due to its singleton nature. In the future it may be worth refactoring to make use of a discrete GPU, or to make use of specialised libraries for big data processing such as MapReduce.
+
+\subsubsection{Thread Object Access Control}
+To control object access between threads two Queue objects are used. One contains a JSON representation of all of the profiles in the search spaces and is only accessed by the producer threads, and the other is used by producer threads to send face mappings of profiles to consumer threads. These objects are guaranteed to be threadsafe, meaning that both the put() and get() operations are atomic. To control access to the result object that multiple consumer threads may try to access, a Lock() is passed in the consumer constructor. Before a consumer accesses the result object it must first call lock.acquire() which will block if another thread has acquired the lock first. After a consumer has finished writing to the result object it releases the lock by calling lock.release(), allowing other consumer threads access.
 
 
-\section{Challenges}
-\todo{Loading from mem rather than filesys}
-\todo{Maximum loaded images}
+
 \todo{Results from thread sortedlist}
-\todo{Multiple workers for producing/consuming}
-\todo{Remote image fetching using PIL}
 \todo{Command line args}
 \todo{Multiple queues}
 \todo{Sentinels}
 \todo{Multiple face images}
 
-
-
-
-
-
 \section{Testing}
 \section{Results}
 \section{Evaluation}
 \section{Conclusion}
+
+\newpage
+\bibliography{citations}
+
+\newpage
+\begin{appendices}
+\section{Threat Graph}
+\label{appendix:threatgraph}
+\includegraphics[width=\linewidth]{res/threat_graph.png}
+Graph of insider threat factors \citep{behaviourdetection}.
+
+\section{"Boston Bomber" Identification}
+\label{appendix:bostonbomber}
+\includegraphics[width=\linewidth]{res/boston_bomber.png}
+Table of potential matches, note the correct identification from the picture taken from social media with similar pose and lighting \citep{bostonbombingcasestudy}.
+
+\end{appendices}
 \end{document}

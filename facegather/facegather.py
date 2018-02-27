@@ -45,7 +45,7 @@ def search(test_face_location,
     if threshold is None:
         threshold = DEFAULT_THRESHOLD
 
-    result = sortedcontainers.SortedListWithKey(key=lambda val: val[0])
+    result = []
     result_lock = threading.Lock()
 
     profile_queue_counter = threading.Semaphore(max_loaded)
@@ -127,19 +127,14 @@ class FaceRecogniser(threading.Thread):
     # Take a face mapping from the queue, then test for similarity.
     def run(self):
         while True:
-            self.counter.release()
             img = img_queue.get()
             if img == sentinels.NOTHING:
                 img_queue.put(sentinels.NOTHING)
                 return
 
-            # if fr.face_distance([self.test_face], img[0]) < self.result[-1][0]:
-            #    distance = fr.face_distance([self.test_face], img[0])
-            #    print(distance)
-            #    self.result.add([distance, img[1]])
-            #    self.result.pop()
             if fr.face_distance([self.test_face], img[0]) < self.threshold:
                 distance = fr.face_distance([self.test_face], img[0])
                 self.result_lock.acquire()
                 self.result.add([distance, img[1]])
                 self.result_lock.release()
+            self.counter.release()

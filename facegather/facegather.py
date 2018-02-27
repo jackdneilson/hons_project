@@ -48,7 +48,7 @@ def search(test_face_location,
     result = []
     result_lock = threading.Lock()
 
-    profile_queue_counter = threading.Semaphore(max_loaded)
+    profile_queue_counter = threading.Semaphore(int(max_loaded))
     print('Getting profile information...')
     if name is None:
         profiles = _get_profiles(uri)
@@ -135,6 +135,6 @@ class FaceRecogniser(threading.Thread):
             if fr.face_distance([self.test_face], img[0]) < self.threshold:
                 distance = fr.face_distance([self.test_face], img[0])
                 self.result_lock.acquire()
-                self.result.add([distance, img[1]])
+                self.result.append([distance, img[1]])
                 self.result_lock.release()
             self.counter.release()

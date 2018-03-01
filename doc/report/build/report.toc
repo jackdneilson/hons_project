@@ -1,0 +1,64 @@
+\contentsline {section}{\numberline {1}Literature Review}{4}
+\contentsline {subsection}{\numberline {1.1}Background}{4}
+\contentsline {subsubsection}{\numberline {1.1.1}SOCMINT}{4}
+\contentsline {subsubsection}{\numberline {1.1.2}Uses of SOCMINT}{4}
+\contentsline {subsubsection}{\numberline {1.1.3}Facial Recognition}{4}
+\contentsline {subsubsection}{\numberline {1.1.4}Uses of Facial Recognition}{4}
+\contentsline {subsubsection}{\numberline {1.1.5}Constrained vs Unconstrained}{5}
+\contentsline {subsection}{\numberline {1.2}Prior Knowledge Attacks}{5}
+\contentsline {subsubsection}{\numberline {1.2.1}Social Engineering}{5}
+\contentsline {subsubsection}{\numberline {1.2.2}Spearphishing}{5}
+\contentsline {subsection}{\numberline {1.3}Intelligence Gathering}{6}
+\contentsline {subsubsection}{\numberline {1.3.1}SOCMINT}{6}
+\contentsline {subsubsection}{\numberline {1.3.2}HUMINT}{6}
+\contentsline {subsubsection}{\numberline {1.3.3}Individual vs Group Data}{6}
+\contentsline {subsubsection}{\numberline {1.3.4}Quantity of Information}{7}
+\contentsline {subsubsection}{\numberline {1.3.5}Accessibility of Data}{7}
+\contentsline {subsubsection}{\numberline {1.3.6}Uses}{7}
+\contentsline {subsubsection}{\numberline {1.3.7}Challenges and Constraints}{7}
+\contentsline {subsection}{\numberline {1.4}Facial Recognition}{8}
+\contentsline {subsubsection}{\numberline {1.4.1}Current Applications}{8}
+\contentsline {subsubsection}{\numberline {1.4.2}Unconstrained Facial Recognition}{8}
+\contentsline {subsubsection}{\numberline {1.4.3}Challenges}{8}
+\contentsline {subsubsection}{\numberline {1.4.4}Recent Advances}{8}
+\contentsline {section}{\numberline {2}Methodology}{9}
+\contentsline {subsection}{\numberline {2.1}Overview}{9}
+\contentsline {subsection}{\numberline {2.2}Functional Requirements}{9}
+\contentsline {subsubsection}{\numberline {2.2.1}Face Recognition}{9}
+\contentsline {subsubsection}{\numberline {2.2.2}Social Media Integration}{9}
+\contentsline {subsubsection}{\numberline {2.2.3}Headless}{9}
+\contentsline {subsubsection}{\numberline {2.2.4}Multithreaded}{9}
+\contentsline {subsection}{\numberline {2.3}Non-functional Requirements}{9}
+\contentsline {subsubsection}{\numberline {2.3.1}Accuracy}{9}
+\contentsline {subsubsection}{\numberline {2.3.2}Usefulness}{9}
+\contentsline {subsubsection}{\numberline {2.3.3}Cross-Platform}{10}
+\contentsline {subsubsection}{\numberline {2.3.4}Imprecision Tolerance}{10}
+\contentsline {subsubsection}{\numberline {2.3.5}Usability}{10}
+\contentsline {subsubsection}{\numberline {2.3.6}Facial Recognition Libraries}{10}
+\contentsline {subsubsection}{\numberline {2.3.7}Language}{10}
+\contentsline {subsubsection}{\numberline {2.3.8}Time Spent}{10}
+\contentsline {subsubsection}{\numberline {2.3.9}Documentation}{10}
+\contentsline {subsubsection}{\numberline {2.3.10}Testing}{10}
+\contentsline {section}{\numberline {3}Implementation}{11}
+\contentsline {subsection}{\numberline {3.1}Face Recognition}{11}
+\contentsline {subsection}{\numberline {3.2}Test Server}{11}
+\contentsline {subsection}{\numberline {3.3}Portable Module}{11}
+\contentsline {subsection}{\numberline {3.4}Threading}{11}
+\contentsline {subsection}{\numberline {3.5}Headless}{11}
+\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{11}
+\contentsline {subsection}{\numberline {3.7}Challenges}{11}
+\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{11}
+\contentsline {subsubsection}{\numberline {3.7.2}Maximum Loaded Images}{12}
+\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{12}
+\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{12}
+\contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{13}
+\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{13}
+\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{13}
+\contentsline {section}{\numberline {4}Testing}{14}
+\contentsline {section}{\numberline {5}Results}{14}
+\contentsline {section}{\numberline {6}Evaluation}{14}
+\contentsline {section}{\numberline {7}Conclusion}{14}
+\contentsline {section}{Appendices}{17}
+\contentsline {section}{\numberline {A}Threat Graph}{17}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{18}
+\contentsline {section}{\numberline {C}Connection Graph}{19}

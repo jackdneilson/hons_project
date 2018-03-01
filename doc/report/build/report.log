@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  27 FEB 2018 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  1 MAR 2018 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,78 +588,134 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 37.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (build/report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+ [2])
+\tf@toc=\write4
+\openout4 = `report.toc'.
 
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-[7]
+ [3] [4] [5]
+[6] [7]
 
 LaTeX Warning: Marginpar on page 8 moved.
 
 
 LaTeX Warning: Marginpar on page 8 moved.
 
-[8] [9] [10] (build/report.bbl
+
+Overfull \hbox (6.02791pt too wide) in paragraph at lines 134--134
+[][][][]\OT1/cmr/m/n/10 Unconstrained  
+ []
+
+
+Overfull \hbox (6.02791pt too wide) in paragraph at lines 134--134
+[][][][]\OT1/cmr/m/n/10 Unconstrained  
+ []
+
+
+Overfull \hbox (6.02791pt too wide) in paragraph at lines 134--134
+[][][][]\OT1/cmr/m/n/10 Unconstrained  
+ []
+
+
+Overfull \hbox (6.02791pt too wide) in paragraph at lines 134--134
+[][][][]\OT1/cmr/m/n/10 Unconstrained  
+ []
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+[8] [9] [10]
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+[11] [12] [13] [14] (build/report.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ˜ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [11]
+ [15]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-) [12]
-<res/threat_graph.png, id=50, 845.559pt x 597.9138pt>
+) [16]
+<res/threat_graph.png, id=64, 845.559pt x 597.9138pt>
 File: res/threat_graph.png Graphic file (type png)
 
 <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 296.
+Package pdftex.def Info: res/threat_graph.png used on input line 314.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
 
-<res/boston_bomber.png, id=51, 447.92343pt x 607.89609pt>
+<res/boston_bomber.png, id=65, 447.92343pt x 607.89609pt>
 File: res/boston_bomber.png Graphic file (type png)
 
 <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 301.
-(pdftex.def)             Requested size: 443.57848pt x 602.01378pt.
- [13 <./res/threat_graph.png (PNG copy)>] [14 <./res/boston_bomber.png>] [15] (
-build/report.aux) ) 
+Package pdftex.def Info: res/boston_bomber.png used on input line 319.
+(pdftex.def)             Requested size: 358.33922pt x 486.31754pt.
+ [17 <./res/threat_graph.png (PNG copy)>]
+<res/connection_klout.png, id=70, 1215.54124pt x 251.94125pt>
+File: res/connection_klout.png Graphic file (type png)
+
+<use res/connection_klout.png>
+Package pdftex.def Info: res/connection_klout.png used on input line 324.
+(pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
+ [18 <./res/boston_bomber.png>] [19 <./res/connection_klout.png>] (build/report
+.aux) ) 
 Here is how much of TeX's memory you used:
- 15204 strings out of 494902
- 293072 string characters out of 6179890
- 396374 words of memory out of 5000000
- 18217 multiletter control sequences out of 15000+600000
+ 15253 strings out of 494902
+ 294196 string characters out of 6179890
+ 416151 words of memory out of 5000000
+ 18262 multiletter control sequences out of 15000+600000
  9313 words of font info for 33 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,9n,76p,860b,1526s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on build/report.pdf (15 pages, 3993925 bytes).
+ 62i,9n,76p,860b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt9.pfb>
+Output written on build/report.pdf (19 pages, 4042596 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

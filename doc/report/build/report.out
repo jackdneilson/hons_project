@@ -1,0 +1,64 @@
+\BOOKMARK [1][-]{section.1}{Literature Review}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Background}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{SOCMINT}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Uses of SOCMINT}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Facial Recognition}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{Uses of Facial Recognition}{subsection.1.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.5}{Constrained vs Unconstrained}{subsection.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.2}{Prior Knowledge Attacks}{section.1}% 8
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Social Engineering}{subsection.1.2}% 9
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Spearphishing}{subsection.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.3}{Intelligence Gathering}{section.1}% 11
+\BOOKMARK [3][-]{subsubsection.1.3.1}{SOCMINT}{subsection.1.3}% 12
+\BOOKMARK [3][-]{subsubsection.1.3.2}{HUMINT}{subsection.1.3}% 13
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Individual vs Group Data}{subsection.1.3}% 14
+\BOOKMARK [3][-]{subsubsection.1.3.4}{Quantity of Information}{subsection.1.3}% 15
+\BOOKMARK [3][-]{subsubsection.1.3.5}{Accessibility of Data}{subsection.1.3}% 16
+\BOOKMARK [3][-]{subsubsection.1.3.6}{Uses}{subsection.1.3}% 17
+\BOOKMARK [3][-]{subsubsection.1.3.7}{Challenges and Constraints}{subsection.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.4}{Facial Recognition}{section.1}% 19
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Current Applications}{subsection.1.4}% 20
+\BOOKMARK [3][-]{subsubsection.1.4.2}{Unconstrained Facial Recognition}{subsection.1.4}% 21
+\BOOKMARK [3][-]{subsubsection.1.4.3}{Challenges}{subsection.1.4}% 22
+\BOOKMARK [3][-]{subsubsection.1.4.4}{Recent Advances}{subsection.1.4}% 23
+\BOOKMARK [1][-]{section.2}{Methodology}{}% 24
+\BOOKMARK [2][-]{subsection.2.1}{Overview}{section.2}% 25
+\BOOKMARK [2][-]{subsection.2.2}{Functional Requirements}{section.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Face Recognition}{subsection.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Social Media Integration}{subsection.2.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Headless}{subsection.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Multithreaded}{subsection.2.2}% 30
+\BOOKMARK [2][-]{subsection.2.3}{Non-functional Requirements}{section.2}% 31
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Accuracy}{subsection.2.3}% 32
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Usefulness}{subsection.2.3}% 33
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Cross-Platform}{subsection.2.3}% 34
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Imprecision Tolerance}{subsection.2.3}% 35
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Usability}{subsection.2.3}% 36
+\BOOKMARK [3][-]{subsubsection.2.3.6}{Facial Recognition Libraries}{subsection.2.3}% 37
+\BOOKMARK [3][-]{subsubsection.2.3.7}{Language}{subsection.2.3}% 38
+\BOOKMARK [3][-]{subsubsection.2.3.8}{Time Spent}{subsection.2.3}% 39
+\BOOKMARK [3][-]{subsubsection.2.3.9}{Documentation}{subsection.2.3}% 40
+\BOOKMARK [3][-]{subsubsection.2.3.10}{Testing}{subsection.2.3}% 41
+\BOOKMARK [1][-]{section.3}{Implementation}{}% 42
+\BOOKMARK [2][-]{subsection.3.1}{Face Recognition}{section.3}% 43
+\BOOKMARK [2][-]{subsection.3.2}{Test Server}{section.3}% 44
+\BOOKMARK [2][-]{subsection.3.3}{Portable Module}{section.3}% 45
+\BOOKMARK [2][-]{subsection.3.4}{Threading}{section.3}% 46
+\BOOKMARK [2][-]{subsection.3.5}{Headless}{section.3}% 47
+\BOOKMARK [2][-]{subsection.3.6}{Social Network Interactivity}{section.3}% 48
+\BOOKMARK [2][-]{subsection.3.7}{Challenges}{section.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.7.1}{Loading Images from Memory}{subsection.3.7}% 50
+\BOOKMARK [3][-]{subsubsection.3.7.2}{Maximum Loaded Images}{subsection.3.7}% 51
+\BOOKMARK [3][-]{subsubsection.3.7.3}{Multiple Threads for Producing and Consuming}{subsection.3.7}% 52
+\BOOKMARK [3][-]{subsubsection.3.7.4}{Thread Object Access Control}{subsection.3.7}% 53
+\BOOKMARK [3][-]{subsubsection.3.7.5}{Result Retrieval}{subsection.3.7}% 54
+\BOOKMARK [3][-]{subsubsection.3.7.6}{Command Line Arguments}{subsection.3.7}% 55
+\BOOKMARK [3][-]{subsubsection.3.7.7}{Inter-Thread Communication}{subsection.3.7}% 56
+\BOOKMARK [1][-]{section.4}{Testing}{}% 57
+\BOOKMARK [1][-]{section.5}{Results}{}% 58
+\BOOKMARK [1][-]{section.6}{Evaluation}{}% 59
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 60
+\BOOKMARK [1][-]{section*.18}{Appendices}{}% 61
+\BOOKMARK [1][-]{Appendix.a.A}{Threat Graph}{}% 62
+\BOOKMARK [1][-]{Appendix.a.B}{"Boston Bomber" Identification}{}% 63
+\BOOKMARK [1][-]{Appendix.a.C}{Connection Graph}{}% 64

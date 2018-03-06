@@ -19,8 +19,6 @@
 \contentsline {subsection}{\numberline {1.4}Facial Recognition}{8}
 \contentsline {subsubsection}{\numberline {1.4.1}Current Applications}{8}
 \contentsline {subsubsection}{\numberline {1.4.2}Unconstrained Facial Recognition}{8}
-\contentsline {subsubsection}{\numberline {1.4.3}Challenges}{8}
-\contentsline {subsubsection}{\numberline {1.4.4}Recent Advances}{8}
 \contentsline {section}{\numberline {2}Methodology}{9}
 \contentsline {subsection}{\numberline {2.1}Overview}{9}
 \contentsline {subsection}{\numberline {2.2}Functional Requirements}{9}
@@ -42,23 +40,26 @@
 \contentsline {section}{\numberline {3}Implementation}{11}
 \contentsline {subsection}{\numberline {3.1}Face Recognition}{11}
 \contentsline {subsection}{\numberline {3.2}Test Server}{11}
+\contentsline {subsubsection}{\numberline {3.2.1}nginx}{11}
+\contentsline {subsubsection}{\numberline {3.2.2}cherrypy}{11}
 \contentsline {subsection}{\numberline {3.3}Portable Module}{11}
 \contentsline {subsection}{\numberline {3.4}Threading}{11}
-\contentsline {subsection}{\numberline {3.5}Headless}{11}
-\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{11}
-\contentsline {subsection}{\numberline {3.7}Challenges}{11}
-\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{11}
+\contentsline {subsection}{\numberline {3.5}Command Line Interactivity}{11}
+\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{12}
+\contentsline {subsection}{\numberline {3.7}Challenges}{12}
+\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{12}
 \contentsline {subsubsection}{\numberline {3.7.2}Maximum Loaded Images}{12}
-\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{12}
-\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{12}
+\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{13}
+\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{13}
 \contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{13}
-\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{13}
-\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{13}
-\contentsline {section}{\numberline {4}Testing}{14}
-\contentsline {section}{\numberline {5}Results}{14}
-\contentsline {section}{\numberline {6}Evaluation}{14}
-\contentsline {section}{\numberline {7}Conclusion}{14}
-\contentsline {section}{Appendices}{17}
-\contentsline {section}{\numberline {A}Threat Graph}{17}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{18}
-\contentsline {section}{\numberline {C}Connection Graph}{19}
+\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{14}
+\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{14}
+\contentsline {section}{\numberline {4}Testing}{15}
+\contentsline {section}{\numberline {5}Results}{15}
+\contentsline {section}{\numberline {6}Evaluation}{15}
+\contentsline {section}{\numberline {7}Conclusion}{15}
+\contentsline {section}{Appendices}{18}
+\contentsline {section}{\numberline {A}Threat Graph}{18}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{19}
+\contentsline {section}{\numberline {C}Connection Graph}{20}
+\contentsline {section}{\numberline {D}Command Line Arguments}{20}

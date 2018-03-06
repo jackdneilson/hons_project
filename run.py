@@ -12,6 +12,7 @@ parser.add_argument("--pthreads", help='Number of image processing threads')
 parser.add_argument("--cthreads", help='Number of image comparison threads')
 parser.add_argument("--maxload", help='Maximum number of images pre-loaded into memory')
 parser.add_argument("--name", help='Name of person of interest')
+parser.add_argument("--output_location", help='Location of results file')
 
 args = parser.parse_args()
 
@@ -37,7 +38,41 @@ elif args.service == 'test':
     uri = 'http://localhost:8081/'
     result = ''
     if args.name is not None:
-        result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload, name=args.name)
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
     else:
-        result = facegather.search(args.test_face, uri, args.pthreads, args.cthreads, args.maxload)
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
     print(result)

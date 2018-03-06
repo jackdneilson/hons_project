@@ -133,25 +133,11 @@ Unconstraned facial recognition is a subset of facial recognition which focuses 
 
 Unconstrained facial recognition is typically used in situations where a subject is unaware or unwilling. As already mentioned, it was used in a case study by Klontz and Jain where they compared the images released by the FBI of Tamerlan and Dzhokhar Tsarnaev (the "Boston Bombers"). They found that by comparing the released images taken from security cameras to images on social media in an unconstrained setting, they could positively identify one of the brothers \citep{bostonbombingcasestudy} (see Appendix \ref{appendix:bostonbomber}).
 
-\subsubsection{Challenges}
-\todo{Training sets}
-
-
-\todo{Unconstrained}
-
-
-\todo{Images for comparison}
-
-
-
-\subsubsection{Recent Advances}
-\todo{Write some shit here}
-
 
 \newpage
 \section{Methodology}
 \subsection{Overview}
-The software implemented will be in the form of a Python command line program, which allows users to specify an input image and data set to check it against. Additional identifying information such as name, date of birth etc. should also be utilised if given. The data sets the software references must come from social networking websites (or in the case of this proof of concept, a data set which is an accurate representation). 
+The software implemented will be in the form of a Python command line program, which allows users to specify an input image and data set to check it against. Additional identifying information such as name, date of birth etc. should also be utilised if given. The data sets the software references must come from social networking websites (or in the case of this proof of concept, a data set which is an accurate representation).
 
 As its output, the software must show the five most similar faces in the data set to allow for human verification. They should be presented with information that was gained from their social media profiles such as age, gender, name etc., as well as the similarity to the test image. In the case that the software is being ran headlessly, the results should be available in a file format which includes an image of the match and a representation of their social media profile.
 
@@ -202,21 +188,36 @@ The software will be tested using a comination of publicly available face recogn
 \newpage
 \section{Implementation}
 \subsection{Face Recognition}
-\todo{Talk about face recog library as well as why chose that one}
+The application has been developed using the face recognition module created by A. Geitgey:
+
+\url{https://github.com/ageitgey/face\_recognition/}.
+
+It is an easy to use facial recognition library build on top of dlib. It exposes a python API, making it ideal for this project. It also boasts an accuracy rate of up to 99.38\% on the LFW data set.
+
+Alternate libraries (such as dlib) that were investigated were found to either have a much higher barrier to entry, or a much lower accuracy.
+
 \subsection{Test Server}
-\todo{Talk about nginx vs others}
-\todo{Talk about python webserver}
-\todo{Talk about dynamic json generation}
+\subsubsection{nginx}
+To test the application, nginx is used to serve static content as well as as a reverse proxy. Nginx was chosen over Apache or another native Python webserver due to its capability at handling massive concurrent requests, its flexibility, and its speed at server static content. Since the application makes several connections simultaneusly and requests large amounts of images, nginx was ideal.
+
+\subsubsection{cherrypy}
+To serve a dynamic description of where profiles and their respective images are located, a cherrypy server was implemented which expands a glob from the test directory (which contains the test data sets) then returns a json representation of them. As noted earlier, nginx acts as a reverse proxy to this service
+
 \subsection{Portable Module}
-\todo{Talk about split between module and run.py}
+The application has been developed in a modular fashion. To this end, a run file has been provided alongside a python module. The python module includes the logic for retrieving profiles from a web service and setting up multiple threads to compare face mappings, whereas the run file comes with some pre-processing and default arguments. Ideally, the module should be re-usable for other web services.
+
 \subsection{Threading}
-\todo{Talk about control from main thread}
-\todo{Talk about prod/con}
-\subsection{Headless}
-\todo{Talk about cmd line args}
-\todo{Talk about results}
+The application has been developed to make use of multiple threads. The main thread in \textit{facegather.py} controls these threads and their results using locks, thread-safe queues, semaphores, and the thread.join() method.
+
+The producer / consumer consumer model was useful when developing the application. In this context, the producers retrieve profiles from the social networking service and the consumers compare the retrieved profiles to the test data given and store the result.
+
+\subsection{Command Line Interactivity}
+Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX >> operator).
+
+One potential issue when using an application without a GUI is presenting the results. The application persists its results in a JSON format for use by other applications or for direct consumption by the end user. \todo{results}
+
 \subsection{Social Network Interactivity}
-\todo{Talk about mirrored structure}
+Since this project has been done on a fairly small scale in a short time frame, it was not possible to gain access to a large social media platform to perform testing (ignoring the obvious ethical issues with such an approach). Instead, the test environment has been set up in such a way as to mirror the way in which a social media API may be presented - with an array of profiles, each one having a link to some related resources.
 
 \subsection{Challenges}
 \subsubsection{Loading Images from Memory}
@@ -275,7 +276,7 @@ To control object access between threads two Queue objects are used. One contain
 \textit{Above: The result object is not thread-safe, so must have a lock around it.}
 
 \subsubsection{Result Retrieval}
-Having a "top 5" result as was initially planned would require many comparison and list traversal operations. It would also make having multiple consumers pointless, as only one thread would be able to do comparisons at a time. Rather than having the top 5 matches, the result returned is now all faces that match the test face within a given threshold (by default, face value $<$ 0.3).
+Having a "top 5" result as was initially planned would require many comparison and list traversal operations. It would also make having multiple consumers pointless, as only one thread would be able to do comparisons at a time. Rather than having the top 5 matches, the result returned is now all faces that match the test face within a given threshold (by default, face distance $<$ 0.6).
 
 \subsubsection{Command Line Arguments}
 The application can take many command line arguments to customise its use. Having the user fill out and remember every one of these arguments would make the application unintuituve and difficult to use. Therefore, the decision was made to make heavy use of optional keyword arguments both when running the program (e.g. --cthreads=1) and in functions within the application. This allows the user to specify some, all, or none of the optional parameters and still have the application function correctly. 
@@ -334,6 +335,11 @@ Table of potential matches, note the correct identification from the picture tak
 \label{appendix:connectiongraph}
 \includegraphics[width=\linewidth]{res/connection_klout.png}
 Graph of social media connections and klout score in the Nereus framework\citep{behaviourdetection}.
+
+\section{Command Line Arguments}
+\label{appendix:commandlineargs}
+\includegraphics[width=\linewidth]{res/facegather_cmd_line_args.png}
+A help page showing the command line arguments that can be supplied.
 
 \end{appendices}
 \end{document}

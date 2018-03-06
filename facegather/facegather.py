@@ -4,8 +4,9 @@ import face_recognition as fr
 import threading
 import queue
 import numpy
-import sortedcontainers
 import sentinels
+import time
+import json
 
 IMAGE_LOAD_MAX = 200
 DEFAULT_THRESHOLD = 0.5
@@ -34,7 +35,8 @@ def search(test_face_location,
            no_consumer_threads=None,
            max_loaded=None,
            threshold=None,
-           name=None):
+           name=None,
+           output_location=None):
     # Load default values in case called with "None"
     if no_producer_threads is None:
         no_producer_threads = 1
@@ -80,7 +82,12 @@ def search(test_face_location,
         recogniser.join()
 
     print('Done')
-    return result
+    if output_location is None:
+        return result
+    else:
+        output_file = open(output_location + '/facegather_' + str(time.time()) + '.txt', 'w')
+        output_file.write(json.dumps(result))
+        return result
 
 
 def _get_profiles(uri, name=None):
@@ -134,7 +141,8 @@ class FaceRecogniser(threading.Thread):
 
             if fr.face_distance([self.test_face], img[0]) < self.threshold:
                 distance = fr.face_distance([self.test_face], img[0])
+                img[1]['distance'] = distance[0]
                 self.result_lock.acquire()
-                self.result.append([distance, img[1]])
+                self.result.append(img[1])
                 self.result_lock.release()
             self.counter.release()

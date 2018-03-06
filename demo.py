@@ -11,6 +11,9 @@ class Handler(FileSystemEventHandler):
         self.base_uri = 'http://localhost:8081/'
 
     def on_created(self, event):
+        if event.src_path[-4:] is 'html':
+            return
+
         result_file = open(event.src_path, 'r')
         result_array = json.load(result_file)
 

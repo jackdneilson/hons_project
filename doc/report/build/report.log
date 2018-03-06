@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  6 MAR 2018 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  6 MAR 2018 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -498,12 +498,12 @@ LaTeX Font Info:    ... okay on input line 35.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -585,18 +585,18 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count134
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <14.4> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 38.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 38.
+(Font)              <7> on input line 38.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (build/report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
  [2])
 \tf@toc=\write4
 \openout4 = `report.toc'.
@@ -605,73 +605,169 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: Marginpar on page 4 moved.
 
-[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] (build/report.bbl
-Underfull \hbox (badness 5985) in paragraph at lines 67--71
-[]\OT1/cmr/m/n/10 Facebook (2018), `How does Face-book sug-gest tags?', $\OT1/c
-mtt/m/n/10 https : / / www . facebook . com / help /
+[4] [5] [6] [7] [8] [9] [10] [11] [12]
+Overfull \hbox (2.79686pt too wide) in paragraph at lines 186--186
+[][][][]\OT1/cmr/m/n/12 Include 
  []
 
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-[16]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-) [17] <res/threat_graph.png, id=68, 845.559pt x 597.9138pt>
+
+Overfull \hbox (15.00784pt too wide) in paragraph at lines 186--186
+\OT1/cmr/m/n/12 databases  
+ []
+
+
+Overfull \hbox (2.79686pt too wide) in paragraph at lines 186--186
+[][][][]\OT1/cmr/m/n/12 Include 
+ []
+
+
+Overfull \hbox (15.00784pt too wide) in paragraph at lines 186--186
+\OT1/cmr/m/n/12 databases  
+ []
+
+
+Overfull \hbox (2.79686pt too wide) in paragraph at lines 186--186
+[][][][]\OT1/cmr/m/n/12 Include 
+ []
+
+
+Overfull \hbox (15.00784pt too wide) in paragraph at lines 186--186
+\OT1/cmr/m/n/12 databases  
+ []
+
+
+Overfull \hbox (2.79686pt too wide) in paragraph at lines 186--186
+[][][][]\OT1/cmr/m/n/12 Include 
+ []
+
+
+Overfull \hbox (15.00784pt too wide) in paragraph at lines 186--186
+\OT1/cmr/m/n/12 databases  
+ []
+
+
+Overfull \hbox (2.53992pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 guages, 
+ []
+
+
+Overfull \hbox (0.90799pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 choices  
+ []
+
+
+Overfull \hbox (2.53992pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 guages, 
+ []
+
+
+Overfull \hbox (0.90799pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 choices  
+ []
+
+
+Overfull \hbox (2.53992pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 guages, 
+ []
+
+
+Overfull \hbox (0.90799pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 choices  
+ []
+
+
+Overfull \hbox (2.53992pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 guages, 
+ []
+
+
+Overfull \hbox (0.90799pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 choices  
+ []
+
+
+LaTeX Warning: Marginpar on page 13 moved.
+
+[13] [14] [15] [16] [17] [18] [19] (build/report.bbl
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+ [20]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ [21]) [22]
+<res/threat_graph.png, id=82, 845.559pt x 597.9138pt>
 File: res/threat_graph.png Graphic file (type png)
 
 <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 327.
+Package pdftex.def Info: res/threat_graph.png used on input line 328.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
 
-<res/boston_bomber.png, id=69, 447.92343pt x 607.89609pt>
+<res/boston_bomber.png, id=83, 447.92343pt x 607.89609pt>
 File: res/boston_bomber.png Graphic file (type png)
 
 <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 332.
+Package pdftex.def Info: res/boston_bomber.png used on input line 333.
 (pdftex.def)             Requested size: 358.33922pt x 486.31754pt.
- [18 <./res/threat_graph.png (PNG copy)>]
-<res/connection_klout.png, id=74, 1215.54124pt x 251.94125pt>
+ [23 <./res/threat_graph.png (PNG copy)>]
+<res/connection_klout.png, id=88, 1215.54124pt x 251.94125pt>
 File: res/connection_klout.png Graphic file (type png)
 
 <use res/connection_klout.png>
-Package pdftex.def Info: res/connection_klout.png used on input line 337.
+Package pdftex.def Info: res/connection_klout.png used on input line 338.
 (pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
- [19 <./res/boston_bomber.png>]
-<res/facegather_cmd_line_args.png, id=80, 805.0075pt x 326.21875pt>
+ [24 <./res/boston_bomber.png>]
+Overfull \hbox (3.12325pt too wide) in paragraph at lines 343--343
+[][][][]\OT1/cmr/m/n/12 Update 
+ []
+
+
+Overfull \hbox (3.12325pt too wide) in paragraph at lines 343--343
+[][][][]\OT1/cmr/m/n/12 Update 
+ []
+
+
+Overfull \hbox (3.12325pt too wide) in paragraph at lines 343--343
+[][][][]\OT1/cmr/m/n/12 Update 
+ []
+
+
+Overfull \hbox (3.12325pt too wide) in paragraph at lines 343--343
+[][][][]\OT1/cmr/m/n/12 Update 
+ []
+
+<res/facegather_cmd_line_args.png, id=93, 805.0075pt x 326.21875pt>
 File: res/facegather_cmd_line_args.png Graphic file (type png)
 
 <use res/facegather_cmd_line_args.png>
 Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 34
-2.
+4.
 (pdftex.def)             Requested size: 443.57848pt x 179.75436pt.
- [20 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] (build/
+ [25 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] (build/
 report.aux) ) 
 Here is how much of TeX's memory you used:
- 15227 strings out of 494902
- 292850 string characters out of 6179890
- 367792 words of memory out of 5000000
- 18230 multiletter control sequences out of 15000+600000
- 9481 words of font info for 34 fonts, out of 8000000 for 9000
+ 15246 strings out of 494902
+ 293297 string characters out of 6179890
+ 371831 words of memory out of 5000000
+ 18251 multiletter control sequences out of 15000+600000
+ 10398 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,9n,76p,860b,1516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,76p,860b,1628s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt9.pfb>
-Output written on build/report.pdf (20 pages, 4137899 bytes).
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on build/report.pdf (25 pages, 4102447 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

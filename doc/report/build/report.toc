@@ -59,12 +59,13 @@
 \contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{18}
 \contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{18}
 \contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{19}
-\contentsline {section}{\numberline {4}Testing}{20}
-\contentsline {section}{\numberline {5}Results}{20}
-\contentsline {section}{\numberline {6}Evaluation}{20}
-\contentsline {section}{\numberline {7}Conclusion}{20}
-\contentsline {section}{Appendices}{24}
-\contentsline {section}{\numberline {A}Threat Graph}{24}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{25}
-\contentsline {section}{\numberline {C}Connection Graph}{26}
-\contentsline {section}{\numberline {D}Command Line Arguments}{26}
+\contentsline {subsubsection}{\numberline {3.7.8}UML Diagram}{20}
+\contentsline {section}{\numberline {4}Testing}{21}
+\contentsline {section}{\numberline {5}Results}{21}
+\contentsline {section}{\numberline {6}Evaluation}{21}
+\contentsline {section}{\numberline {7}Conclusion}{21}
+\contentsline {section}{Appendices}{25}
+\contentsline {section}{\numberline {A}Threat Graph}{25}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{26}
+\contentsline {section}{\numberline {C}Connection Graph}{27}
+\contentsline {section}{\numberline {D}Command Line Arguments}{27}

@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: build/report.aux
 The style file: agsm.bst
 Database file #1: citations.bib
-You've used 29 entries,
+You've used 32 entries,
             2909 wiz_defined-function locations,
-            808 strings with 10156 characters,
-and the built_in function-call counts, 117441 in all, are:
-= -- 18964
-> -- 1672
+            819 strings with 10444 characters,
+and the built_in function-call counts, 123252 in all, are:
+= -- 19864
+> -- 1744
 < -- 0
-+ -- 9042
-- -- 511
-* -- 10139
-:= -- 23671
-add.period$ -- 30
-call.type$ -- 29
-change.case$ -- 407
-chr.to.int$ -- 29
-cite$ -- 29
-duplicate$ -- 468
-empty$ -- 966
-format.name$ -- 610
-if$ -- 21068
-int.to.chr$ -- 5
++ -- 9429
+- -- 532
+* -- 10575
+:= -- 24953
+add.period$ -- 36
+call.type$ -- 32
+change.case$ -- 449
+chr.to.int$ -- 30
+cite$ -- 32
+duplicate$ -- 501
+empty$ -- 1044
+format.name$ -- 637
+if$ -- 22095
+int.to.chr$ -- 7
 int.to.str$ -- 0
 missing$ -- 24
-newline$ -- 95
-num.names$ -- 299
-pop$ -- 136
+newline$ -- 107
+num.names$ -- 329
+pop$ -- 157
 preamble$ -- 1
-purify$ -- 435
+purify$ -- 480
 quote$ -- 0
-skip$ -- 405
+skip$ -- 438
 stack$ -- 0
-substring$ -- 26775
-swap$ -- 89
-text.length$ -- 406
+substring$ -- 27960
+swap$ -- 95
+text.length$ -- 448
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
+type$ -- 126
 warning$ -- 0
-while$ -- 643
+while$ -- 706
 width$ -- 0
-write$ -- 379
+write$ -- 421

@@ -19,47 +19,52 @@
 \contentsline {subsection}{\numberline {1.4}Facial Recognition}{9}
 \contentsline {subsubsection}{\numberline {1.4.1}Current Applications}{9}
 \contentsline {subsubsection}{\numberline {1.4.2}Unconstrained Facial Recognition}{10}
-\contentsline {section}{\numberline {2}Methodology}{11}
-\contentsline {subsection}{\numberline {2.1}Overview}{11}
-\contentsline {subsection}{\numberline {2.2}Functional Requirements}{11}
-\contentsline {subsubsection}{\numberline {2.2.1}Face Recognition}{11}
-\contentsline {subsubsection}{\numberline {2.2.2}Social Media Integration}{11}
-\contentsline {subsubsection}{\numberline {2.2.3}Headless}{11}
-\contentsline {subsubsection}{\numberline {2.2.4}Multithreaded}{11}
-\contentsline {subsection}{\numberline {2.3}Non-functional Requirements}{12}
-\contentsline {subsubsection}{\numberline {2.3.1}Accuracy}{12}
-\contentsline {subsubsection}{\numberline {2.3.2}Usefulness}{12}
-\contentsline {subsubsection}{\numberline {2.3.3}Cross-Platform}{12}
-\contentsline {subsubsection}{\numberline {2.3.4}Imprecision Tolerance}{12}
-\contentsline {subsubsection}{\numberline {2.3.5}Usability}{12}
-\contentsline {subsubsection}{\numberline {2.3.6}Facial Recognition Libraries}{12}
-\contentsline {subsubsection}{\numberline {2.3.7}Language}{12}
-\contentsline {subsubsection}{\numberline {2.3.8}Time Spent}{12}
-\contentsline {subsubsection}{\numberline {2.3.9}Documentation}{13}
-\contentsline {subsubsection}{\numberline {2.3.10}Testing}{13}
-\contentsline {section}{\numberline {3}Implementation}{14}
-\contentsline {subsection}{\numberline {3.1}Face Recognition}{14}
-\contentsline {subsection}{\numberline {3.2}Test Server}{14}
-\contentsline {subsubsection}{\numberline {3.2.1}nginx}{14}
-\contentsline {subsubsection}{\numberline {3.2.2}cherrypy}{14}
-\contentsline {subsection}{\numberline {3.3}Portable Module}{14}
-\contentsline {subsection}{\numberline {3.4}Threading}{14}
-\contentsline {subsection}{\numberline {3.5}Command Line Interactivity}{15}
-\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{15}
-\contentsline {subsection}{\numberline {3.7}Challenges}{15}
-\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{15}
-\contentsline {subsubsection}{\numberline {3.7.2}Maximum Loaded Images}{16}
-\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{17}
-\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{17}
-\contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{17}
-\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{17}
-\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{18}
-\contentsline {section}{\numberline {4}Testing}{19}
-\contentsline {section}{\numberline {5}Results}{19}
-\contentsline {section}{\numberline {6}Evaluation}{19}
-\contentsline {section}{\numberline {7}Conclusion}{19}
-\contentsline {section}{Appendices}{23}
-\contentsline {section}{\numberline {A}Threat Graph}{23}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{24}
-\contentsline {section}{\numberline {C}Connection Graph}{25}
-\contentsline {section}{\numberline {D}Command Line Arguments}{25}
+\contentsline {subsection}{\numberline {1.5}Existing Solutions}{10}
+\contentsline {subsubsection}{\numberline {1.5.1}pipl}{10}
+\contentsline {subsubsection}{\numberline {1.5.2}192}{10}
+\contentsline {subsubsection}{\numberline {1.5.3}Facebook}{11}
+\contentsline {subsubsection}{\numberline {1.5.4}Gaps in Functionality}{11}
+\contentsline {section}{\numberline {2}Methodology}{12}
+\contentsline {subsection}{\numberline {2.1}Overview}{12}
+\contentsline {subsection}{\numberline {2.2}Functional Requirements}{12}
+\contentsline {subsubsection}{\numberline {2.2.1}Face Recognition}{12}
+\contentsline {subsubsection}{\numberline {2.2.2}Social Media Integration}{12}
+\contentsline {subsubsection}{\numberline {2.2.3}Headless}{12}
+\contentsline {subsubsection}{\numberline {2.2.4}Multithreaded}{12}
+\contentsline {subsection}{\numberline {2.3}Non-functional Requirements}{13}
+\contentsline {subsubsection}{\numberline {2.3.1}Accuracy}{13}
+\contentsline {subsubsection}{\numberline {2.3.2}Usefulness}{13}
+\contentsline {subsubsection}{\numberline {2.3.3}Cross-Platform}{13}
+\contentsline {subsubsection}{\numberline {2.3.4}Imprecision Tolerance}{13}
+\contentsline {subsubsection}{\numberline {2.3.5}Usability}{13}
+\contentsline {subsubsection}{\numberline {2.3.6}Facial Recognition Libraries}{13}
+\contentsline {subsubsection}{\numberline {2.3.7}Language}{13}
+\contentsline {subsubsection}{\numberline {2.3.8}Time Spent}{13}
+\contentsline {subsubsection}{\numberline {2.3.9}Documentation}{14}
+\contentsline {subsubsection}{\numberline {2.3.10}Testing}{14}
+\contentsline {section}{\numberline {3}Implementation}{15}
+\contentsline {subsection}{\numberline {3.1}Face Recognition}{15}
+\contentsline {subsection}{\numberline {3.2}Test Server}{15}
+\contentsline {subsubsection}{\numberline {3.2.1}nginx}{15}
+\contentsline {subsubsection}{\numberline {3.2.2}cherrypy}{15}
+\contentsline {subsection}{\numberline {3.3}Portable Module}{15}
+\contentsline {subsection}{\numberline {3.4}Threading}{15}
+\contentsline {subsection}{\numberline {3.5}Command Line Interactivity}{16}
+\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{16}
+\contentsline {subsection}{\numberline {3.7}Challenges}{16}
+\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{16}
+\contentsline {subsubsection}{\numberline {3.7.2}Maximum Loaded Images}{17}
+\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{18}
+\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{18}
+\contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{18}
+\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{18}
+\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{19}
+\contentsline {section}{\numberline {4}Testing}{20}
+\contentsline {section}{\numberline {5}Results}{20}
+\contentsline {section}{\numberline {6}Evaluation}{20}
+\contentsline {section}{\numberline {7}Conclusion}{20}
+\contentsline {section}{Appendices}{24}
+\contentsline {section}{\numberline {A}Threat Graph}{24}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{25}
+\contentsline {section}{\numberline {C}Connection Graph}{26}
+\contentsline {section}{\numberline {D}Command Line Arguments}{26}

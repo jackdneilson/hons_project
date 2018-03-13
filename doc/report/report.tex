@@ -40,7 +40,6 @@
 \tableofcontents
 \newpage
 
-\todo{Talk about existing systems, gaps, how filled}
 \section{Literature Review}
 \subsection{Background}
 \subsubsection{SOCMINT}
@@ -133,6 +132,25 @@ Facebook also uses face recognition on photos uploaded to its service \citep{fac
 Unconstraned facial recognition is a subset of facial recognition which focuses on identifying faces in images with variations in pose, lighting, and facial occlusion. It is significantly more difficult than facial recongition which imposes constraints on these conditions.
 
 Unconstrained facial recognition is typically used in situations where a subject is unaware or unwilling. As already mentioned, it was used in a case study by Klontz and Jain where they compared the images released by the FBI of Tamerlan and Dzhokhar Tsarnaev (the "Boston Bombers"). They found that by comparing the released images taken from security cameras to images on social media in an unconstrained setting, they could positively identify one of the brothers \citep{bostonbombingcasestudy} (see Appendix \ref{appendix:bostonbomber}).
+
+\subsection{Existing Solutions}
+\subsubsection{pipl}
+\url{pipl.com} is a popular web service that allows users to search a database of people by name, e-mail, social media username, phone number, or location. It is aimed at de-anonymising people that use pseudonyms or that do not publicly associate identifying information with their e-mail or social media username by cross-referencing information from several sources. For example, a person may associate their e-mail but not their phone number with a username on a social media service, and then associate the same username with their phone number but not their e-mail address on a different social media service. With this method pipl can effectively collate identifying data about a large sample of people and make it searchable, which is evidently useful for many business applications (particularly within advertisement, as it allows for targeted adverts to be sent to the same person over several social media networks). It's list of clients include large companies within the social media and personal data sectors such as Twitter, equifax and Experian \citep{pipl}.
+
+\subsubsection{192}
+\url{192.com} is a similar service to pipl, however it allows for a more advaced search with more terms to restrict or search on. As well as using social media profiles it uses publicly available information (OSINT) such as the electoral register to enhance its data set. It claims to have 750 million records, far less than pipl's over 3 billion (although the records kept by 192 are much more detailed). The main feature of 192 is that it allows users to search for details about entities other than people, such as schools or businesses.
+
+\subsubsection{Facebook}
+Facebook itself offers fairly primitive search functionality, allowing users to search for posts, people, photos, videos, pages, places, groups, and events. While this may seem to be fairly extensive, it should be noted that the intended use of the search function is to allow userse to make more connections. The searches users can perform will therefore be tightly restricted - for example, when searching for people the search may only show those people that are indirectly connected through other friends, known connections, or people in close proximity \citep{facebookpeoplesearch}. The Graph API that Facebook exposes allows users to search outside of these restrictions, however as discussed previously it is difficult for a party of one to use the Graph API for large-scale searches due to rate limits and Facebook's privacy settings \citep{facebookgraphapi}. 
+
+Even with these limitations, Facebook is still a very useful service for enumerating identifiable information about a person of interest provided the user has some basic information such as the person of interest's full name.
+
+\subsubsection{Gaps in Functionality}
+The services listed above are extremely useful when attempting to gather more information about a person of interest. Given some basic identifying information such as username, given name, e-mail address etc. they can be used to effectively build a profile of searchable person. Where they fall short however is when a person of interest needs to be identified from a collection - the amount of data returned when searching for location or place of residence alone is far too large to sift through. Even Facebook's search falls short when trying to identify a single person from a potentially large collection, as the lack of customisable search restrictions means that the result of a search is unlikely to be able to be processed in a reasonable amount of time.
+
+With the exception of Facebook, the services listed aggregate social media profiles in order to hold as much meaningful information about individuals as is feasible. This necessitates that some information must be omitted when collating from several social media networks. One of the pitfalls of these services is that several of the omitted items can be very useful when restricting searches - for example, a profile picture may prove useful for identification if a user has a reference image of a person of interest.
+
+A potentially large gap in functionality is that lack of "soft" comparisons. The services above perform well when doing direct comparisons, such as having a specific name or a name matching a regular expression. They do not offer search functionality allowing for some margin of error such as a name matching a regular expression or having a Hebbian distance of 1, or having a face harvested from a profile picture be similar to a test image.
 
 \newpage
 \section{Methodology}

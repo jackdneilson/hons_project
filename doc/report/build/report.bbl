@@ -63,8 +63,19 @@ Evans, J.~R., Meissner, C.~A., Brandon, S.~E., Russano, M.~B. \harvardand\
   38}(1-2),~215--249.
 \newline\harvardurl{https://doi.org/10.1177/009318531003800110}
 
-\harvarditem{{Facebook}}{2018}{facebookfacerecog}
-{Facebook}  \harvardyearleft 2018\harvardyearright , `{How does Facebook
+\harvarditem{{Facebook}}{2018{\em a}}{facebookgraphapi}
+{Facebook}  \harvardyearleft 2018{\em a}\harvardyearright , `{Facebook Graph
+  API Supporting Documents}',
+  \url{https://developers.facebook.com/docs/graph-api/}.
+\newblock Online; accessed 13th March 2018.
+
+\harvarditem{{Facebook}}{2018{\em b}}{facebookpeoplesearch}
+{Facebook}  \harvardyearleft 2018{\em b}\harvardyearright , `{Facebook People
+  Search Page}', \url{https://www.facebook.com/people-search.php}.
+\newblock Online; accessed 13th March 2018.
+
+\harvarditem{{Facebook}}{2018{\em c}}{facebookfacerecog}
+{Facebook}  \harvardyearleft 2018{\em c}\harvardyearright , `{How does Facebook
   suggest tags?}',
   \url{https://www.facebook.com/help/122175507864081?helpref=faq_content}.
 \newblock Online; accessed 2nd March 2018.
@@ -150,6 +161,11 @@ Omand, S.~D., Bartlett, J. \harvardand\ Miller, C.  \harvardyearleft
 \harvarditem{Parmar}{2012}{spearphishingresults}
 Parmar, B.  \harvardyearleft 2012\harvardyearright , `Protecting against
   spear-phishing',  {\bf 2012},~8–11.
+
+\harvarditem{{pipl}}{2018}{pipl}
+{pipl}  \harvardyearleft 2018\harvardyearright , `{pipl home page}',
+  \url{https://pipl.com/}.
+\newblock Online; accessed 13th March 2018.
 
 \harvarditem{Ruiz}{2018}{gchqmasssurveillance}
 Ruiz, J.  \harvardyearleft 2018\harvardyearright , Gchq and mass surveillance,

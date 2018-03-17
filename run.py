@@ -2,7 +2,6 @@ from facegather import facegather
 import face_recognition
 import argparse
 
-
 parser = argparse.ArgumentParser(
     description='A python3 program to gather social media intelligence using facial recognition')
 parser.add_argument("test_face", help='Location of the test face')

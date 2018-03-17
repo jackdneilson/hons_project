@@ -49,8 +49,6 @@ class Handler(FileSystemEventHandler):
         html_demo.write('</table>')
 
 
-
-
 path = './demo'
 handler = Handler()
 

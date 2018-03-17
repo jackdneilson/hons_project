@@ -40,6 +40,12 @@
 \tableofcontents
 \newpage
 
+\section{Abstract}
+\todo{Write abstract}
+
+\section{Acknowledgements}
+\todo{Write Acknowledgements}
+
 \section{Literature Review}
 \subsection{Background}
 \subsubsection{SOCMINT}
@@ -201,9 +207,7 @@ The software must be able to complete the above task in the same time or less th
 The software should have at a minimum a man page and usage information. More documentation would be beneficial.
 
 \subsubsection{Testing}
-The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the CMU Face in Action database, and the SCFace database. \todo{Include final list of databases}
-
-\todo{Talk about languages, other choices}
+The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the AT\&T Face database, the Essex Facial Recognition database and the SCFace database. \todo{Implement testing for the other 3}
 
 \newpage
 \section{Implementation}
@@ -234,7 +238,7 @@ The producer / consumer consumer model was useful when developing the applicatio
 \subsection{Command Line Interactivity}
 Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX >> operator).
 
-One potential issue when using an application without a GUI is presenting the results. The application persists its results in a JSON format for use by other applications or for direct consumption by the end user. \todo{results}
+One potential issue when using an application without a GUI is presenting the results. The application persists its results in a JSON format for use by other applications or for direct consumption by the end user.
 
 \subsection{Social Network Interactivity}
 Since this project has been done on a fairly small scale in a short time frame, it was not possible to gain access to a large social media platform to perform testing (ignoring the obvious ethical issues with such an approach). Instead, the test environment has been set up in such a way as to mirror the way in which a social media API may be presented - with an array of profiles, each one having a link to some related resources.
@@ -334,15 +338,24 @@ The only inter-thread communication required by the application is for the consu
 \subsubsection{UML Diagram}
 \includegraphics[scale=1]{res/facegather_uml.png}
 
+\todo{Testing}
 \section{Testing}
+\subsection{Testing Methodology}
+
+\subsection{Replication of Results}
+
+\subsection{Comparing Images with Different Compression Algorithms}
+
+\subsection{Restricting by Identifiable Information}
 
 
+\todo{Results}
 \section{Results}
 
-
+\todo{Eval}
 \section{Evaluation}
 
-
+\todo{Conclusion}
 \section{Conclusion}
 
 \newpage

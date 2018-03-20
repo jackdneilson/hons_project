@@ -1,71 +1,79 @@
-\contentsline {section}{\numberline {1}Literature Review}{4}
-\contentsline {subsection}{\numberline {1.1}Background}{4}
-\contentsline {subsubsection}{\numberline {1.1.1}SOCMINT}{4}
-\contentsline {subsubsection}{\numberline {1.1.2}Uses of SOCMINT}{4}
-\contentsline {subsubsection}{\numberline {1.1.3}Facial Recognition}{5}
-\contentsline {subsubsection}{\numberline {1.1.4}Uses of Facial Recognition}{5}
-\contentsline {subsubsection}{\numberline {1.1.5}Constrained vs Unconstrained}{5}
-\contentsline {subsection}{\numberline {1.2}Prior Knowledge Attacks}{6}
-\contentsline {subsubsection}{\numberline {1.2.1}Social Engineering}{6}
-\contentsline {subsubsection}{\numberline {1.2.2}Spearphishing}{6}
-\contentsline {subsection}{\numberline {1.3}Intelligence Gathering}{7}
-\contentsline {subsubsection}{\numberline {1.3.1}SOCMINT}{7}
-\contentsline {subsubsection}{\numberline {1.3.2}HUMINT}{7}
-\contentsline {subsubsection}{\numberline {1.3.3}Individual vs Group Data}{8}
-\contentsline {subsubsection}{\numberline {1.3.4}Quantity of Information}{8}
-\contentsline {subsubsection}{\numberline {1.3.5}Accessibility of Data}{8}
-\contentsline {subsubsection}{\numberline {1.3.6}Uses}{8}
-\contentsline {subsubsection}{\numberline {1.3.7}Challenges and Constraints}{9}
-\contentsline {subsection}{\numberline {1.4}Facial Recognition}{9}
-\contentsline {subsubsection}{\numberline {1.4.1}Current Applications}{9}
-\contentsline {subsubsection}{\numberline {1.4.2}Unconstrained Facial Recognition}{10}
-\contentsline {subsection}{\numberline {1.5}Existing Solutions}{10}
-\contentsline {subsubsection}{\numberline {1.5.1}pipl}{10}
-\contentsline {subsubsection}{\numberline {1.5.2}192}{10}
-\contentsline {subsubsection}{\numberline {1.5.3}Facebook}{11}
-\contentsline {subsubsection}{\numberline {1.5.4}Gaps in Functionality}{11}
-\contentsline {section}{\numberline {2}Methodology}{12}
-\contentsline {subsection}{\numberline {2.1}Overview}{12}
-\contentsline {subsection}{\numberline {2.2}Functional Requirements}{12}
-\contentsline {subsubsection}{\numberline {2.2.1}Face Recognition}{12}
-\contentsline {subsubsection}{\numberline {2.2.2}Social Media Integration}{12}
-\contentsline {subsubsection}{\numberline {2.2.3}Headless}{12}
-\contentsline {subsubsection}{\numberline {2.2.4}Multithreaded}{12}
-\contentsline {subsection}{\numberline {2.3}Non-functional Requirements}{13}
-\contentsline {subsubsection}{\numberline {2.3.1}Accuracy}{13}
-\contentsline {subsubsection}{\numberline {2.3.2}Usefulness}{13}
-\contentsline {subsubsection}{\numberline {2.3.3}Cross-Platform}{13}
-\contentsline {subsubsection}{\numberline {2.3.4}Imprecision Tolerance}{13}
-\contentsline {subsubsection}{\numberline {2.3.5}Usability}{13}
-\contentsline {subsubsection}{\numberline {2.3.6}Facial Recognition Libraries}{13}
-\contentsline {subsubsection}{\numberline {2.3.7}Language}{13}
-\contentsline {subsubsection}{\numberline {2.3.8}Time Spent}{13}
-\contentsline {subsubsection}{\numberline {2.3.9}Documentation}{14}
-\contentsline {subsubsection}{\numberline {2.3.10}Testing}{14}
-\contentsline {section}{\numberline {3}Implementation}{15}
-\contentsline {subsection}{\numberline {3.1}Face Recognition}{15}
-\contentsline {subsection}{\numberline {3.2}Test Server}{15}
-\contentsline {subsubsection}{\numberline {3.2.1}nginx}{15}
-\contentsline {subsubsection}{\numberline {3.2.2}cherrypy}{15}
-\contentsline {subsection}{\numberline {3.3}Portable Module}{15}
-\contentsline {subsection}{\numberline {3.4}Threading}{15}
-\contentsline {subsection}{\numberline {3.5}Command Line Interactivity}{16}
-\contentsline {subsection}{\numberline {3.6}Social Network Interactivity}{16}
-\contentsline {subsection}{\numberline {3.7}Challenges}{16}
-\contentsline {subsubsection}{\numberline {3.7.1}Loading Images from Memory}{16}
-\contentsline {subsubsection}{\numberline {3.7.2}Maximum Loaded Images}{17}
-\contentsline {subsubsection}{\numberline {3.7.3}Multiple Threads for Producing and Consuming}{18}
-\contentsline {subsubsection}{\numberline {3.7.4}Thread Object Access Control}{18}
-\contentsline {subsubsection}{\numberline {3.7.5}Result Retrieval}{18}
-\contentsline {subsubsection}{\numberline {3.7.6}Command Line Arguments}{18}
-\contentsline {subsubsection}{\numberline {3.7.7}Inter-Thread Communication}{19}
-\contentsline {subsubsection}{\numberline {3.7.8}UML Diagram}{20}
-\contentsline {section}{\numberline {4}Testing}{21}
-\contentsline {section}{\numberline {5}Results}{21}
-\contentsline {section}{\numberline {6}Evaluation}{21}
-\contentsline {section}{\numberline {7}Conclusion}{21}
-\contentsline {section}{Appendices}{25}
-\contentsline {section}{\numberline {A}Threat Graph}{25}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{26}
-\contentsline {section}{\numberline {C}Connection Graph}{27}
-\contentsline {section}{\numberline {D}Command Line Arguments}{27}
+\contentsline {section}{\numberline {1}Abstract}{5}
+\contentsline {section}{\numberline {2}Acknowledgements}{5}
+\contentsline {section}{\numberline {3}Literature Review}{5}
+\contentsline {subsection}{\numberline {3.1}Background}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}SOCMINT}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Uses of SOCMINT}{6}
+\contentsline {subsubsection}{\numberline {3.1.3}Facial Recognition}{6}
+\contentsline {subsubsection}{\numberline {3.1.4}Uses of Facial Recognition}{6}
+\contentsline {subsubsection}{\numberline {3.1.5}Constrained vs Unconstrained}{6}
+\contentsline {subsection}{\numberline {3.2}Prior Knowledge Attacks}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}Social Engineering}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}Spearphishing}{7}
+\contentsline {subsection}{\numberline {3.3}Intelligence Gathering}{8}
+\contentsline {subsubsection}{\numberline {3.3.1}SOCMINT}{8}
+\contentsline {subsubsection}{\numberline {3.3.2}HUMINT}{8}
+\contentsline {subsubsection}{\numberline {3.3.3}Individual vs Group Data}{9}
+\contentsline {subsubsection}{\numberline {3.3.4}Quantity of Information}{9}
+\contentsline {subsubsection}{\numberline {3.3.5}Accessibility of Data}{9}
+\contentsline {subsubsection}{\numberline {3.3.6}Uses}{10}
+\contentsline {subsubsection}{\numberline {3.3.7}Challenges and Constraints}{10}
+\contentsline {subsection}{\numberline {3.4}Facial Recognition}{11}
+\contentsline {subsubsection}{\numberline {3.4.1}Current Applications}{11}
+\contentsline {subsubsection}{\numberline {3.4.2}Unconstrained Facial Recognition}{11}
+\contentsline {subsection}{\numberline {3.5}Existing Solutions}{11}
+\contentsline {subsubsection}{\numberline {3.5.1}pipl}{11}
+\contentsline {subsubsection}{\numberline {3.5.2}192}{12}
+\contentsline {subsubsection}{\numberline {3.5.3}Facebook}{12}
+\contentsline {subsubsection}{\numberline {3.5.4}Gaps in Functionality}{12}
+\contentsline {section}{\numberline {4}Methodology}{14}
+\contentsline {subsection}{\numberline {4.1}Overview}{14}
+\contentsline {subsection}{\numberline {4.2}Functional Requirements}{14}
+\contentsline {subsubsection}{\numberline {4.2.1}Face Recognition}{14}
+\contentsline {subsubsection}{\numberline {4.2.2}Social Media Integration}{14}
+\contentsline {subsubsection}{\numberline {4.2.3}Headless}{14}
+\contentsline {subsubsection}{\numberline {4.2.4}Multithreaded}{14}
+\contentsline {subsection}{\numberline {4.3}Non-functional Requirements}{15}
+\contentsline {subsubsection}{\numberline {4.3.1}Accuracy}{15}
+\contentsline {subsubsection}{\numberline {4.3.2}Usefulness}{15}
+\contentsline {subsubsection}{\numberline {4.3.3}Cross-Platform}{15}
+\contentsline {subsubsection}{\numberline {4.3.4}Imprecision Tolerance}{15}
+\contentsline {subsubsection}{\numberline {4.3.5}Usability}{15}
+\contentsline {subsubsection}{\numberline {4.3.6}Facial Recognition Libraries}{15}
+\contentsline {subsubsection}{\numberline {4.3.7}Language}{15}
+\contentsline {subsubsection}{\numberline {4.3.8}Time Spent}{15}
+\contentsline {subsubsection}{\numberline {4.3.9}Documentation}{16}
+\contentsline {subsubsection}{\numberline {4.3.10}Testing}{16}
+\contentsline {section}{\numberline {5}Implementation}{17}
+\contentsline {subsection}{\numberline {5.1}Face Recognition}{17}
+\contentsline {subsection}{\numberline {5.2}Test Server}{17}
+\contentsline {subsubsection}{\numberline {5.2.1}nginx}{17}
+\contentsline {subsubsection}{\numberline {5.2.2}cherrypy}{17}
+\contentsline {subsection}{\numberline {5.3}Portable Module}{17}
+\contentsline {subsection}{\numberline {5.4}Threading}{17}
+\contentsline {subsection}{\numberline {5.5}Command Line Interactivity}{18}
+\contentsline {subsection}{\numberline {5.6}Social Network Interactivity}{18}
+\contentsline {subsection}{\numberline {5.7}Challenges}{18}
+\contentsline {subsubsection}{\numberline {5.7.1}Loading Images from Memory}{18}
+\contentsline {subsubsection}{\numberline {5.7.2}Maximum Loaded Images}{19}
+\contentsline {subsubsection}{\numberline {5.7.3}Multiple Threads for Producing and Consuming}{20}
+\contentsline {subsubsection}{\numberline {5.7.4}Thread Object Access Control}{20}
+\contentsline {subsubsection}{\numberline {5.7.5}Result Retrieval}{20}
+\contentsline {subsubsection}{\numberline {5.7.6}Command Line Arguments}{20}
+\contentsline {subsubsection}{\numberline {5.7.7}Inter-Thread Communication}{21}
+\contentsline {subsubsection}{\numberline {5.7.8}UML Diagram}{22}
+\contentsline {section}{\numberline {6}Testing}{23}
+\contentsline {subsection}{\numberline {6.1}Aims}{23}
+\contentsline {subsection}{\numberline {6.2}Testing Plan}{23}
+\contentsline {subsubsection}{\numberline {6.2.1}Comparing Images with Different Compression Algorithms}{23}
+\contentsline {subsubsection}{\numberline {6.2.2}Restricting by Identifiable Information}{23}
+\contentsline {subsection}{\numberline {6.3}Expected Results}{23}
+\contentsline {subsection}{\numberline {6.4}Testing Methodology}{23}
+\contentsline {subsection}{\numberline {6.5}Results}{23}
+\contentsline {section}{\numberline {7}Evaluation}{23}
+\contentsline {section}{\numberline {8}Conclusion}{23}
+\contentsline {section}{Appendices}{27}
+\contentsline {section}{\numberline {A}Threat Graph}{27}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{28}
+\contentsline {section}{\numberline {C}Connection Graph}{29}
+\contentsline {section}{\numberline {D}Command Line Arguments}{29}

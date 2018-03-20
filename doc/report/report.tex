@@ -341,12 +341,34 @@ The only inter-thread communication required by the application is for the consu
 \todo{Testing}
 \section{Testing}
 \subsection{Aims}
+The aim of the application is to allow a user to query a dataset and find the social media profile of a person in a test image. The data sets used for testing are varied so as to allow for testing across a trained data set, testing across an untrained data set, and testing across an abnormal data set (in this case, the IR images taken from the SCFace database). The testing should reflect this, and as such should provide insight into the following areas:
 
-\subsection{Testing Plan}
+\begin{itemize}
+\item{The facial recognition part of the application should replicate the success rate of the library it uses.}
+\item{The restrictions on search terms should work as expected, and exclude profiles which do not meet the search criteria.}
+\item{Testing done across data sets which have not been used in training should have a reasonable success rate.}
+\item{Success rates across abnormal data sets - for example, the SCFace IR images - should be tested to gather insight in to how effectively or otherwise these images could be used in facial recognition when gathering social media intelligence.}
+\item{The application itself should be tested for correctness.}
+\end{itemize}
+\todo{Maybe do a proof for deadlock?}
+
+\subsection{Testing Strategy}
+\subsubsection{Reproducing Facial Recognition Results}
 \subsubsection{Comparing Images with Different Compression Algorithms}
+\subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
 \subsubsection{Restricting by Identifiable Information}
+\subsubsection{Searching on an Untrained Data Set}
+\subsubsection{Searching on an IR Data Set}
 
 \subsection{Expected Results}
+\subsubsection{Reproducing Facial Recognition Results}
+The application should produce the same accuracy across the LFW data set as was produced in the wrapping library - 99.38\%.
+
+\subsubsection{Comparing Images with Different Compression Algorithms}
+\subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
+\subsubsection{Restricting by Identifiable Information}
+\subsubsection{Searching on an Untrained Data Set}
+\subsubsection{Searching on an IR Data Set}
 
 \subsection{Testing Methodology}
 \subsection{Results}

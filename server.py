@@ -7,7 +7,7 @@ class EnumerateFiles(object):
     def index(self, **kwargs):
         directory = 'test/**'
         if 'name' in kwargs:
-            directory = 'test/lfw/' + kwargs['name']
+            directory = 'test/**/' + kwargs['name']
 
         sb = '['
         for location in glob.glob(directory + '/*.json', recursive=True):

@@ -33,8 +33,8 @@ if args.service == 'demo':
     result = face_recognition.face_distance([test_face], test_face2)
     print(result)
 
-elif args.service == 'test':
-    uri = 'http://localhost:8081/'
+elif args.service == 'test_multiple_db':
+    uri = 'http://localhost:8081/test_multiple_datasets/'
     result = ''
     if args.name is not None:
         if args.output_location is not None:

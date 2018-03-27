@@ -17,13 +17,11 @@ img_queue = queue.Queue()
 # Load an image in to memory from local or remote sources
 def load_images(uri, remote=True):
     if remote:
-        print('Retrieving image from ' + uri)
         resp = requests.get(uri, stream=True)
         resp.raw.decode_content = True
         img = Image.open(resp.raw)
         return fr.face_encodings(numpy.array(img))
     else:
-        print('Retrieving image from ' + uri)
         img_array = fr.load_image_file(uri)
     return fr.face_encodings(img_array)
 

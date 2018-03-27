@@ -2,7 +2,7 @@ import cherrypy as cp
 import glob
 
 
-class EnumerateFiles(object):
+class EnumerateFiles:
     @cp.expose
     def index(self, **kwargs):
         directory = 'test/**'
@@ -20,6 +20,20 @@ class EnumerateFiles(object):
         else:
             return sb[:-1] + ']'
 
+class TestMultipleDB:
+    @cp.expose
+    def index(self):
+        directories = ['test/lfw/', 'test/essex_cswww/']
+        sb = '['
+        for directory in directories:
+            for location in glob.glob(directory + '**/*.json', recursive=True):
+                f = open(location, 'r')
+                sb += f.read()
+                sb += ','
+                f.close()
+        sb = sb[:-1] + ']'
+        return sb
+
 
 if __name__ == '__main__':
     cp.config.update({
@@ -27,4 +41,12 @@ if __name__ == '__main__':
         'tools.proxy.on': True,
         'tools.proxy.base': 'localhost'
     })
-    cp.quickstart(EnumerateFiles())
+
+
+    home = EnumerateFiles()
+
+    cp.tree.mount(EnumerateFiles(), '/', None)
+    cp.tree.mount(TestMultipleDB(), '/test_multiple_datasets', None)
+    
+    cp.engine.start()
+    cp.engine.block()

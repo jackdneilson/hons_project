@@ -19,8 +19,11 @@ def load_images(uri, remote=True):
     if remote:
         resp = requests.get(uri, stream=True)
         resp.raw.decode_content = True
-        img = Image.open(resp.raw)
-        return fr.face_encodings(numpy.array(img))
+        try:
+            img = Image.open(resp.raw)
+            return fr.face_encodings(numpy.array(img))
+        except:
+            print(uri)
     else:
         img_array = fr.load_image_file(uri)
     return fr.face_encodings(img_array)
@@ -55,7 +58,7 @@ def search(test_face_location,
     else:
         profiles = _get_profiles(uri + '?name=' + name)
     for profile in profiles:
-        profile_queue.put([uri + '/' + profile['image_location'], profile])
+        profile_queue.put([profile['image_location'], profile])
         print('Loaded ' + profile['name'])
     print('Done')
 

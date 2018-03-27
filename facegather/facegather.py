@@ -59,7 +59,6 @@ def search(test_face_location,
         profiles = _get_profiles(uri + '?name=' + name)
     for profile in profiles:
         profile_queue.put([profile['image_location'], profile])
-        print('Loaded ' + profile['name'])
     print('Done')
 
     print('Processing images...')

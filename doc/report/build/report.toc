@@ -65,14 +65,14 @@
 \contentsline {section}{\numberline {6}Testing}{23}
 \contentsline {subsection}{\numberline {6.1}Aims}{23}
 \contentsline {subsection}{\numberline {6.2}Testing Strategy}{23}
-\contentsline {subsubsection}{\numberline {6.2.1}Reproducing Facial Recognition Results}{23}
+\contentsline {subsubsection}{\numberline {6.2.1}Comparing Images from Different Data Sets}{23}
 \contentsline {subsubsection}{\numberline {6.2.2}Comparing Images with Different Compression Algorithms}{23}
-\contentsline {subsubsection}{\numberline {6.2.3}Comparing Images Taken in Infra-Red to Images Taken in RGB}{23}
-\contentsline {subsubsection}{\numberline {6.2.4}Restricting by Identifiable Information}{23}
-\contentsline {subsubsection}{\numberline {6.2.5}Searching on an Untrained Data Set}{23}
-\contentsline {subsubsection}{\numberline {6.2.6}Searching on an IR Data Set}{23}
-\contentsline {subsection}{\numberline {6.3}Expected Results}{23}
-\contentsline {subsubsection}{\numberline {6.3.1}Reproducing Facial Recognition Results}{23}
+\contentsline {subsubsection}{\numberline {6.2.3}Comparing Images Taken in Infra-Red to Images Taken in RGB}{24}
+\contentsline {subsubsection}{\numberline {6.2.4}Restricting by Identifiable Information}{24}
+\contentsline {subsubsection}{\numberline {6.2.5}Searching on an Untrained Data Set}{24}
+\contentsline {subsubsection}{\numberline {6.2.6}Searching on an IR Data Set}{24}
+\contentsline {subsection}{\numberline {6.3}Expected Results}{24}
+\contentsline {subsubsection}{\numberline {6.3.1}Reproducing Facial Recognition Results}{24}
 \contentsline {subsubsection}{\numberline {6.3.2}Comparing Images with Different Compression Algorithms}{24}
 \contentsline {subsubsection}{\numberline {6.3.3}Comparing Images Taken in Infra-Red to Images Taken in RGB}{24}
 \contentsline {subsubsection}{\numberline {6.3.4}Restricting by Identifiable Information}{24}

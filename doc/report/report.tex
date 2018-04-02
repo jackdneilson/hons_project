@@ -355,10 +355,16 @@ The aim of the application is to allow a user to query a dataset and find the so
 \end{itemize}
 \todo{Maybe do a proof for deadlock?}
 
-\subsection{Testing Strategy}
-\subsubsection{Reproducing Facial Recognition Results}
+\subsection{Testing Strategy}https://www.facebook.com/
+\subsubsection{Comparing Images from Different Data Sets}
+To compare images from different data sets five images were selected from the total pool of images. One was taken from each of the seperate categories in the Essex data set, and one was taken from the LFW data set. The number of correct matches was then compared against the number of expected correct matches, and the number of false positives.
+
 \subsubsection{Comparing Images with Different Compression Algorithms}
+A data set that uses a different compression algorithm than JPEG could not be located, so instead a new data set was generated from the LFW data set by compressing the images using the Portable Network Graphic (PNG) algorithm. A comparison was then made between the accuracy of an image compared with the same compression algorithm, and an image compared using two different compression algorithms.
+
 \subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
+
+
 \subsubsection{Restricting by Identifiable Information}
 \subsubsection{Searching on an Untrained Data Set}
 \subsubsection{Searching on an IR Data Set}

@@ -1,31 +1,31 @@
 \contentsline {section}{\numberline {1}Abstract}{5}
 \contentsline {section}{\numberline {2}Acknowledgements}{5}
-\contentsline {section}{\numberline {3}Literature Review}{5}
-\contentsline {subsection}{\numberline {3.1}Background}{5}
-\contentsline {subsubsection}{\numberline {3.1.1}SOCMINT}{5}
+\contentsline {section}{\numberline {3}Literature Review}{6}
+\contentsline {subsection}{\numberline {3.1}Background}{6}
+\contentsline {subsubsection}{\numberline {3.1.1}SOCMINT}{6}
 \contentsline {subsubsection}{\numberline {3.1.2}Uses of SOCMINT}{6}
-\contentsline {subsubsection}{\numberline {3.1.3}Facial Recognition}{6}
-\contentsline {subsubsection}{\numberline {3.1.4}Uses of Facial Recognition}{6}
-\contentsline {subsubsection}{\numberline {3.1.5}Constrained vs Unconstrained}{6}
-\contentsline {subsection}{\numberline {3.2}Prior Knowledge Attacks}{7}
-\contentsline {subsubsection}{\numberline {3.2.1}Social Engineering}{7}
-\contentsline {subsubsection}{\numberline {3.2.2}Spearphishing}{7}
-\contentsline {subsection}{\numberline {3.3}Intelligence Gathering}{8}
-\contentsline {subsubsection}{\numberline {3.3.1}SOCMINT}{8}
-\contentsline {subsubsection}{\numberline {3.3.2}HUMINT}{8}
-\contentsline {subsubsection}{\numberline {3.3.3}Individual vs Group Data}{9}
-\contentsline {subsubsection}{\numberline {3.3.4}Quantity of Information}{9}
-\contentsline {subsubsection}{\numberline {3.3.5}Accessibility of Data}{9}
+\contentsline {subsubsection}{\numberline {3.1.3}Facial Recognition}{7}
+\contentsline {subsubsection}{\numberline {3.1.4}Uses of Facial Recognition}{7}
+\contentsline {subsubsection}{\numberline {3.1.5}Constrained vs Unconstrained}{7}
+\contentsline {subsection}{\numberline {3.2}Prior Knowledge Attacks}{8}
+\contentsline {subsubsection}{\numberline {3.2.1}Social Engineering}{8}
+\contentsline {subsubsection}{\numberline {3.2.2}Spearphishing}{8}
+\contentsline {subsection}{\numberline {3.3}Intelligence Gathering}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}SOCMINT}{9}
+\contentsline {subsubsection}{\numberline {3.3.2}HUMINT}{9}
+\contentsline {subsubsection}{\numberline {3.3.3}Individual vs Group Data}{10}
+\contentsline {subsubsection}{\numberline {3.3.4}Quantity of Information}{10}
+\contentsline {subsubsection}{\numberline {3.3.5}Accessibility of Data}{10}
 \contentsline {subsubsection}{\numberline {3.3.6}Uses}{10}
-\contentsline {subsubsection}{\numberline {3.3.7}Challenges and Constraints}{10}
+\contentsline {subsubsection}{\numberline {3.3.7}Challenges and Constraints}{11}
 \contentsline {subsection}{\numberline {3.4}Facial Recognition}{11}
 \contentsline {subsubsection}{\numberline {3.4.1}Current Applications}{11}
-\contentsline {subsubsection}{\numberline {3.4.2}Unconstrained Facial Recognition}{11}
-\contentsline {subsection}{\numberline {3.5}Existing Solutions}{11}
-\contentsline {subsubsection}{\numberline {3.5.1}pipl}{11}
+\contentsline {subsubsection}{\numberline {3.4.2}Unconstrained Facial Recognition}{12}
+\contentsline {subsection}{\numberline {3.5}Existing Solutions}{12}
+\contentsline {subsubsection}{\numberline {3.5.1}pipl}{12}
 \contentsline {subsubsection}{\numberline {3.5.2}192}{12}
-\contentsline {subsubsection}{\numberline {3.5.3}Facebook}{12}
-\contentsline {subsubsection}{\numberline {3.5.4}Gaps in Functionality}{12}
+\contentsline {subsubsection}{\numberline {3.5.3}Facebook}{13}
+\contentsline {subsubsection}{\numberline {3.5.4}Gaps in Functionality}{13}
 \contentsline {section}{\numberline {4}Methodology}{14}
 \contentsline {subsection}{\numberline {4.1}Overview}{14}
 \contentsline {subsection}{\numberline {4.2}Functional Requirements}{14}
@@ -70,20 +70,16 @@
 \contentsline {subsubsection}{\numberline {6.2.3}Comparing Images Taken in Infra-Red to Images Taken in RGB}{24}
 \contentsline {subsubsection}{\numberline {6.2.4}Restricting by Identifiable Information}{24}
 \contentsline {subsubsection}{\numberline {6.2.5}Searching on an Untrained Data Set}{24}
-\contentsline {subsubsection}{\numberline {6.2.6}Searching on an IR Data Set}{24}
 \contentsline {subsection}{\numberline {6.3}Expected Results}{24}
-\contentsline {subsubsection}{\numberline {6.3.1}Reproducing Facial Recognition Results}{24}
-\contentsline {subsubsection}{\numberline {6.3.2}Comparing Images with Different Compression Algorithms}{24}
-\contentsline {subsubsection}{\numberline {6.3.3}Comparing Images Taken in Infra-Red to Images Taken in RGB}{24}
-\contentsline {subsubsection}{\numberline {6.3.4}Restricting by Identifiable Information}{24}
-\contentsline {subsubsection}{\numberline {6.3.5}Searching on an Untrained Data Set}{24}
-\contentsline {subsubsection}{\numberline {6.3.6}Searching on an IR Data Set}{24}
-\contentsline {subsection}{\numberline {6.4}Testing Methodology}{24}
-\contentsline {subsection}{\numberline {6.5}Results}{24}
-\contentsline {section}{\numberline {7}Evaluation}{24}
-\contentsline {section}{\numberline {8}Conclusion}{24}
-\contentsline {section}{Appendices}{28}
-\contentsline {section}{\numberline {A}Threat Graph}{28}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{29}
-\contentsline {section}{\numberline {C}Connection Graph}{30}
-\contentsline {section}{\numberline {D}Command Line Arguments}{30}
+\contentsline {subsubsection}{\numberline {6.3.1}Comparing Images with Different Compression Algorithms}{24}
+\contentsline {subsubsection}{\numberline {6.3.2}Comparing Images Taken in Infra-Red to Images Taken in RGB}{24}
+\contentsline {subsubsection}{\numberline {6.3.3}Restricting by Identifiable Information}{24}
+\contentsline {subsubsection}{\numberline {6.3.4}Searching on an Untrained Data Set}{24}
+\contentsline {section}{\numberline {7}Results}{25}
+\contentsline {section}{\numberline {8}Evaluation}{26}
+\contentsline {section}{\numberline {9}Conclusion}{27}
+\contentsline {section}{Appendices}{31}
+\contentsline {section}{\numberline {A}Threat Graph}{31}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{32}
+\contentsline {section}{\numberline {C}Connection Graph}{33}
+\contentsline {section}{\numberline {D}Command Line Arguments}{33}

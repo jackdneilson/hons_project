@@ -41,6 +41,12 @@
 \newpage
 
 \section{Abstract}
+Social Media Intelligence is an emergent sector in Open Source Intelligence that examines gathering information via publicly available social network profiles. It is viewed by many to be an extremely important aspect of information gathering, with several intelligence agencies including the UK Ministry of Defence and the US Federal Bureau of Investigation recently investing in tools to gather and analyse Social Media Intelligence \citep{socmintpublicsafety}.
+
+A relatively unexplored method of gathering social media intelligence is by using facial recognition. By allowing a search using a person's face, a completely unknown person of interest could be identified and several important pieces of personal information gained.
+
+\textit{Keywords}: SOCMINT; Facial Recognition; OSINT; Social Media; Artificial Intelligence
+
 \todo{Write abstract}
 \todo{Credit cswww}
 \todo{Credit scface}
@@ -48,6 +54,7 @@
 
 \section{Acknowledgements}
 \todo{Write Acknowledgements}
+\newpage
 
 \section{Literature Review}
 \subsection{Background}
@@ -347,7 +354,6 @@ The only inter-thread communication required by the application is for the consu
 The aim of the application is to allow a user to query a dataset and find the social media profile of a person in a test image. The data sets used for testing are varied so as to allow for testing across a trained data set, testing across an untrained data set, and testing across an abnormal data set (in this case, the IR images taken from the SCFace database). The testing should reflect this, and as such should provide insight into the following areas:
 
 \begin{itemize}
-\item{The facial recognition part of the application should replicate the success rate of the library it uses.}
 \item{The restrictions on search terms should work as expected, and exclude profiles which do not meet the search criteria.}
 \item{Testing done across data sets which have not been used in training should have a reasonable success rate.}
 \item{Success rates across abnormal data sets - for example, the SCFace IR images - should be tested to gather insight in to how effectively or otherwise these images could be used in facial recognition when gathering social media intelligence.}
@@ -355,7 +361,7 @@ The aim of the application is to allow a user to query a dataset and find the so
 \end{itemize}
 \todo{Maybe do a proof for deadlock?}
 
-\subsection{Testing Strategy}https://www.facebook.com/
+\subsection{Testing Strategy}
 \subsubsection{Comparing Images from Different Data Sets}
 To compare images from different data sets five images were selected from the total pool of images. One was taken from each of the seperate categories in the Essex data set, and one was taken from the LFW data set. The number of correct matches was then compared against the number of expected correct matches, and the number of false positives.
 
@@ -363,31 +369,37 @@ To compare images from different data sets five images were selected from the to
 A data set that uses a different compression algorithm than JPEG could not be located, so instead a new data set was generated from the LFW data set by compressing the images using the Portable Network Graphic (PNG) algorithm. A comparison was then made between the accuracy of an image compared with the same compression algorithm, and an image compared using two different compression algorithms.
 
 \subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
-
+Images taken from the original frontal portion of the SCFace data set were compared to the IR images contained within the database, and the accuracy rate noted. Also, IR images were compared across the entire data set (LFW, Essex and SCFace) to check for false positives.
 
 \subsubsection{Restricting by Identifiable Information}
+A comparison was done in the accuracy and speed of searches on the LFW data set when restricting the search by first and full name.
+
 \subsubsection{Searching on an Untrained Data Set}
-\subsubsection{Searching on an IR Data Set}
+Several comparisons were done using the Essex data set, which the underlying facial recognition algorithm was not trained on.
 
 \subsection{Expected Results}
-\subsubsection{Reproducing Facial Recognition Results}
-The application should produce the same accuracy across the LFW data set as was produced in the wrapping library - 99.38\%.
-
 \subsubsection{Comparing Images with Different Compression Algorithms}
+The PNG compression algorithm that was used is a lossless algorithm. No detail should be lost when compressing the data set, and so the expected accuracy when comparing photos with different compression algorithms is the same.
+
 \subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
+Ideally, photos taken in RGB should be matched with those taken in black and white. This may not be the case due to difficulty identifying facial descriptors.
+
 \subsubsection{Restricting by Identifiable Information}
+Searches against a restricted data set give less opportunities for false positives, and increase the ratio of matching images to non-matching images. Therefore, it is expected that the accuracy and speed of the search should be superior to an unrestricted search.
+
 \subsubsection{Searching on an Untrained Data Set}
-\subsubsection{Searching on an IR Data Set}
+Again, ideally the accuracy and speed of searching on an untrained dataset should be close to that when searching on a trained data set. This is almost certainly not the case, however an acceptable speed and accuracy rate should be maintained.
 
-\subsection{Testing Methodology}
-\subsection{Results}
+\newpage
+\section{Results}
 
-
-\todo{Eval}
+\newpage
 \section{Evaluation}
+\todo{Eval}
 
-\todo{Conclusion}
+\newpage
 \section{Conclusion}
+\todo{Conclusion}
 
 \newpage
 \bibliography{citations}

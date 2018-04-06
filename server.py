@@ -36,6 +36,19 @@ class TestMultipleDB:
         return sb
 
 
+class TestImageCompression:
+    @cp.expose
+    def index(self):
+        sb = '['
+        for location in glob.glob('test/lfw/**/*_png.json', recursive=True):
+            f = open(location, 'r')
+            sb += f.read()
+            sb += ','
+            f.close()
+        sb = sb[:-1] + ']'
+        return sb
+
+
 if __name__ == '__main__':
     cp.config.update({
         'server.socket_port': 8080,
@@ -43,11 +56,11 @@ if __name__ == '__main__':
         'tools.proxy.base': 'localhost'
     })
 
-
     home = EnumerateFiles()
 
     cp.tree.mount(EnumerateFiles(), '/', None)
     cp.tree.mount(TestMultipleDB(), '/test_multiple_datasets', None)
+    cp.tree.mount(TestImageCompression(), '/test_image_compression', None)
     
     cp.engine.start()
     cp.engine.block()

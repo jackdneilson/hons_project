@@ -33,8 +33,96 @@ if args.service == 'demo':
     result = face_recognition.face_distance([test_face], test_face2)
     print(result)
 
+elif args.service == 'test':
+    uri = 'http://localhost:8081/'
+    result = ''
+    print(args.name)
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
 elif args.service == 'test_multiple_db':
     uri = 'http://localhost:8081/test_multiple_datasets/'
+    result = ''
+    print(args.name)
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_image_compression':
+    uri = 'http://localhost:8081/test_image_compression/'
     result = ''
     print(args.name)
     if args.name is not None:

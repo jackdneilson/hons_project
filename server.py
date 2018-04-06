@@ -23,10 +23,12 @@ class EnumerateFiles:
 
 class TestMultipleDB:
     @cp.expose
-    def index(self):
+    def index(self, **kwargs):
         directories = ['test/lfw/', 'test/essex_cswww/']
         sb = '['
         for directory in directories:
+            if 'name' in kwargs:
+                directory = directory + kwargs['name'] + '/'
             for location in glob.glob(directory + '**/*.json', recursive=True):
                 f = open(location, 'r')
                 sb += f.read()

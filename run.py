@@ -36,6 +36,7 @@ if args.service == 'demo':
 elif args.service == 'test_multiple_db':
     uri = 'http://localhost:8081/test_multiple_datasets/'
     result = ''
+    print(args.name)
     if args.name is not None:
         if args.output_location is not None:
             result = facegather.search(

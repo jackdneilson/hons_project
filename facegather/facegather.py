@@ -54,8 +54,10 @@ def search(test_face_location,
     profile_queue_counter = threading.Semaphore(int(max_loaded))
     print('Getting profile information...')
     if name is None:
+        print(uri)
         profiles = _get_profiles(uri)
     else:
+        print(uri + '?name=' + name)
         profiles = _get_profiles(uri + '?name=' + name)
     for profile in profiles:
         profile_queue.put([profile['image_location'], profile])

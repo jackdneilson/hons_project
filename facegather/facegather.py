@@ -1,4 +1,5 @@
 from PIL import Image
+from io import BytesIO
 import requests
 import face_recognition as fr
 import threading
@@ -18,12 +19,12 @@ img_queue = queue.Queue()
 def load_images(uri, remote=True):
     if remote:
         resp = requests.get(uri, stream=True)
-        resp.raw.decode_content = True
         try:
-            img = Image.open(resp.raw)
+            img = Image.open(BytesIO(resp.content))
             return fr.face_encodings(numpy.array(img))
         except:
-            print(uri)
+            # Catch line in case PNG file is encoded as greyscale
+            return fr.face_encodings(numpy.array(img.convert('RGB')))
     else:
         img_array = fr.load_image_file(uri)
     return fr.face_encodings(img_array)

@@ -36,7 +36,6 @@ if args.service == 'demo':
 elif args.service == 'test':
     uri = 'http://localhost:8081/'
     result = ''
-    print(args.name)
     if args.name is not None:
         if args.output_location is not None:
             result = facegather.search(
@@ -80,7 +79,6 @@ elif args.service == 'test':
 elif args.service == 'test_multiple_db':
     uri = 'http://localhost:8081/test_multiple_datasets/'
     result = ''
-    print(args.name)
     if args.name is not None:
         if args.output_location is not None:
             result = facegather.search(
@@ -124,7 +122,6 @@ elif args.service == 'test_multiple_db':
 elif args.service == 'test_image_compression':
     uri = 'http://localhost:8081/test_image_compression/'
     result = ''
-    print(args.name)
     if args.name is not None:
         if args.output_location is not None:
             result = facegather.search(

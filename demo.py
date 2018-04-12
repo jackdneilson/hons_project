@@ -28,7 +28,7 @@ class Handler(FileSystemEventHandler):
             '</head>'
             ''
             '<body>'
-            '<table class="table table-dark" style="text-align: center; width: 100%; max-height: 50%; margin: 0; border: 0;">'
+            '<table class="table table-dark" style="text-align: center; width: 100%; max-height: 50%; margin: 0; border: 0; font-size: 32pt;">'
             '<tr>'
             '<th>Name</th>'
             '<th>Distance</th>'

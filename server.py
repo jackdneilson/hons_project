@@ -11,7 +11,7 @@ class EnumerateFiles:
 
         sb = '['
         for location in glob.glob(directory + '/*.json', recursive=True):
-            if location[-9:] is not '_png.json':
+            if not location[-9:] == '_png.json':
                 f = open(location, 'r')
                 sb += f.read()
                 sb += ','

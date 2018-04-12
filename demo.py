@@ -8,10 +8,9 @@ class Handler(FileSystemEventHandler):
     def __init__(self):
         super()
         self.path = './demo'
-        self.base_uri = 'http://localhost:8081/'
 
     def on_created(self, event):
-        if event.src_path[-4:] is 'html':
+        if event.src_path[-4:] == 'html':
             return
 
         result_file = open(event.src_path, 'r')
@@ -29,7 +28,7 @@ class Handler(FileSystemEventHandler):
             '</head>'
             ''
             '<body>'
-            '<table class=".table .table-hover" style="width: 80%;">'
+            '<table class="table table-dark" style="text-align: center; width: 100%; max-height: 50%; margin: 0; border: 0;">'
             '<tr>'
             '<th>Name</th>'
             '<th>Distance</th>'
@@ -42,7 +41,7 @@ class Handler(FileSystemEventHandler):
                 '<tr>'
                 '<td>' + result['name'] + '</td>'
                 '<td>' + str(result['distance']) + '</td>'
-                '<td><img src="' + self.base_uri + result['image_location'] + '"></td>'
+                '<td><img src="' + result['image_location'] + '"></td>'
                 '</tr>'
             )
 

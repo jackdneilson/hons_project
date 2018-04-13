@@ -1,0 +1,1 @@
+[{"distance": 0.0, "image_location": "http://localhost:8081/static/SCface/SCface_database/surveillance_cameras_IR_cam8/018_cam8.jpg", "name": "018_cam8"}, {"distance": 0.4797243721214274, "image_location": "http://localhost:8081/static/SCface/SCface_database/surveillance_cameras_IR_cam8/106_cam8.jpg", "name": "106_cam8"}]

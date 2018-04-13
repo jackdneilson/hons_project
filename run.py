@@ -161,3 +161,89 @@ elif args.service == 'test_image_compression':
                 max_loaded=args.maxload,
             )
     print(result)
+
+elif args.service == 'test_IR_RGB':
+    uri = 'http://localhost:8081/test_IR_RGB/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_IR_images':
+    uri = 'http://localhost:8081/test_IR_images/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)

@@ -47,13 +47,11 @@ A relatively unexplored method of gathering social media intelligence is by usin
 
 \textit{Keywords}: SOCMINT; Facial Recognition; OSINT; Social Media; Artificial Intelligence
 
-\todo{Write abstract}
+\section{Acknowledgements}
+\todo{Write Acknowledgements}
 \todo{Credit cswww}
 \todo{Credit scface}
 \todo{Credit attfaces}
-
-\section{Acknowledgements}
-\todo{Write Acknowledgements}
 \newpage
 
 \section{Literature Review}
@@ -217,7 +215,7 @@ The software must be able to complete the above task in the same time or less th
 The software should have at a minimum a man page and usage information. More documentation would be beneficial.
 
 \subsubsection{Testing}
-The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the AT\&T Face database, the Essex Facial Recognition database and the SCFace database. \todo{Implement testing for the other 3}
+The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the Essex Facial Recognition database and the SCFace database.
 
 \newpage
 \section{Implementation}
@@ -348,18 +346,18 @@ The only inter-thread communication required by the application is for the consu
 \subsubsection{UML Diagram}
 \includegraphics[scale=1]{res/facegather_uml.png}
 
-\todo{Testing}
-\section{Testing}
+\section{Testing and Results}
 \subsection{Aims}
 The aim of the application is to allow a user to query a dataset and find the social media profile of a person in a test image. The data sets used for testing are varied so as to allow for testing across a trained data set, testing across an untrained data set, and testing across an abnormal data set (in this case, the IR images taken from the SCFace database). The testing should reflect this, and as such should provide insight into the following areas:
 
 \begin{itemize}
-\item{The restrictions on search terms should work as expected, and exclude profiles which do not meet the search criteria.}
-\item{Testing done across data sets which have not been used in training should have a reasonable success rate.}
+
+\item{Even when comparing over multiple data sets that have been generated using different methods, a reasonable accuracy should still be maintained.}
+\item{Images that have been compressed with different algorithms should still match, given that they are of the same person.}
 \item{Success rates across abnormal data sets - for example, the SCFace IR images - should be tested to gather insight in to how effectively or otherwise these images could be used in facial recognition when gathering social media intelligence.}
-\item{The application itself should be tested for correctness.}
+\item{The restrictions on search terms should work as expected, and exclude profiles which do not meet the search criteria.}
+\item{Testing done across data sets which have not been used in training should have a reasonable accuracy.}
 \end{itemize}
-\todo{Maybe do a proof for deadlock?}
 
 \subsection{Testing Strategy}
 \subsubsection{Comparing Images from Different Data Sets}
@@ -368,8 +366,8 @@ To compare images from different data sets five images were selected from the to
 \subsubsection{Comparing Images with Different Compression Algorithms}
 A data set that uses a different compression algorithm than JPEG could not be located, so instead a new data set was generated from the LFW data set by compressing the images using the Portable Network Graphic (PNG) algorithm. A comparison was then made between the accuracy of an image compared with the same compression algorithm, and an image compared using two different compression algorithms.
 
-\subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
-Images taken from the original frontal portion of the SCFace data set were compared to the IR images contained within the database, and the accuracy rate noted. Also, IR images were compared across the entire data set (LFW, Essex and SCFace) to check for false positives.
+\subsubsection{Comparing Images Taken in the Infra-Red Spectrum}
+Images taken from the SCFace data set were compared to the IR images contained within the database, and the accuracy rate noted.
 
 \subsubsection{Restricting by Identifiable Information}
 A comparison was done in the accuracy and speed of searches on the LFW data set when restricting the search by first and full name.
@@ -377,6 +375,7 @@ A comparison was done in the accuracy and speed of searches on the LFW data set 
 \subsubsection{Searching on an Untrained Data Set}
 Several comparisons were done using the Essex data set, which the underlying facial recognition algorithm was not trained on.
 
+\todo{Redo expected results}
 \subsection{Expected Results}
 \subsubsection{Comparing Images with Different Compression Algorithms}
 The PNG compression algorithm that was used is a lossless algorithm. No detail should be lost when compressing the data set, and so the expected accuracy when comparing photos with different compression algorithms is the same.
@@ -390,8 +389,596 @@ Searches against a restricted data set give less opportunities for false positiv
 \subsubsection{Searching on an Untrained Data Set}
 Again, ideally the accuracy and speed of searching on an untrained dataset should be close to that when searching on a trained data set. This is almost certainly not the case, however an acceptable speed and accuracy rate should be maintained.
 
-\newpage
-\section{Results}
+\subsection{Comparing Images from Different Data Sets}
+\begin{center}
+\begin{tabular}{cccc}
+Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
+\hline
+1 & 1.0 & 0 & 2:06:59\\
+2 & 1.0 & 0 & 2:07:27\\
+3 & 0.59 & 13 & 2:07:50\\
+4 & 1.0 & 0 & 2:06:18\\
+5 & 1.0 & 0 & 2:08:02\\
+Avg & 0.92 & 2.6 & 2:07:19\\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 1}
+Test image: essex\_cswww/faces94/male/cjsake/cjsake.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+cjsake.1.jpg & 0 & No \\
+cjsake.2.jpg & 0.12415972564754801 & No \\
+cjsake.3.jpg & 0.1202683265955043 & No \\
+cjsake.4.jpg & 0.12056058735503877 & No \\
+cjsake.5.jpg & 0.15399061544936016 & No \\
+cjsake.6.jpg & 0.15170091461313734 & No \\
+cjsake.7.jpg & 0.15761164790252086 & No \\
+cjsake.8.jpg & 0.18675358283846008 & No \\
+cjsake.9.jpg & 0.22679627515383244 & No \\
+cjsake.10.jpg & 0.16498243163116574 & No \\
+cjsake.11.jpg & 0.2083636000224947 & No \\
+cjsake.12.jpg & 0.19579060568070747 & No \\
+cjsake.13.jpg & 0.21036201522486805 & No \\
+cjsake.14.jpg & 0.16785907543854067 & No \\
+cjsake.15.jpg & 0.2078185538842606 & No \\
+cjsake.16.jpg & 0.19772310008051744 & No \\
+cjsake.17.jpg & 0.18166327218341696 & No \\
+cjsake.18.jpg & 0.20414891693929105 & No \\
+cjsake.19.jpg & 0.19693488266700446 & No \\
+cjsake.20.jpg & 0.1671873443722762 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 2}
+Test image: essex\_cswww/faces95/adhast/adhast.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+adhast.1.jpg & 0 & No \\
+adhast.2.jpg & 0.2312083988155676 & No \\
+adhast.3.jpg & 0.25972150326024057 & No \\
+adhast.4.jpg & 0.21590055493708946 & No \\
+adhast.5.jpg & 0.24049261224827648 & No \\
+adhast.6.jpg & 0.23465681660325552 & No \\
+adhast.7.jpg & 0.24771615139343836 & No \\
+adhast.8.jpg & 0.2569527085240263 & No \\
+adhast.9.jpg & 0.2835389426928616 & No \\
+adhast.10.jpg & 0.2774791080863853 & No \\
+adhast.11.jpg & 0.2532400849084287 & No \\
+adhast.12.jpg & 0.28278790526661146 & No \\
+adhast.13.jpg & 0.2937914096756732 & No \\
+adhast.14.jpg & 0.2970183349284969 & No \\
+adhast.15.jpg & 0.29927374807082874 & No \\
+adhast.16.jpg & 0.2783214797648933 & No \\
+adhast.17.jpg & 0.2736083238480712 & No \\
+adhast.18.jpg & 0.2851054856115722 & No \\
+adhast.19.jpg & 0.2891104254644535 & No \\
+adhast.20.jpg & 0.2816904095878937 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 3}
+Test image: essex\_cswww/faces96/cjhewi/cjhewi.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+cjewi.1.jpg & 0 & No \\
+cjewi.2.jpg & 0.19289455983673667 & No \\
+cjewi.3.jpg & 0.24900325719699287 & No \\
+cjewi.4.jpg & 0.3291783082081157 & No \\
+cjewi.5.jpg & 0.31046947257682805 & No \\
+cjewi.6.jpg & 0.375778847049278 & No \\
+cjewi.7.jpg & 0.49121008818147793 & No \\
+cjewi.8.jpg & 0.24928926125340656 & No \\
+cjewi.9.jpg & 0.2805170839075122 & No \\
+cjewi.10.jpg & 0.2917877509617489 & No \\
+cjewi.12.jpg & 0.33383609910398243 & No \\
+cjewi.13.jpg & 0.3107498407520015 & No \\
+cjewi.14.jpg & 0.3226220896718056 & No \\
+cjewi.15.jpg & 0.3315345047726276 & No \\
+cjewi.16.jpg & 0.29075881781505053 & No \\
+cjewi.17.jpg & 0.3323513335348239 & No \\
+cjewi.18.jpg & 0.3216638643477499 & No \\
+cjewi.19.jpg & 0.310250334339258 & No \\
+cjewi.20.jpg & 0.338702834726292 & No \\
+namull.1.jpg & 0.48963088468953936 & Yes \\
+namull.6.jpg & 0.4842381188636226 & Yes \\
+namull.7.jpg & 0.4662936114262804 & Yes \\
+namull.8.jpg & 0.4836512854747962 & Yes \\
+namull.9.jpg & 0.4696436628368218 & Yes \\
+namull.10.jpg & 0.4940518896453423 & Yes \\
+namull.11.jpg & 0.48309837097908737 & Yes \\
+namull.12.jpg & 0.48312326468475714 & Yes \\
+namull.13.jpg & 0.486709853926479 & Yes \\
+namull.14.jpg & 0.49657762085731155 & Yes \\
+namull.16.jpg & 0.47954763770455816 & Yes \\
+namull.17.jpg & 0.49958672970235724 & Yes \\
+namull.19.jpg & 0.49557076522667326 & Yes \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 4}
+Test image: essex\_cswww/grimace/glen/glen\_exp.16.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+glen\_exp.1.jpg & 0.34313537619742157 & No \\
+glen\_exp.2.jpg & 0.32513380486202487 & No \\
+glen\_exp.3.jpg & 0.328383372717064 & No \\
+glen\_exp.4.jpg & 0.3491545736970797 & No \\
+glen\_exp.5.jpg & 0.30237431205513626 & No \\
+glen\_exp.6.jpg & 0.29009140244087817 & No \\
+glen\_exp.7.jpg & 0.24115004735784007 & No \\
+glen\_exp.8.jpg & 0.32010274711449116 & No \\
+glen\_exp.9.jpg & 0.24679108112701786 & No \\
+glen\_exp.10.jpg & 0.25755122131334396 & No \\
+glen\_exp.11.jpg & 0.25527497911678315 & No \\
+glen\_exp.12.jpg & 0.2613227017464422 & No \\
+glen\_exp.13.jpg & 0.15115098114591524 & No \\
+glen\_exp.14.jpg & 0.14626106627309007 & No \\
+glen\_exp.15.jpg & 0.12721964956014153 & No \\
+glen\_exp.16.jpg & 0 & No \\
+glen\_exp.17.jpg & 0.1282296546247514 & No \\
+glen\_exp.18.jpg & 0.15230068444806952 & No \\
+glen\_exp.19.jpg & 0.1574033445984365 & No \\
+glen\_exp.20.jpg & 0.171147992496858 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 5}
+Test image: lfw/Aaron\_Peirsol/Aaron\_Peirsol\_0001.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Aaron\_Peirsol\_0001.jpg & 0 & No \\
+Aaron\_Peirsol\_0002.jpg & 0.359368799618006 & No \\
+Aaron\_Peirsol\_0003.jpg & 0.3356236792942648 & No \\
+Aaron\_Peirsol\_0004.jpg & 0.41244297976804756 & No \\
+\end{tabular}
+\end{center}
+
+\subsection{Comparing Images with Different Compression Algorithms}
+\begin{center}
+\begin{tabular}{cccc}
+Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
+\hline
+1 & 1.0 & 0 & 1:23:20\\
+2 & 0.25 & 3 & 1:22:42\\
+3 & 0.72 & 1 & 1:24:10\\
+4 & 0.5 & 2 & 1:22:46\\
+5 & 0.82 & 0 & 1:23:16\\
+Avg & 0.658 & 1.2 & 1:23:15 \\ 
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 1}
+Test image: lfw/Aaron\_Peirsol/Aaron\_Peirsol\_0001.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Aaron\_Peirsol\_0001.png & 0.012334246377964656 & No \\
+Aaron\_Peirsol\_0002.png & 0.3603868116326761 & No \\
+Aaron\_Peirsol\_0003.png & 0.3358269006565544 & No \\
+Aaron\_Peirsol\_0004.png & 0.4213942834670981 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 2}
+Test image: lfw/Doc\_Rivers/Doc\_Rivers\_0001.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Doc\_Rivers\_0001.png & 0.008126612697683498 & No \\
+Glenn\_Rivers\_0001.png & 0.4441926835082163 & Yes \\
+Maurice\_Cheeks\_0001.png & 0.4755522108329577 & Yes \\
+Thabo\_Mbeki\_0001.png & 0.48904588661316073 & Yes \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 3}
+Test image: lfw/George\_HW\_Bush\_0003.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+George\_HW\_Bush\_0001.png & 0.43779864167037513 & No \\
+George\_HW\_Bush\_0003.png & 0.05526240671390998 & No \\
+George\_HW\_Bush\_0005.png & 0.49556510308006735 & No \\
+George\_HW\_Bush\_0006.png & 0.49678314589520917 & No \\
+George\_HW\_Bush\_0007.png & 0.4661770164726044 & No \\
+George\_HW\_Bush\_0009.png & 0.4343336388504174 & No \\
+George\_HW\_Bush\_0011.png & 0.41749203800312495 & No \\
+George\_HW\_Bush\_0012.png & 0.4958857255192459 & No \\
+George\_HW\_Bush\_0013.png & 0.4970243387404675 & No \\
+George\_W\_Bush\_0287.png & 0.44049867749481153 & Yes \\
+
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 4}
+Test image: lfw/Joseph\_Blatter\_0002.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Joseph\_Blatter\_0001.png & 0.47858057359342215 & No \\
+Joseph\_Blatter\_0002.png & 0.0336530518133179 & No \\
+Sepp\_Blatter\_0002.png & 0.4862694459206191 & Yes \\
+Sepp\_Blatter\_0004.png & 0.42559962697675985 & Yes \\
+
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 5}
+Test image: lfw/Tony\_Blair\_0002.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Tony\_Blair\_0002.png & 0.4771680101285018 & No \\
+Tony\_Blair\_0003.png & 0.480985145188809 & No\\
+Tony\_Blair\_0004.png & 0.4596974293243147 & No\\
+Tony\_Blair\_0006.png & 0.036247002247086095 & No\\
+Tony\_Blair\_0007.png & 0.3749530714147472 & No\\
+Tony\_Blair\_0009.png & 0.44356856961314667 & No\\
+Tony\_Blair\_0012.png & 0.39056265389937056 & No\\
+Tony\_Blair\_0013.png & 0.36810087134361 & No\\
+Tony\_Blair\_0015.png & 0.47290939486890193 & No\\
+Tony\_Blair\_0016.png & 0.4799575413945816 & No\\
+Tony\_Blair\_0017.png & 0.3791103058656651 & No\\
+Tony\_Blair\_0019.png & 0.47370780408374297 & No\\
+Tony\_Blair\_0020.png & 0.4030814376470261 & No\\
+Tony\_Blair\_0022.png & 0.3484769600414663 & No\\
+Tony\_Blair\_0024.png & 0.4749464761064012 & No\\
+Tony\_Blair\_0025.png & 0.37668636275839784 & No\\
+Tony\_Blair\_0026.png & 0.4540464799599294 & No\\
+Tony\_Blair\_0027.png & 0.4175971449726495 & No\\
+Tony\_Blair\_0028.png & 0.45196053604334974 & No\\
+Tony\_Blair\_0029.png & 0.4040722828269198 & No\\
+Tony\_Blair\_0030.png & 0.4040920514555924 & No\\
+Tony\_Blair\_0032.png & 0.4403225959394582 & No\\
+Tony\_Blair\_0033.png & 0.47767228365950215 & No\\
+Tony\_Blair\_0035.png & 0.4457419703771305 & No\\
+Tony\_Blair\_0036.png & 0.45523765642848557 & No\\
+Tony\_Blair\_0037.png & 0.47821689320577304 & No\\
+Tony\_Blair\_0039.png & 0.46474096062460735 & No\\
+Tony\_Blair\_0040.png & 0.45155503656989276 & No\\
+Tony\_Blair\_0042.png & 0.4625118053790461 & No\\
+Tony\_Blair\_0041.png & 0.47343379679317094 & No\\
+Tony\_Blair\_0043.png & 0.46666912378683195 & No\\
+Tony\_Blair\_0046.png & 0.4029704245820186 & No\\
+Tony\_Blair\_0047.png & 0.42564273287725796 & No\\
+Tony\_Blair\_0048.png & 0.47068237137426056 & No\\
+Tony\_Blair\_0049.png & 0.42269784320192466 & No\\
+Tony\_Blair\_0050.png & 0.498966415423654 & No\\
+\end{tabular}
+
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Tony\_Blair\_0052.png & 0.48711129745936227 & No\\
+Tony\_Blair\_0051.png & 0.4863045001385002 & No\\
+Tony\_Blair\_0053.png & 0.4878306595340014 & No\\
+Tony\_Blair\_0054.png & 0.4547578270562901 & No\\
+Tony\_Blair\_0055.png & 0.45477935130613995 & No\\
+Tony\_Blair\_0056.png & 0.46440980003212756 & No\\
+Tony\_Blair\_0057.png & 0.4044213964481114 & No\\
+Tony\_Blair\_0058.png & 0.44105103047407657 & No\\
+Tony\_Blair\_0059.png & 0.4572087448490241 & No\\
+Tony\_Blair\_0060.png & 0.48874981459517125 & No\\
+Tony\_Blair\_0061.png & 0.4259232633107541 & No\\
+Tony\_Blair\_0062.png & 0.4312476463279641 & No\\
+Tony\_Blair\_0063.png & 0.4539069717684182 & No\\
+Tony\_Blair\_0064.png & 0.42503974397901295 & No\\
+Tony\_Blair\_0065.png & 0.4034136646600798 & No\\
+Tony\_Blair\_0067.png & 0.36800919552842437 & No\\
+Tony\_Blair\_0068.png & 0.49371680987282746 & No\\
+Tony\_Blair\_0070.png & 0.499827996283155 & No\\
+Tony\_Blair\_0071.png & 0.47263084324812427 & No\\
+Tony\_Blair\_0072.png & 0.4770663160672075 & No\\
+Tony\_Blair\_0073.png & 0.49287495683175353 & No\\
+Tony\_Blair\_0078.png & 0.42120037854851483 & No\\
+Tony\_Blair\_0080.png & 0.4271619535881904 & No\\
+Tony\_Blair\_0081.png & 0.45576621662738687 & No\\
+Tony\_Blair\_0082.png & 0.4291947084716399 & No\\
+Tony\_Blair\_0083.png & 0.47053749832287933 & No\\
+Tony\_Blair\_0084.png & 0.49055603003745324 & No\\
+Tony\_Blair\_0085.png & 0.48118130886360233 & No\\
+Tony\_Blair\_0086.png & 0.39077778686829673 & No\\
+Tony\_Blair\_0087.png & 0.47799662896914624 & No\\
+Tony\_Blair\_0088.png & 0.45594586876542087 & No\\
+Tony\_Blair\_0089.png & 0.3956468551870259 & No\\
+Tony\_Blair\_0091.png & 0.4874395113110329 & No\\
+Tony\_Blair\_0092.png & 0.4505891128182158 & No\\
+Tony\_Blair\_0093.png & 0.47806026796247597 & No\\
+Tony\_Blair\_0096.png & 0.4638839966233622 & No\\
+Tony\_Blair\_0097.png & 0.426256451794294 & No\\
+Tony\_Blair\_0099.png & 0.4111159768122537 & No\\
+Tony\_Blair\_0101.png & 0.4141999990896525 & No\\
+\end{tabular}
+
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+Tony\_Blair\_0102.png & 0.4700670088189572 & No\\
+Tony\_Blair\_0103.png & 0.46185539009939025 & No\\
+Tony\_Blair\_0104.png & 0.44897356154630347 & No\\
+Tony\_Blair\_0106.png & 0.47399290771782543 & No\\
+Tony\_Blair\_0107.png & 0.49320329875468166 & No\\
+Tony\_Blair\_0109.png & 0.497298251309488 & No\\
+Tony\_Blair\_0111.png & 0.4658191818926708 & No\\
+Tony\_Blair\_0112.png & 0.45226067648954343 & No\\
+Tony\_Blair\_0114.png & 0.3888446086340705 & No\\
+Tony\_Blair\_0113.png & 0.483735856230772 & No\\
+Tony\_Blair\_0116.png & 0.4922189710321329 & No\\
+Tony\_Blair\_0117.png & 0.4881579137913724 & No\\
+Tony\_Blair\_0118.png & 0.4767777939761526 & No\\
+Tony\_Blair\_0119.png & 0.4888145552284681 & No\\
+Tony\_Blair\_0122.png & 0.4048638517205401 & No\\
+Tony\_Blair\_0121.png & 0.43206610453180183 & No\\
+Tony\_Blair\_0123.png & 0.4848490145683085 & No\\
+Tony\_Blair\_0124.png & 0.4858565492585873 & No\\
+Tony\_Blair\_0126.png & 0.49118102706622646 & No\\
+Tony\_Blair\_0125.png & 0.44974738645157736 & No\\
+Tony\_Blair\_0129.png & 0.46810588485536203 & No\\
+Tony\_Blair\_0130.png & 0.4753108653778671 & No\\
+Tony\_Blair\_0132.png & 0.4995327443552532 & No\\
+Tony\_Blair\_0134.png & 0.4707471675268031 & No\\
+Tony\_Blair\_0133.png & 0.46476424681366074 & No\\
+Tony\_Blair\_0136.png & 0.4114815889521775 & No\\
+Tony\_Blair\_0138.png & 0.45758562676217934 & No\\
+Tony\_Blair\_0139.png & 0.4721173528401837 & No\\
+Tony\_Blair\_0140.png & 0.47340721200992797 & No\\
+Tony\_Blair\_0141.png & 0.39354676586036913 & No\\
+Tony\_Blair\_0142.png & 0.38277308586730685 & No\\
+Tony\_Blair\_0143.png & 0.44663782899819965 & No\\
+\end{tabular}
+\end{center}
+
+\subsection{Comparing Images Taken in the Infra-Red Spectrum}
+\begin{center}
+\begin{tabular}{cccc}
+Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
+\hline
+1 & 1.0 & 0 & 0:01:01\\
+2 & 0.33 & 2 & 0:00:55\\
+3 & 0.5 & 1 & 0:01:56\\
+4 & 1 & 0 & 0:00:57\\
+5 & 1 & 0 & 0:00:58\\
+Avg & 0.766 & 0.6 & 0:01:09 \\ 
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 1}
+Test image: SCface\_database/surveillance\_cameras\_IR\_cam8/001\_cam8.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+001\_cam8.jpg & 0 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 2}
+Test image: SCface\_database/surveillance\_cameras\_IR\_cam8/012\_cam8.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+012\_cam8.jpg & 0 & No \\
+012\_cam8.jpg & 0.48812956542079605 & Yes \\
+012\_cam8.jpg & 0.4626028092713898 & Yes \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 3}
+Test image: SCface\_database/surveillance\_cameras\_IR\_cam8/018\_cam8.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+018\_cam8.jpg & 0 & No \\
+106\_cam8.jpg & 0.4797243721214274 & Yes \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 4}
+Test image: SCface\_database/surveillance\_cameras\_IR\_cam8/050\_cam8.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+050\_cam8.jpg & 0 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 5}
+Test image: SCface\_database/surveillance\_cameras\_IR\_cam8/123\_cam8.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+123\_cam8.jpg & 0 & No \\
+\end{tabular}
+\end{center}
+
+
+\subsection{Restricting by Identifiable Information}
+\begin{center}
+\begin{tabular}{cccc}
+Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
+\hline
+1 & 0.72 & 1 & 0:00:28 \\
+2 & 1 & 0 & 0:00:35 \\
+3 & 1 & 0 & 0:00:23 \\
+4 & 0.95 & 0 & 0:00:35 \\
+5 & 1 & 0 & 0:00:11\\
+Avg & 0.934 & 0.2 &  0:00:26\\ 
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 1}
+Test image: lfw/George\_HW\_Bush\_0003.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+George\_HW\_Bush\_0001.jpg & 0.44468805399677747 & No \\
+George\_HW\_Bush\_0003.jpg & 0 & No \\
+George\_HW\_Bush\_0005.jpg & 0.49416427819847825 & No \\
+George\_HW\_Bush\_0006.jpg & 0.497188652920442 & No \\
+George\_HW\_Bush\_0007.jpg & 0.46536163951784293 & No \\
+George\_HW\_Bush\_0009.jpg & 0.43531340164790916 & No \\
+George\_HW\_Bush\_0011.jpg & 0.41985097908792973 & No \\
+George\_HW\_Bush\_0012.jpg & 0.4960292649139455 & No \\
+George\_HW\_Bush\_0013.jpg & 0.49746813708113324 & No \\
+George\_W\_Bush\_0287.jpg & 0.4454600672429446 & Yes \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 2}
+Test image: essex\_cswww/faces94/male/cjsake/cjsake.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+cjsake.1.jpg & 0 & No \\
+cjsake.2.jpg & 0.12415972564754801 & No \\
+cjsake.3.jpg & 0.1202683265955043 & No \\
+cjsake.4.jpg & 0.12056058735503877 & No \\
+cjsake.5.jpg & 0.15399061544936016 & No \\
+cjsake.6.jpg & 0.15170091461313734 & No \\
+cjsake.7.jpg & 0.15761164790252086 & No \\
+cjsake.8.jpg & 0.18675358283846008 & No \\
+cjsake.9.jpg & 0.22679627515383244 & No \\
+cjsake.10.jpg & 0.16498243163116574 & No \\
+cjsake.11.jpg & 0.2083636000224947 & No \\
+cjsake.12.jpg & 0.19579060568070747 & No \\
+cjsake.13.jpg & 0.21036201522486805 & No \\
+cjsake.14.jpg & 0.16785907543854067 & No \\
+cjsake.15.jpg & 0.2078185538842606 & No \\
+cjsake.16.jpg & 0.19772310008051744 & No \\
+cjsake.17.jpg & 0.18166327218341696 & No \\
+cjsake.18.jpg & 0.20414891693929105 & No \\
+cjsake.19.jpg & 0.19693488266700446 & No \\
+cjsake.20.jpg & 0.1671873443722762 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 3}
+Test image: essex\_cswww/faces95/adhast/adhast.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+adhast.1.jpg & 0 & No \\
+adhast.2.jpg & 0.2312083988155676 & No \\
+adhast.3.jpg & 0.25972150326024057 & No \\
+adhast.4.jpg & 0.21590055493708946 & No \\
+adhast.5.jpg & 0.24049261224827648 & No \\
+adhast.6.jpg & 0.23465681660325552 & No \\
+adhast.7.jpg & 0.24771615139343836 & No \\
+adhast.8.jpg & 0.2569527085240263 & No \\
+adhast.9.jpg & 0.2835389426928616 & No \\
+adhast.10.jpg & 0.2774791080863853 & No \\
+adhast.11.jpg & 0.2532400849084287 & No \\
+adhast.12.jpg & 0.28278790526661146 & No \\
+adhast.13.jpg & 0.2937914096756732 & No \\
+adhast.14.jpg & 0.2970183349284969 & No \\
+adhast.15.jpg & 0.29927374807082874 & No \\
+adhast.16.jpg & 0.2783214797648933 & No \\
+adhast.17.jpg & 0.2736083238480712 & No \\
+adhast.18.jpg & 0.2851054856115722 & No \\
+adhast.19.jpg & 0.2891104254644535 & No \\
+adhast.20.jpg & 0.2816904095878937 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 4}
+Test image: essex\_cswww/faces96/cjhewi/cjhewi.1.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+cjhewi.1.jpg & 0 & No \\
+cjhewi.2.jpg & 0.19289455983673667 & No \\
+cjhewi.3.jpg & 0.24900325719699287 & No \\
+cjhewi.4.jpg & 0.3291783082081157 & No \\
+cjhewi.5.jpg & 0.31046947257682805 & No \\
+cjhewi.6.jpg & 0.375778847049278 & No \\
+cjhewi.7.jpg & 0.49121008818147793 & No \\
+cjhewi.8.jpg & 0.24928926125340656 & No \\
+cjhewi.9.jpg & 0.2805170839075122 & No \\
+cjhewi.10.jpg & 0.2917877509617489 & No \\
+cjhewi.12.jpg & 0.33383609910398243 & No \\
+cjhewi.13.jpg & 0.3107498407520015 & No \\
+cjhewi.14.jpg & 0.3226220896718056 & No \\
+cjhewi.15.jpg & 0.3315345047726276 & No \\
+cjhewi.16.jpg & 0.29075881781505053 & No \\
+cjhewi.17.jpg & 0.3323513335348239 & No \\
+cjhewi.18.jpg & 0.3216638643477499 & No \\
+cjhewi.19.jpg & 0.310250334339258 & No \\
+cjhewi.20.jpg & 0.338702834726292 & No \\
+\end{tabular}
+\end{center}
+
+\subsubsection{Test 5}
+Test image: essex\_cswww/grimace/glen/glen\_exp.16.jpg
+
+\begin{center}
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
+glen\_exp.1.jpg & 0.34313537619742157 & No \\
+glen\_exp.2.jpg & 0.32513380486202487 & No \\
+glen\_exp.3.jpg & 0.328383372717064 & No \\
+glen\_exp.4.jpg & 0.3491545736970797 & No \\
+glen\_exp.5.jpg & 0.30237431205513626 & No \\
+glen\_exp.6.jpg & 0.29009140244087817 & No \\
+glen\_exp.7.jpg & 0.24115004735784007 & No \\
+glen\_exp.8.jpg & 0.32010274711449116 & No \\
+glen\_exp.9.jpg & 0.24679108112701786 & No \\
+glen\_exp.10.jpg & 0.25755122131334396 & No \\
+glen\_exp.11.jpg & 0.25527497911678315 & No \\
+glen\_exp.12.jpg & 0.2613227017464422 & No \\
+glen\_exp.13.jpg & 0.15115098114591524 & No \\
+glen\_exp.14.jpg & 0.14626106627309007 & No \\
+glen\_exp.15.jpg & 0.12721964956014153 & No \\
+glen\_exp.16.jpg & 0 & No \\
+glen\_exp.17.jpg & 0.1282296546247514 & No \\
+glen\_exp.18.jpg & 0.15230068444806952 & No \\
+glen\_exp.19.jpg & 0.1574033445984365 & No \\
+glen\_exp.20.jpg & 0.171147992496858 & No \\
+\end{tabular}
+\end{center}
 
 \newpage
 \section{Evaluation}
@@ -423,9 +1010,549 @@ Graph of social media connections and klout score in the Nereus framework\citep{
 
 \section{Command Line Arguments}
 \label{appendix:commandlineargs}
-\todo{Update with new image}
 \includegraphics[width=\linewidth]{res/facegather_cmd_line_args.png}
 A help page showing the command line arguments that can be supplied.
 
+\section{GitHub Commit log}
+\todo{Add commit log}
+
+\section{Full Source Code}
+\subsection{facegather.py}
+\begin{lstlisting}
+from PIL import Image
+from io import BytesIO
+import requests
+import face_recognition as fr
+import threading
+import queue
+import numpy
+import sentinels
+import time
+import json
+
+IMAGE_LOAD_MAX = 200
+DEFAULT_THRESHOLD = 0.5
+profile_queue = queue.Queue()
+img_queue = queue.Queue()
+
+
+# Load an image in to memory from local or remote sources
+def load_images(uri, remote=True):
+    if remote:
+        resp = requests.get(uri, stream=True)
+        try:
+            img = Image.open(BytesIO(resp.content))
+            return fr.face_encodings(numpy.array(img))
+        except:
+            # Catch line in case PNG file is encoded as greyscale
+            return fr.face_encodings(numpy.array(img.convert('RGB')))
+    else:
+        img_array = fr.load_image_file(uri)
+    return fr.face_encodings(img_array)
+
+
+# Search a data set at the given URI for the best matches to the test face
+def search(test_face_location,
+           uri,
+           no_producer_threads=None,
+           no_consumer_threads=None,
+           max_loaded=None,
+           threshold=None,
+           name=None,
+           output_location=None):
+    # Load default values in case called with "None"
+    if no_producer_threads is None:
+        no_producer_threads = 1
+    if no_consumer_threads is None:
+        no_consumer_threads = 1
+    if max_loaded is None:
+        max_loaded = IMAGE_LOAD_MAX
+    if threshold is None:
+        threshold = DEFAULT_THRESHOLD
+
+    result = []
+    result_lock = threading.Lock()
+
+    profile_queue_counter = threading.Semaphore(int(max_loaded))
+    print('Getting profile information...')
+    if name is None:
+        print(uri)
+        profiles = _get_profiles(uri)
+    else:
+        print(uri + '?name=' + name)
+        profiles = _get_profiles(uri + '?name=' + name)
+    for profile in profiles:
+        profile_queue.put([profile['image_location'], profile])
+    print('Done')
+
+    print('Processing images...')
+    processor_list = []
+    for i in range(0, int(no_producer_threads)):
+        processor = ImageProcessor(profile_queue_counter)
+        processor.start()
+        processor_list.append(processor)
+
+    recogniser_list = []
+    for i in range(0, int(no_consumer_threads)):
+        recogniser = FaceRecogniser(test_face_location, profile_queue_counter, result, result_lock, threshold)
+        recogniser.start()
+        recogniser_list.append(recogniser)
+
+    for processor in processor_list:
+        processor.join()
+    img_queue.put(sentinels.NOTHING)
+
+    for recogniser in recogniser_list:
+        recogniser.join()
+
+    print('Done')
+    if output_location is None:
+        return result
+    else:
+        output_file = open(output_location + '/facegather_' + str(time.time()) + '.txt', 'w')
+        output_file.write(json.dumps(result))
+        return result
+
+
+def _get_profiles(uri, name=None):
+    if name is not None:
+        uri += '?name='
+        uri += name
+    resp = requests.get(uri)
+    return resp.json()
+
+
+# Class based thread to take a profile from the queue, download the profile photo, and pre-process it to be ready for
+# facial recognition by 1 or more FaceRecogniser threads
+class ImageProcessor(threading.Thread):
+    def __init__(self, counter):
+        threading.Thread.__init__(self)
+        self.waiting_counter = counter
+
+    # Take a URI from the queue, download image from that location then add face mappings and profile uri to the queue
+    # to be consumed by a FaceRecogniser
+    def run(self):
+        while True:
+            self.waiting_counter.acquire()
+            if profile_queue.empty():
+                return
+            profile = profile_queue.get()
+
+            img_array = load_images(profile[0])
+            for img in img_array:
+                img_queue.put([img, profile[1]])
+
+
+# Class based thread to take images loaded in to memory and rank them in terms of similarity to the test image.
+class FaceRecogniser(threading.Thread):
+    finished_flag = False
+
+    def __init__(self, test_face_location, waiting_counter, result, result_lock, threshold):
+        threading.Thread.__init__(self)
+        self.test_face = fr.face_encodings(fr.load_image_file(test_face_location))[0]
+        self.counter = waiting_counter
+        self.result = result
+        self.result_lock = result_lock
+        self.threshold = threshold
+
+    # Take a face mapping from the queue, then test for similarity.
+    def run(self):
+        while True:
+            img = img_queue.get()
+            if img == sentinels.NOTHING:
+                img_queue.put(sentinels.NOTHING)
+                return
+
+            if fr.face_distance([self.test_face], img[0]) < self.threshold:
+                distance = fr.face_distance([self.test_face], img[0])
+                img[1]['distance'] = distance[0]
+                self.result_lock.acquire()
+                self.result.append(img[1])
+                self.result_lock.release()
+            self.counter.release()
+
+\end{lstlisting}
+
+\subsection{run.py}
+\begin{lstlisting}
+from facegather import facegather
+import face_recognition
+import argparse
+
+parser = argparse.ArgumentParser(
+    description='A python3 program to gather social media intelligence using facial recognition')
+parser.add_argument("test_face", help='Location of the test face')
+parser.add_argument("service", help='Social network service to search')
+
+parser.add_argument("--pthreads", help='Number of image processing threads')
+parser.add_argument("--cthreads", help='Number of image comparison threads')
+parser.add_argument("--maxload", help='Maximum number of images pre-loaded into memory')
+parser.add_argument("--name", help='Name of person of interest')
+parser.add_argument("--output_location", help='Location of results file')
+
+args = parser.parse_args()
+
+uri = ''
+if args.service == 'demo':
+    uri = 'http://localhost:8081/static'
+
+    test_face = facegather.load_images(uri + '/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg')[0]
+    test_face2 = facegather.load_images(uri + '/lfw/Aaron_Peirsol/Aaron_Peirsol_0002.jpg')[0]
+    result = face_recognition.face_distance([test_face], test_face2)
+    print(result)
+
+    test_face = facegather.load_images(
+        '/home/jack/Documents/hons_project/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg',
+        remote=False)[0]
+    test_face2 = facegather.load_images(
+        '/home/jack/Documents/hons_project/test/lfw/Aaron_Peirsol/Aaron_Peirsol_0002.jpg',
+        remote=False)[0]
+    result = face_recognition.face_distance([test_face], test_face2)
+    print(result)
+
+elif args.service == 'test':
+    uri = 'http://localhost:8081/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_multiple_db':
+    uri = 'http://localhost:8081/test_multiple_datasets/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_image_compression':
+    uri = 'http://localhost:8081/test_image_compression/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_IR_RGB':
+    uri = 'http://localhost:8081/test_IR_RGB/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+elif args.service == 'test_IR_images':
+    uri = 'http://localhost:8081/test_IR_images/'
+    result = ''
+    if args.name is not None:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                name=args.name
+            )
+    else:
+        if args.output_location is not None:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+                output_location=args.output_location
+            )
+        else:
+            result = facegather.search(
+                args.test_face,
+                uri,
+                no_producer_threads=args.pthreads,
+                no_consumer_threads=args.cthreads,
+                max_loaded=args.maxload,
+            )
+    print(result)
+
+\end{lstlisting}
+
+\subsection{server.py}
+\begin{lstlisting}
+import cherrypy as cp
+import glob
+
+
+class EnumerateFiles:
+    @cp.expose
+    def index(self, **kwargs):
+        directory = 'test/**'
+        if 'name' in kwargs:
+            directory = 'test/**/' + kwargs['name']
+
+        sb = '['
+        for location in glob.glob(directory + '/*.json', recursive=True):
+            if not location[-9:] == '_png.json':
+                f = open(location, 'r')
+                sb += f.read()
+                sb += ','
+                f.close()
+        if sb.endswith('['):
+            return '[]'
+        else:
+            return sb[:-1] + ']'
+
+
+class TestMultipleDB:
+    @cp.expose
+    def index(self, **kwargs):
+        directories = ['test/lfw/', 'test/essex_cswww/']
+        sb = '['
+        for directory in directories:
+            if 'name' in kwargs:
+                directory = directory + kwargs['name'] + '/'
+            for location in glob.glob(directory + '**/*.json', recursive=True):
+                f = open(location, 'r')
+                sb += f.read()
+                sb += ','
+                f.close()
+        sb = sb[:-1] + ']'
+        return sb
+
+
+class TestImageCompression:
+    @cp.expose
+    def index(self):
+        sb = '['
+        for location in glob.glob('test/lfw/**/*_png.json', recursive=True):
+            f = open(location, 'r')
+            sb += f.read()
+            sb += ','
+            f.close()
+        sb = sb[:-1] + ']'
+        return sb
+
+
+class TestIRImages:
+    @cp.expose
+    def index(self):
+        sb = '['
+        for location in glob.glob('test/SCface/SCface_database/surveillance_cameras_IR_cam8/*.json'):
+            f = open(location, 'r')
+            sb += f.read()
+            sb += ','
+            f.close()
+        sb = sb[:-1] + ']'
+        return sb
+
+
+if __name__ == '__main__':
+    cp.config.update({
+        'server.socket_port': 8080,
+        'tools.proxy.on': True,
+        'tools.proxy.base': 'localhost'
+    })
+
+    home = EnumerateFiles()
+
+    cp.tree.mount(EnumerateFiles(), '/', None)
+    cp.tree.mount(TestMultipleDB(), '/test_multiple_datasets', None)
+    cp.tree.mount(TestImageCompression(), '/test_image_compression', None)
+    cp.tree.mount(TestIRImages(), '/test_IR_images', None)
+
+    cp.engine.start()
+    cp.engine.block()
+
+\end{lstlisting}
+
+\subsection{compression\_algorithm\_test.sh}
+\begin{lstlisting}
+#!/bin/sh
+python3 run.py ./test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg test_image_compression --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/compression_algorithm_test;
+python3 run.py ./test/lfw/Doc_Rivers/Doc_Rivers_0001.jpg test_image_compression --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/compression_algorithm_test;
+python3 run.py ./test/lfw/George_HW_Bush/George_HW_Bush_0003.jpg test_image_compression --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/compression_algorithm_test;
+python3 run.py ./test/lfw/Joseph_Blatter/Joseph_Blatter_0002.jpg test_image_compression --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/compression_algorithm_test;
+python3 run.py ./test/lfw/Tony_Blair/Tony_Blair_0006.jpg test_image_compression --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/compression_algorithm_test;
+\end{lstlisting}
+
+\subsection{identifying\_information\_restriction\_test.sh}
+\begin{lstlisting}
+#!/bin/sh
+python3 run.py ./test/lfw/George_HW_Bush/George_HW_Bush_0003.jpg test --pthreads=2 --cthreads=2 --maxload=200 --name="George*" --output_location=./test/results/identifying_information_restriction_test;
+python3 run.py ./test/essex_cswww/faces94/male/cjsake/cjsake.1.jpg test --pthreads=2 --cthreads=2 --maxload=200 --name="cj*" --output_location=./test/results/identifying_information_restriction_test;
+python3 run.py ./test/essex_cswww/faces95/adhast/adhast.1.jpg test --pthreads=2 --cthreads=2 --maxload=200 --name="ad*" --output_location=./test/results/identifying_information_restriction_test;
+python3 run.py ./test/essex_cswww/faces96/cjhewi/cjhewi.1.jpg test --pthreads=2 --cthreads=2 --maxload=200 --name="cj*" --output_location=./test/results/identifying_information_restriction_test;
+python3 run.py ./test/essex_cswww/grimace/glen/glen_exp.16.jpg test --pthreads=2 --cthreads=2 --maxload=200 --name="glen*" --output_location=./test/results/identifying_information_restriction_test;
+\end{lstlisting}
+
+\subsection{IR\_image\_test.sh}
+\begin{lstlisting}
+#!/bin/sh
+python3 run.py ./test/SCface/SCface_database/surveillance_cameras_IR_cam8/001_cam8.jpg test_IR_images --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/IR_image_test;
+python3 run.py ./test/SCface/SCface_database/surveillance_cameras_IR_cam8/012_cam8.jpg test_IR_images --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/IR_image_test;
+python3 run.py ./test/SCface/SCface_database/surveillance_cameras_IR_cam8/018_cam8.jpg test_IR_images --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/IR_image_test;
+python3 run.py ./test/SCface/SCface_database/surveillance_cameras_IR_cam8/050_cam8.jpg test_IR_images --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/IR_image_test;
+python3 run.py ./test/SCface/SCface_database/surveillance_cameras_IR_cam8/123_cam8.jpg test_IR_images --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/IR_image_test;
+\end{lstlisting}
+
+\subsection{multiple\_dataset\_test.sh}
+\begin{lstlisting}
+#!/bin/sh
+python3 run.py ./test/essex_cswww/faces94/male/cjsake/cjsake.1.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+python3 run.py ./test/essex_cswww/faces95/adhast/adhast.1.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+python3 run.py ./test/essex_cswww/faces96/cjhewi/cjhewi.1.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+python3 run.py ./test/essex_cswww/grimace/glen/glen_exp.16.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+python3 run.py ./test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+\end{lstlisting}
 \end{appendices}
 \end{document}

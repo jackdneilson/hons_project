@@ -65,19 +65,6 @@ class TestIRImages:
         return sb
 
 
-class TestIR_RGB:
-    @cp.expose
-    def index(self):
-        sb = '['
-        for location in glob.glob('test/SCface/SCface_database/**/*.json'):
-            f = open(location, 'r')
-            sb += f.read()
-            sb += ','
-            f.close()
-        sb = sb[:-1] + ']'
-        return sb
-
-
 if __name__ == '__main__':
     cp.config.update({
         'server.socket_port': 8080,
@@ -91,7 +78,6 @@ if __name__ == '__main__':
     cp.tree.mount(TestMultipleDB(), '/test_multiple_datasets', None)
     cp.tree.mount(TestImageCompression(), '/test_image_compression', None)
     cp.tree.mount(TestIRImages(), '/test_IR_images', None)
-    cp.tree.mount(TestIR_RGB(), '/test_IR_RGB', None)
-    
+
     cp.engine.start()
     cp.engine.block()

@@ -48,12 +48,11 @@ A relatively unexplored method of gathering social media intelligence is by usin
 \textit{Keywords}: SOCMINT; Facial Recognition; OSINT; Social Media; Artificial Intelligence
 
 \section{Acknowledgements}
-\todo{Write Acknowledgements}
-\todo{Credit cswww}
-\todo{Credit scface}
-\todo{Credit attfaces}
-\newpage
+Special thanks are due to Dr. John Isaacs of the Robert Gordon University, without whom this project would not have been possible.
 
+Thanks are also owed to Dr. Libor Spacek for use of the Essex Computer Vision database, Dr. Mislav Grgic for use of the SCFace database, and Gary B. Huang, Manu Ramesh, Tamara Berg, and Erik Learned-Miller for the use of the LFW database, respectively.
+
+\newpage
 \section{Literature Review}
 \subsection{Background}
 \subsubsection{SOCMINT}
@@ -372,22 +371,19 @@ Images taken from the SCFace data set were compared to the IR images contained w
 \subsubsection{Restricting by Identifiable Information}
 A comparison was done in the accuracy and speed of searches on the LFW data set when restricting the search by first and full name.
 
-\subsubsection{Searching on an Untrained Data Set}
-Several comparisons were done using the Essex data set, which the underlying facial recognition algorithm was not trained on.
-
-\todo{Redo expected results}
 \subsection{Expected Results}
+\subsubsection{Comparing Images from Different Data Sets}
+The program should maintain a high accuracy rate even across data sets it has not been trained on.
+
 \subsubsection{Comparing Images with Different Compression Algorithms}
 The PNG compression algorithm that was used is a lossless algorithm. No detail should be lost when compressing the data set, and so the expected accuracy when comparing photos with different compression algorithms is the same.
 
-\subsubsection{Comparing Images Taken in Infra-Red to Images Taken in RGB}
-Ideally, photos taken in RGB should be matched with those taken in black and white. This may not be the case due to difficulty identifying facial descriptors.
+\subsubsection{Comparing Images Taken in the Infra-Red Spectrum}
+Ideally, photos taken in infra-red should be matched at a similar accuracy as those taken in RGB. This may not be the case due to difficulty identifying facial descriptors.
 
 \subsubsection{Restricting by Identifiable Information}
 Searches against a restricted data set give less opportunities for false positives, and increase the ratio of matching images to non-matching images. Therefore, it is expected that the accuracy and speed of the search should be superior to an unrestricted search.
 
-\subsubsection{Searching on an Untrained Data Set}
-Again, ideally the accuracy and speed of searching on an untrained dataset should be close to that when searching on a trained data set. This is almost certainly not the case, however an acceptable speed and accuracy rate should be maintained.
 
 \subsection{Comparing Images from Different Data Sets}
 \begin{center}
@@ -433,6 +429,7 @@ cjsake.20.jpg & 0.1671873443722762 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 2}
 Test image: essex\_cswww/faces95/adhast/adhast.1.jpg
 
@@ -463,6 +460,7 @@ adhast.20.jpg & 0.2816904095878937 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 3}
 Test image: essex\_cswww/faces96/cjhewi/cjhewi.1.jpg
 
@@ -505,6 +503,7 @@ namull.19.jpg & 0.49557076522667326 & Yes \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 4}
 Test image: essex\_cswww/grimace/glen/glen\_exp.16.jpg
 
@@ -549,6 +548,7 @@ Aaron\_Peirsol\_0004.jpg & 0.41244297976804756 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsection{Comparing Images with Different Compression Algorithms}
 \begin{center}
 \begin{tabular}{cccc}
@@ -627,6 +627,7 @@ Sepp\_Blatter\_0004.png & 0.42559962697675985 & Yes \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 5}
 Test image: lfw/Tony\_Blair\_0002.jpg
 
@@ -754,6 +755,7 @@ Tony\_Blair\_0143.png & 0.44663782899819965 & No\\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsection{Comparing Images Taken in the Infra-Red Spectrum}
 \begin{center}
 \begin{tabular}{cccc}
@@ -861,6 +863,7 @@ George\_W\_Bush\_0287.jpg & 0.4454600672429446 & Yes \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 2}
 Test image: essex\_cswww/faces94/male/cjsake/cjsake.1.jpg
 
@@ -891,6 +894,7 @@ cjsake.20.jpg & 0.1671873443722762 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 3}
 Test image: essex\_cswww/faces95/adhast/adhast.1.jpg
 
@@ -921,6 +925,7 @@ adhast.20.jpg & 0.2816904095878937 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 4}
 Test image: essex\_cswww/faces96/cjhewi/cjhewi.1.jpg
 
@@ -950,6 +955,7 @@ cjhewi.20.jpg & 0.338702834726292 & No \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 5}
 Test image: essex\_cswww/grimace/glen/glen\_exp.16.jpg
 

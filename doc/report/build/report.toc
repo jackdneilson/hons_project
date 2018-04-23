@@ -69,49 +69,48 @@
 \contentsline {subsubsection}{\numberline {6.2.2}Comparing Images with Different Compression Algorithms}{24}
 \contentsline {subsubsection}{\numberline {6.2.3}Comparing Images Taken in the Infra-Red Spectrum}{25}
 \contentsline {subsubsection}{\numberline {6.2.4}Restricting by Identifiable Information}{25}
-\contentsline {subsubsection}{\numberline {6.2.5}Searching on an Untrained Data Set}{25}
 \contentsline {subsection}{\numberline {6.3}Expected Results}{25}
-\contentsline {subsubsection}{\numberline {6.3.1}Comparing Images with Different Compression Algorithms}{25}
-\contentsline {subsubsection}{\numberline {6.3.2}Comparing Images Taken in Infra-Red to Images Taken in RGB}{25}
-\contentsline {subsubsection}{\numberline {6.3.3}Restricting by Identifiable Information}{25}
-\contentsline {subsubsection}{\numberline {6.3.4}Searching on an Untrained Data Set}{25}
-\contentsline {subsection}{\numberline {6.4}Comparing Images from Different Data Sets}{26}
+\contentsline {subsubsection}{\numberline {6.3.1}Comparing Images from Different Data Sets}{25}
+\contentsline {subsubsection}{\numberline {6.3.2}Comparing Images with Different Compression Algorithms}{25}
+\contentsline {subsubsection}{\numberline {6.3.3}Comparing Images Taken in the Infra-Red Spectrum}{25}
+\contentsline {subsubsection}{\numberline {6.3.4}Restricting by Identifiable Information}{25}
+\contentsline {subsection}{\numberline {6.4}Comparing Images from Different Data Sets}{25}
 \contentsline {subsubsection}{\numberline {6.4.1}Test 1}{26}
-\contentsline {subsubsection}{\numberline {6.4.2}Test 2}{26}
-\contentsline {subsubsection}{\numberline {6.4.3}Test 3}{27}
-\contentsline {subsubsection}{\numberline {6.4.4}Test 4}{28}
+\contentsline {subsubsection}{\numberline {6.4.2}Test 2}{27}
+\contentsline {subsubsection}{\numberline {6.4.3}Test 3}{28}
+\contentsline {subsubsection}{\numberline {6.4.4}Test 4}{29}
 \contentsline {subsubsection}{\numberline {6.4.5}Test 5}{29}
-\contentsline {subsection}{\numberline {6.5}Comparing Images with Different Compression Algorithms}{29}
-\contentsline {subsubsection}{\numberline {6.5.1}Test 1}{29}
+\contentsline {subsection}{\numberline {6.5}Comparing Images with Different Compression Algorithms}{30}
+\contentsline {subsubsection}{\numberline {6.5.1}Test 1}{30}
 \contentsline {subsubsection}{\numberline {6.5.2}Test 2}{30}
 \contentsline {subsubsection}{\numberline {6.5.3}Test 3}{30}
-\contentsline {subsubsection}{\numberline {6.5.4}Test 4}{30}
-\contentsline {subsubsection}{\numberline {6.5.5}Test 5}{31}
-\contentsline {subsection}{\numberline {6.6}Comparing Images Taken in the Infra-Red Spectrum}{33}
-\contentsline {subsubsection}{\numberline {6.6.1}Test 1}{34}
-\contentsline {subsubsection}{\numberline {6.6.2}Test 2}{34}
-\contentsline {subsubsection}{\numberline {6.6.3}Test 3}{34}
-\contentsline {subsubsection}{\numberline {6.6.4}Test 4}{34}
-\contentsline {subsubsection}{\numberline {6.6.5}Test 5}{34}
-\contentsline {subsection}{\numberline {6.7}Restricting by Identifiable Information}{34}
-\contentsline {subsubsection}{\numberline {6.7.1}Test 1}{35}
-\contentsline {subsubsection}{\numberline {6.7.2}Test 2}{35}
-\contentsline {subsubsection}{\numberline {6.7.3}Test 3}{35}
-\contentsline {subsubsection}{\numberline {6.7.4}Test 4}{36}
-\contentsline {subsubsection}{\numberline {6.7.5}Test 5}{37}
-\contentsline {section}{\numberline {7}Evaluation}{39}
-\contentsline {section}{\numberline {8}Conclusion}{40}
-\contentsline {section}{Appendices}{44}
-\contentsline {section}{\numberline {A}Threat Graph}{44}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{45}
-\contentsline {section}{\numberline {C}Connection Graph}{46}
-\contentsline {section}{\numberline {D}Command Line Arguments}{46}
-\contentsline {section}{\numberline {E}GitHub Commit log}{46}
-\contentsline {section}{\numberline {F}Full Source Code}{46}
-\contentsline {subsection}{\numberline {F.1}facegather.py}{46}
-\contentsline {subsection}{\numberline {F.2}run.py}{50}
-\contentsline {subsection}{\numberline {F.3}server.py}{56}
-\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{58}
-\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{58}
-\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{58}
-\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{59}
+\contentsline {subsubsection}{\numberline {6.5.4}Test 4}{31}
+\contentsline {subsubsection}{\numberline {6.5.5}Test 5}{32}
+\contentsline {subsection}{\numberline {6.6}Comparing Images Taken in the Infra-Red Spectrum}{35}
+\contentsline {subsubsection}{\numberline {6.6.1}Test 1}{35}
+\contentsline {subsubsection}{\numberline {6.6.2}Test 2}{35}
+\contentsline {subsubsection}{\numberline {6.6.3}Test 3}{35}
+\contentsline {subsubsection}{\numberline {6.6.4}Test 4}{35}
+\contentsline {subsubsection}{\numberline {6.6.5}Test 5}{35}
+\contentsline {subsection}{\numberline {6.7}Restricting by Identifiable Information}{36}
+\contentsline {subsubsection}{\numberline {6.7.1}Test 1}{36}
+\contentsline {subsubsection}{\numberline {6.7.2}Test 2}{37}
+\contentsline {subsubsection}{\numberline {6.7.3}Test 3}{38}
+\contentsline {subsubsection}{\numberline {6.7.4}Test 4}{39}
+\contentsline {subsubsection}{\numberline {6.7.5}Test 5}{40}
+\contentsline {section}{\numberline {7}Evaluation}{41}
+\contentsline {section}{\numberline {8}Conclusion}{42}
+\contentsline {section}{Appendices}{46}
+\contentsline {section}{\numberline {A}Threat Graph}{46}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{47}
+\contentsline {section}{\numberline {C}Connection Graph}{48}
+\contentsline {section}{\numberline {D}Command Line Arguments}{48}
+\contentsline {section}{\numberline {E}GitHub Commit log}{48}
+\contentsline {section}{\numberline {F}Full Source Code}{48}
+\contentsline {subsection}{\numberline {F.1}facegather.py}{48}
+\contentsline {subsection}{\numberline {F.2}run.py}{52}
+\contentsline {subsection}{\numberline {F.3}server.py}{58}
+\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{60}
+\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{60}
+\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{60}
+\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{61}

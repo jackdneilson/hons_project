@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  23 APR 2018 18:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  23 APR 2018 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -602,172 +602,144 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `report.toc'.
 
  [5]
-Overfull \hbox (0.5816pt too wide) in paragraph at lines 52--52
-\OT1/cmr/m/n/12 cswww  
- []
-
-
-Overfull \hbox (0.5816pt too wide) in paragraph at lines 52--52
-\OT1/cmr/m/n/12 cswww  
- []
-
-
-Overfull \hbox (0.5816pt too wide) in paragraph at lines 52--52
-\OT1/cmr/m/n/12 cswww  
- []
-
-
-Overfull \hbox (0.5816pt too wide) in paragraph at lines 52--52
-\OT1/cmr/m/n/12 cswww  
- []
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
 [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
 <res/facegather_uml.png, id=79, 402.50375pt x 563.10374pt>
 File: res/facegather_uml.png Graphic file (type png)
 
 <use res/facegather_uml.png>
-Package pdftex.def Info: res/facegather_uml.png used on input line 347.
+Package pdftex.def Info: res/facegather_uml.png used on input line 346.
 (pdftex.def)             Requested size: 402.50276pt x 563.10237pt.
  [22] [23 <./res/facegather_uml.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 355.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 354.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 355.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 354.
  [24] [25] [26]
-[27] [28]
+[27] [28] [29]
 Overfull \hbox (3.04776pt too wide) in paragraph at lines 552--552
 []\OT1/cmr/bx/n/14.4 Comparing Im-ages with Dif-fer-ent Com-pres-sion Al-go-rit
 hms 
  []
 
-[29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-Overfull \hbox (21.47028pt too wide) in paragraph at lines 989--989
+[30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+Overfull \hbox (21.47028pt too wide) in paragraph at lines 995--995
 [][][][]\OT1/cmr/m/n/12 Conclusion  
  []
 
 
-Overfull \hbox (21.47028pt too wide) in paragraph at lines 989--989
+Overfull \hbox (21.47028pt too wide) in paragraph at lines 995--995
 [][][][]\OT1/cmr/m/n/12 Conclusion  
  []
 
 
-Overfull \hbox (21.47028pt too wide) in paragraph at lines 989--989
+Overfull \hbox (21.47028pt too wide) in paragraph at lines 995--995
 [][][][]\OT1/cmr/m/n/12 Conclusion  
  []
 
 
-Overfull \hbox (21.47028pt too wide) in paragraph at lines 989--989
+Overfull \hbox (21.47028pt too wide) in paragraph at lines 995--995
 [][][][]\OT1/cmr/m/n/12 Conclusion  
  []
 
-[40] (build/report.bbl
+[42] (build/report.bbl
 Underfull \hbox (badness 4072) in paragraph at lines 67--71
 []\OT1/cmr/m/n/12 Facebook (2018\OT1/cmr/m/it/12 a\OT1/cmr/m/n/12 ), `Face-book
  Graph API Sup-port-ing Doc-u-ments', $\OT1/cmtt/m/n/12 https : / /
  []
 
-[41]
+[43]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ˜ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [42]
+ [44]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [43] <res/threat_graph.png, id=153, 845.559pt x 597.9138pt>
+) [45] <res/threat_graph.png, id=159, 845.559pt x 597.9138pt>
 File: res/threat_graph.png Graphic file (type png)
 
 <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 998.
+Package pdftex.def Info: res/threat_graph.png used on input line 1004.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
 
-<res/boston_bomber.png, id=154, 447.92343pt x 607.89609pt>
+<res/boston_bomber.png, id=160, 447.92343pt x 607.89609pt>
 File: res/boston_bomber.png Graphic file (type png)
 
 <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 1003.
+Package pdftex.def Info: res/boston_bomber.png used on input line 1009.
 (pdftex.def)             Requested size: 358.33922pt x 486.31754pt.
- [44 <./res/threat_graph.png (PNG copy)>]
-<res/connection_klout.png, id=158, 1215.54124pt x 251.94125pt>
+ [46 <./res/threat_graph.png (PNG copy)>]
+<res/connection_klout.png, id=164, 1215.54124pt x 251.94125pt>
 File: res/connection_klout.png Graphic file (type png)
 
 <use res/connection_klout.png>
-Package pdftex.def Info: res/connection_klout.png used on input line 1008.
+Package pdftex.def Info: res/connection_klout.png used on input line 1014.
 (pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
- [45 <./res/boston_bomber.png>]
-<res/facegather_cmd_line_args.png, id=163, 790.955pt x 382.42876pt>
+ [47 <./res/boston_bomber.png>]
+<res/facegather_cmd_line_args.png, id=169, 790.955pt x 382.42876pt>
 File: res/facegather_cmd_line_args.png Graphic file (type png)
 
 <use res/facegather_cmd_line_args.png>
 Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 10
-13.
+19.
 (pdftex.def)             Requested size: 443.57848pt x 214.47374pt.
- [46 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] [47] [4
-8] [49] [50]
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1205--1206
+ [48 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] [49] [5
+0] [51] [52]
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1211--1212
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1208--1209
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1214--1215
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[51] [52] [53] [54] [55] [56]
-Overfull \hbox (60.46074pt too wide) in paragraph at lines 1490--1491
+[53] [54] [55] [56] [57] [58]
+Overfull \hbox (60.46074pt too wide) in paragraph at lines 1496--1497
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ]  
  []
 
-[57]
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1531--1532
+[59]
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1537--1538
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1532--1533
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1538--1539
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1533--1534
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1539--1540
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1534--1535
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1540--1541
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1535--1536
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1541--1542
 [][][][][][][][][][]  
  []
 
-[58] [59] (build/report.aux) ) 
+[60] [61] (build/report.aux) ) 
 Here is how much of TeX's memory you used:
- 15415 strings out of 494902
- 296083 string characters out of 6179890
- 399831 words of memory out of 5000000
- 18416 multiletter control sequences out of 15000+600000
+ 15375 strings out of 494902
+ 295158 string characters out of 6179890
+ 392831 words of memory out of 5000000
+ 18376 multiletter control sequences out of 15000+600000
  10398 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  62i,9n,76p,1105b,1654s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -779,10 +751,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on build/report.pdf (59 pages, 4195120 bytes).
+Output written on build/report.pdf (61 pages, 4194780 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 247 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

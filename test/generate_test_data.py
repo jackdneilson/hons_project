@@ -1,5 +1,4 @@
 import glob
-import subprocess
 
 
 def generate_data(root_dir):

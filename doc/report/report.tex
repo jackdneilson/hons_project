@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{url}
 
+\usepackage[parfill]{parskip}
+
 \usepackage{listings}
 \usepackage{color}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -243,7 +245,7 @@ The application has been developed to make use of multiple threads. The main thr
 The producer / consumer consumer model was useful when developing the application. In this context, the producers retrieve profiles from the social networking service and the consumers compare the retrieved profiles to the test data given and store the result.
 
 \subsection{Command Line Interactivity}
-Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX >> operator).
+Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX $>>$ operator).
 
 One potential issue when using an application without a GUI is presenting the results. The application persists its results in a JSON format for use by other applications or for direct consumption by the end user.
 
@@ -341,6 +343,15 @@ The only inter-thread communication required by the application is for the consu
         return
 \end{lstlisting}
 \textit{Above: The main thread blocks until all producer threads are finished, then pushes a sentinel object to the end of the queue, then blocks until all consumer threads are finished.}
+
+\subsubsection{Loading Greyscale Images}
+The import function for loading images from memory described above failed when applied to greyscale images that had been converted from the JPG to the PNG format. All JPG images had been stored as RGB images even when they contained no colour, so when they were converted the compression algorithm saved space by converting them to single-channel images. To get around this problem, a special case was added to convert images in this format to RGB before attempting to generate facial mappings from them.
+
+\begin{lstlisting}
+        except:
+            # Catch line in case PNG file is encoded as greyscale
+            return fr.face_encodings(numpy.array(img.convert('RGB')))
+\end{lstlisting}
 
 \subsubsection{UML Diagram}
 \includegraphics[scale=1]{res/facegather_uml.png}
@@ -591,6 +602,7 @@ Thabo\_Mbeki\_0001.png & 0.48904588661316073 & Yes \\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 3}
 Test image: lfw/George\_HW\_Bush\_0003.jpg
 
@@ -627,7 +639,6 @@ Sepp\_Blatter\_0004.png & 0.42559962697675985 & Yes \\
 \end{tabular}
 \end{center}
 
-\newpage
 \subsubsection{Test 5}
 Test image: lfw/Tony\_Blair\_0002.jpg
 
@@ -646,6 +657,11 @@ Tony\_Blair\_0013.png & 0.36810087134361 & No\\
 Tony\_Blair\_0015.png & 0.47290939486890193 & No\\
 Tony\_Blair\_0016.png & 0.4799575413945816 & No\\
 Tony\_Blair\_0017.png & 0.3791103058656651 & No\\
+\end{tabular}
+
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
 Tony\_Blair\_0019.png & 0.47370780408374297 & No\\
 Tony\_Blair\_0020.png & 0.4030814376470261 & No\\
 Tony\_Blair\_0022.png & 0.3484769600414663 & No\\
@@ -671,11 +687,6 @@ Tony\_Blair\_0047.png & 0.42564273287725796 & No\\
 Tony\_Blair\_0048.png & 0.47068237137426056 & No\\
 Tony\_Blair\_0049.png & 0.42269784320192466 & No\\
 Tony\_Blair\_0050.png & 0.498966415423654 & No\\
-\end{tabular}
-
-\begin{tabular}{ccc}
-Image & Distance & False Positive \\
-\hline
 Tony\_Blair\_0052.png & 0.48711129745936227 & No\\
 Tony\_Blair\_0051.png & 0.4863045001385002 & No\\
 Tony\_Blair\_0053.png & 0.4878306595340014 & No\\
@@ -692,6 +703,12 @@ Tony\_Blair\_0063.png & 0.4539069717684182 & No\\
 Tony\_Blair\_0064.png & 0.42503974397901295 & No\\
 Tony\_Blair\_0065.png & 0.4034136646600798 & No\\
 Tony\_Blair\_0067.png & 0.36800919552842437 & No\\
+
+\end{tabular}
+
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
 Tony\_Blair\_0068.png & 0.49371680987282746 & No\\
 Tony\_Blair\_0070.png & 0.499827996283155 & No\\
 Tony\_Blair\_0071.png & 0.47263084324812427 & No\\
@@ -715,11 +732,6 @@ Tony\_Blair\_0096.png & 0.4638839966233622 & No\\
 Tony\_Blair\_0097.png & 0.426256451794294 & No\\
 Tony\_Blair\_0099.png & 0.4111159768122537 & No\\
 Tony\_Blair\_0101.png & 0.4141999990896525 & No\\
-\end{tabular}
-
-\begin{tabular}{ccc}
-Image & Distance & False Positive \\
-\hline
 Tony\_Blair\_0102.png & 0.4700670088189572 & No\\
 Tony\_Blair\_0103.png & 0.46185539009939025 & No\\
 Tony\_Blair\_0104.png & 0.44897356154630347 & No\\
@@ -738,6 +750,12 @@ Tony\_Blair\_0122.png & 0.4048638517205401 & No\\
 Tony\_Blair\_0121.png & 0.43206610453180183 & No\\
 Tony\_Blair\_0123.png & 0.4848490145683085 & No\\
 Tony\_Blair\_0124.png & 0.4858565492585873 & No\\
+\end{tabular}
+
+\newpage
+\begin{tabular}{ccc}
+Image & Distance & False Positive \\
+\hline
 Tony\_Blair\_0126.png & 0.49118102706622646 & No\\
 Tony\_Blair\_0125.png & 0.44974738645157736 & No\\
 Tony\_Blair\_0129.png & 0.46810588485536203 & No\\
@@ -755,7 +773,6 @@ Tony\_Blair\_0143.png & 0.44663782899819965 & No\\
 \end{tabular}
 \end{center}
 
-\newpage
 \subsection{Comparing Images Taken in the Infra-Red Spectrum}
 \begin{center}
 \begin{tabular}{cccc}
@@ -843,6 +860,7 @@ Avg & 0.934 & 0.2 &  0:00:26\\
 \end{tabular}
 \end{center}
 
+\newpage
 \subsubsection{Test 1}
 Test image: lfw/George\_HW\_Bush\_0003.jpg
 
@@ -863,7 +881,6 @@ George\_W\_Bush\_0287.jpg & 0.4454600672429446 & Yes \\
 \end{tabular}
 \end{center}
 
-\newpage
 \subsubsection{Test 2}
 Test image: essex\_cswww/faces94/male/cjsake/cjsake.1.jpg
 
@@ -988,11 +1005,57 @@ glen\_exp.20.jpg & 0.171147992496858 & No \\
 
 \newpage
 \section{Evaluation}
-\todo{Eval}
+\subsection{Design}
+The overall design of the implementation was sound. In particular the producer-consumer model suited the project well as it allows for a thread-based implementation with multiple queues, allowing the computational cost of searching the data set to be spread across multiple CPU cores.
+
+While the design is fairly modular, as it stands the JSON data containing the list of profiles must be in a particular format and must be sent as a single response). This would be inadequate if the application were to be tested against an actual social media service, as the profile data that can be retrieved from their APIs are in differing formats and are typically sent in chunks. For example, Facebook sends its profiles in chunks of 50 \citep{facebookgraphapi}. Ideally this problem would be solved by refactoring the code to include a layer between the calling program (run.py) and the python module (facegather.py) in which formats can be defined, and the module called repeatedly on chunks of results. Alternatively, a proxy server could be placed in between the computer running the search and the social media service which caches API calls to the provider and returns them as a single response in the expected format.
+
+The design allows for a multi-threaded architecture, however to see truly optimal performance a design based around GPU computing should be considered. By utilising thousands of cores rather than 4 it is theorised that the most time consuming part of the search, the facial descriptor comparisons, could be reduced by an order of magnitude.
+
+\subsection{Implementation}
+Although there were several challenges to a successful implementation of the design, the program developed achieves all of the functional and non-functional requirements set out in the specification.
+
+There are some gaps in functionality which are desirable but could not be added due to limitations in time. For example, while the search can be restricted by identifying information other than a person of interest's face, the only information currently searchable on is their name. While this feature is obviously useful, more search restrictions could be implemented such as location, place of work, home address etc. to narrow down the search space. This would be important if the program were to be used in a national security or industry setting, as otherwise the data set would be far too large to search in a timely manner.
+
+The implementation uses a command-line interface to allow users to search services with a test image, specifying search restrictions, threads for producing and consuming data, maximum image load and other parameters. While this is adequate for expert users and is desirable to allow for inter-program communication (for example, search commands being generated by one program and being piped into facegather), non-expert users may struggle to use the program effectively without a GUI.
+
+\subsection{Results}
+\subsubsection{Comparing Images from Different Data Sets}
+The implementation performed admirably when comparing images against multiple data sets, some of which it had not been trained on. It had an average accuracy of 0.92, only marginally less than dlib's advertised performance when searching the Labeled Faces in the Wild data set. The only result that kept it getting a 100\% accuracy was test 3, which contained several false positives. All false positives had a distance greater than 0.45, whereas all correct matches had a distance less than 0.35 suggesting that accuracy could be improved by giving a more precise thresholding value. It is unlikely to be a problem with the algorithm itself, as test 4 used a much more difficult data set and was searched with 100\% accuracy.
+
+Of particular note is the fact that there was only a single false negative, again in test 3. This is an excellent result, as the intended use of the application is to restrict the search space as much as possible before handing the results to either a secondary program or a human operator. False negatives are therefore much more problematic than false positives, hence why the thresholding value was set to be quite forgiving.
+
+\subsubsection{Comparing Images with Different Compression Algorithms}
+The implementation performed less well when comparing images with different compression algorithms. The accuracy of the search dropped to 0.658, mainly due to the high number of false positives. It should be noted that, even with the substantial drop in accuracy, recall was still fairly high. 
+
+The main reason behind the drop in accuracy is most likely due to the changes in the image when compressing greyscale images. The library responsible for facial recognition has been trained mostly on RGB images, so it may have difficulty identifying facial descriptors in greyscale images particularly when faced with a drop in quality.
+
+\subsubsection{Comparing Images Taken in the Infra-Red Spectrum}
+The implementation performed slightly better when comparing images in the infra-red spectrum, achieving an accuracy of 0.766. This is less impressive than the first set of tests however, as there are far fewer potential false positives in the data set - 129 compared to several thousands for the first and second tests. Again, the algorithm may suffer when comparing greyscale images. Compounding this is the fact that the images were taken in the infra-red spectrum. The images taken from this camera show less distinction between facial features, for example the contrast between where the cheek bones end is much less noticable.
+
+\subsubsection{Restricting by Identifiable Information}
+The results obtained by this set of tests are the most promising in the entire project. The implementation achieved an accuracy of 0.934, the highest in any of the sets of tests. This is to be expected, as by supplying a name to restrict the search by the number of false negatives is reduced from several thousand to at most several hundred. Most impressive is the time saved by restricting the search - the average time taken to search was improved from over 2 hours to just 26 seconds, a time save of over 27,000\%.
+
+An interesting note is that the false positive in test 1, where the test image provided was of George H.W. Bush, was a picture of George W. Bush - the subject's son. If the application behaves similarly in a real-life applications this could be a useful unintended side-effect as gathering information on family members (sons, fathers etc.) would be valuable.
 
 \newpage
 \section{Conclusion}
-\todo{Conclusion}
+\subsection{Overview}
+Overall, the project was succesful in applying machine vision techniques to recognise the faces of persons of interest to gather social media intelligence. The application developed allows users to search a social media service for an image of a person of interest, optionally restricting by name. The underlying facial recognition library is based on dlib trained using the Labeled Faces in the Wild data set.
+
+The emergence of social media intelligence has been helped by several controversies recently. With the new exposure, users of social media services are much more aware of how much information they may potentially be exposing about themselves. Even with this newfound knowledge there are some basic datum which every user must make public - their name and profile photo being examples. This makes the tool developed attractive to intelligence services who may be gathering information about large groups of people, but may lack the tools to single out a person of interest from a population.
+
+\subsection{Findings}
+The application was tested using the Labeled Faces in the Wild, Essex University Computer Vision and SCFace databases. It was tested against datasets it was not trained against, data sets using different compression algorithms, data sets captured in the infra-red spectrum, and data sets that had been restricted using identifiable information (in this case, the person of interest's name). 
+
+The results are encouraging overall. The application had accuracy rates of over 90\% in tests covering multiple datasets, which closely mirror images representative of typical social media profile photos. Importantly, there was only 1 false negative giving a recall of over 95\%. The most realistic text, wherein the search space was restricted by name, had an accuracy of 93.4\%.
+
+The tests including different compression algorithms and infra-red images were less succesful, although they do offer areas for improvement. These searches test non-essential functionality of the program, and can be considered important for continued improvement but niche in a real-word setting.
+
+\subsection{Future Work}
+There are several improvements that could be made over the current implementation. While facial recognition technology improves, so too will this application. It can be considered a wrapper for whichever face recogntion implementation is performing best at the current time. The main improvement that could be made is to have GPUs compare face mappings in batches, rather than the current implementation comparing them one-by-one over multiple CPU cores.
+
+The application certainly warrants further research. The initial findings are promising, but an improved implementation tested against an actual social media service (or a data set truly representative of one) could prove groundbreaking for intelligence gathering communities.
 
 \newpage
 \bibliography{citations}
@@ -1007,6 +1070,7 @@ Graph of insider threat factors \citep{behaviourdetection}.
 \section{"Boston Bomber" Identification}
 \label{appendix:bostonbomber}
 \includegraphics[scale=0.8]{res/boston_bomber.png}
+
 Table of potential matches, note the correct identification from the picture taken from social media with similar pose and lighting \citep{bostonbombingcasestudy}.
 
 \section{Connection Graph}
@@ -1287,7 +1351,7 @@ elif args.service == 'test_multiple_db':
             result = facegather.search(
                 args.test_face,
                 uri,
-                no_producer_threads=args.pthreads,
+                no_producer_threads=args.pthreads,https://www.facebook.com/
                 no_consumer_threads=args.cthreads,
                 max_loaded=args.maxload,
                 output_location=args.output_location
@@ -1315,7 +1379,7 @@ elif args.service == 'test_image_compression':
                 max_loaded=args.maxload,
                 name=args.name,
                 output_location=args.output_location
-            )
+            )https://www.facebook.com/
         else:
             result = facegather.search(
                 args.test_face,
@@ -1451,7 +1515,7 @@ class EnumerateFiles:
             if not location[-9:] == '_png.json':
                 f = open(location, 'r')
                 sb += f.read()
-                sb += ','
+                sb += ','https://www.facebook.com/
                 f.close()
         if sb.endswith('['):
             return '[]'
@@ -1559,6 +1623,97 @@ python3 run.py ./test/essex_cswww/faces95/adhast/adhast.1.jpg test_multiple_db -
 python3 run.py ./test/essex_cswww/faces96/cjhewi/cjhewi.1.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
 python3 run.py ./test/essex_cswww/grimace/glen/glen_exp.16.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
 python3 run.py ./test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
+\end{lstlisting}
+
+\section{generate\_test\_data.py}
+\begin{lstlisting}
+import glob
+
+
+def generate_data(root_dir):
+    for location in glob.glob(root_dir + '/lfw/**/*.jpg', recursive=True):
+        file = open(location[:-3] + 'json', 'w')
+        towrite = '{"name":"%s", "image_location":"%s"}' % (location.split('/')[-2], 'http://localhost:8081/static'+location[1:])
+        file.write(towrite)
+        file.close()
+
+    # for location in glob.glob(root_dir + '/lfw/**/*.jpg', recursive=True):
+    #    print(location)
+    #    subprocess.run(["convert", location, "-colorspace", "sRGB", "-type", "truecolor", location[:-3] + "png"])
+
+    for location in glob.glob(root_dir + '/lfw/**/*.png', recursive=True):
+        file = open(location[:-4] + '_png.json', 'w')
+        towrite = '{"name":"%s", "image_location":"%s"}' % (location.split('/')[-2], 'http://localhost:8081/static'+location[1:])
+        file.write(towrite)
+        file.close()
+
+    for location in glob.glob(root_dir + '/essex_cswww/**/*.jpg', recursive=True):
+        file = open(location[:-3] + 'json', 'w')
+        towrite = '{"name":"%s", "image_location":"%s"}' % (location.split('/')[-2], 'http://localhost:8081/static'+location[1:])
+        file.write(towrite)
+        file.close()
+
+    # SCface db has several formats, need to be specific
+    for location in glob.glob(root_dir + '/SCface/SCface_database/mugshot_frontal_cropped_all/*.JPG', recursive=True):
+        file = open(location[:-12] + '.json', 'w')
+        towrite = '{"name":"%s", "image_location":"%s"}' % (location.split('/')[-1][:3], 'http://localhost:8081/static'+location[1:])
+        file.write(towrite)
+        file.close()
+
+    for location in glob.glob(root_dir + '/SCface/SCface_database/mugshot_frontal_original_all/*.jpg', recursive=True):
+        file = open(location[:-12] + '.json', 'w')
+        towrite = '{"name":"%s", "image_location":"%s"}' % (location.split('/')[-1][:3], 'http://localhost:8081/static'+location[1:])
+        file.write(towrite)
+        file.close()
+
+    for location in glob.glob(root_dir + '/SCface/SCface_database/mugshot_rotation_all/*.jpg', recursive=True):
+        name = location.split('/')[-1][:-4]
+        towrite = '{"name":"%s", "image_location":"%s"}' % (name, 'http://localhost:8081/static' + location[1:])
+        file = open(location[:-3] + 'json', 'w')
+        file.write(towrite)
+        file.close()
+
+    for location in glob.glob(root_dir + '/SCface/SCface_database/surveillance_cameras_*/**/*.jpg', recursive=True):
+        name = location.split('/')[-1][:-4]
+        towrite = '{"name":"%s", "image_location":"%s"}' % (name, 'http://localhost:8081/static' + location[1:])
+        file = open(location[:-3] + 'json', 'w')
+        file.write(towrite)
+        file.close()
+
+
+generate_data('.')
+\end{lstlisting}
+
+
+\section{Example nginx configuration file}
+\begin{lstlisting}
+	upstream app_server {
+		server localhost:8080;
+	}
+
+	gzip_http_version	1.0;
+	gzip_proxied		any;
+	gzip_min_length		500;
+	gzip_disable		"MSIE [1-6]\.";
+	gzip_types		text/plain text/xml text/css
+				text/javascript
+				application/json;
+
+	server {
+		listen 8081;
+		location ^~ /static {
+			alias /home/jack/Documents/hons_project/test/;
+		}
+
+		location / {
+			proxy_pass	http://app_server;
+			proxy_redirect	off;
+			proxy_set_header Host $host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header X-Forwarded-Host $server_name;
+		}
+	}
 \end{lstlisting}
 \end{appendices}
 \end{document}

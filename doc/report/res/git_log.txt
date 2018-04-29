@@ -1,0 +1,716 @@
+commit ed9e153d2cd788334bac9b6a238b3cb930a51a91
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Oct 4 17:59:46 2017 +0100
+
+    First Commit
+
+commit 5185a551eaab3f5c2fe00c7c14d16e1aaec3a19f
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 5 10:14:39 2017 +0100
+
+    Sorted more papers, started record of work
+
+commit e11421915552e1950a27947e4214da8952c750d4
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 5 10:21:16 2017 +0100
+
+    Moved things around, added second lecture
+
+commit 1704c0ee8a0cb79af84abb8c6e955f14721a298b
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 5 16:18:45 2017 +0100
+
+    Added some more relevant papers
+
+commit 0dc39f115e8dc43b7f390fef73aa646d2b93f1c9
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 5 17:28:01 2017 +0100
+
+    Updated diary
+
+commit 556dc5f519da645cea94306ed1c40405683e4825
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 5 17:47:05 2017 +0100
+
+    Added more white papers
+
+commit 7426d82191bae1e14c1679e38fc9a0cf00581387
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Oct 6 12:30:54 2017 +0100
+
+    Updated records
+
+commit 165aee1254176344dd3c1468e323c545c8b3019f
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 12 10:32:39 2017 +0100
+
+    Restructured, added papers on unconstrained facial recognition
+
+commit af33cad06d2abc4d359b5a52b26045d5ab585c11
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Oct 13 12:08:29 2017 +0100
+
+    Updated diary and meeting record
+
+commit ce933432026c3182fd97af489b2a373d0866c5be
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Oct 20 12:45:50 2017 +0100
+
+    Updated records
+
+commit 4121cf07f8b60893dd2141e366757ef2761907ce
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Oct 20 18:46:23 2017 +0100
+
+    Updated Records
+
+commit bb0107857cabb86bebd04a6a26d0a8a2b58794d4
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Oct 26 11:02:43 2017 +0100
+
+    Added papers, added beginning of lit review
+
+commit 819959003c5c1668fffd3d6452b9e0a36da6b94f
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Thu Oct 26 13:19:19 2017 +0100
+
+    Added more papers, continued work on lit. review
+
+commit 7baed3ed9455f1274f5b07c0f6e81ff272a84a5c
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Thu Oct 26 20:12:44 2017 +0100
+
+    Added more papers, finished plan, lit. review and bibliography in proposal, updated diary
+
+commit f74e0428b454ec502804a1e41a9b7a52059005f0
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Oct 27 12:26:02 2017 +0100
+
+    ? in proposal, updated diary and meeting record
+
+commit dfc7fcbd7c615c76a73f2da7d92f56249fbfcad4
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Tue Oct 31 17:50:36 2017 +0000
+
+    Finished first draft of proposal, finished ethics form, updated records
+
+commit d65c794f9fa9e0c449dd0cd1babe0dd247bdf738
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Nov 2 09:34:26 2017 +0000
+
+    Added license
+
+commit b88ce8f3f7e0f207ca5a1d16f45e859cbbfe513d
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Nov 2 10:32:16 2017 +0000
+
+    Rewrote proposal to use Harvard style over Vancouver, updated diary
+
+commit 40a94789ed9d2c0fea8c444ba5253da7aff4016a
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Nov 2 14:11:04 2017 +0000
+
+    Edited proposal, updated records
+
+commit 51543830cea51232af6a0e901f9e59b7aeddca33
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Nov 3 17:28:34 2017 +0000
+
+    Some changes to ethics form, updated records
+
+commit 6d54ad2daebec3e101c6cda267ca4f3aae475225
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Nov 3 17:32:37 2017 +0000
+
+    Added pdf version of proposal
+
+commit 7e795697528af90d4606ad1938eafbb369f1c245
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Fri Nov 10 13:48:08 2017 +0000
+
+    Updated records, added more papers
+
+commit 9093eaa455890cb36c0aa4dc456681307a75c322
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Fri Nov 10 13:51:41 2017 +0000
+
+    Added project feedback
+
+commit 94aa3da22cb48141a87606ac755c80e8ac4eb368
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Nov 23 16:43:36 2017 +0000
+
+    Added project structure
+
+commit 2a49c1dc5917078c7ea7e8ff8dc27a5550327bd3
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Nov 24 12:37:17 2017 +0000
+
+    Updated records, added literature review structure
+
+commit 81227635a95d9955013f53dcc20d90a1a31e69e4
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Nov 24 12:42:45 2017 +0000
+
+    Updated Records
+
+commit f6a2acfb915d7b0c6376190b777dcf3e2c8b8820
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Nov 30 23:20:11 2017 +0000
+
+    Added full lit review structure
+
+commit a0e04fbf3d7a8dddede51fa9c4b6089450a40cb6
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Dec 1 12:25:42 2017 +0000
+
+    Added report structure, updated records
+
+commit ff2189b3fb381c295377adf3f94b6019c72654c1
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Dec 1 13:05:08 2017 +0000
+
+    Updated records
+
+commit 01d5d78373947e4052adf5eb462c0c5621aaff2e
+Author: JACK NEILSON (1506801) <1506801@RG-N519-10.local>
+Date:   Mon Dec 11 17:58:06 2017 +0000
+
+    Added gitignore, found more papers
+
+commit 57780013bd7b2290c539ce0157d14002e19766fd
+Author: JACK NEILSON (1506801) <1506801@RG-N519-10.local>
+Date:   Mon Dec 11 18:00:31 2017 +0000
+
+    updated diary
+
+commit 5e2006050a48ed50303bac3cace24ae4baf22e73
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Jan 19 17:47:40 2018 +0000
+
+    Started on literature review
+
+commit 5e445ef734992c1c8bca7954ecac12653f47d0d7
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Jan 22 13:28:23 2018 +0000
+
+    Started lit review
+
+commit 71504f933deda0086231be9d12137f561a1e05a2
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Jan 22 18:45:29 2018 +0000
+
+    Added todo
+
+commit aea27588f0ff9e5270dfaee1916c54b47e3db784
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 18:47:08 2018 +0000
+
+    Finished added citations
+
+commit daec8b60769c81ba5242c6d8fe91a1172740895a
+Merge: aea27588f 71504f933
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 18:47:14 2018 +0000
+
+    Merge branch 'master' of https://github.com/jackdneilson/hons_project
+    
+    added todos
+
+commit 47b2d89c53de6b19a78e1c9139ca5ef68a9a5ec4
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 20:37:00 2018 +0000
+
+    Finished sources, added intro to lit review
+
+commit 34fe5bad4ba8a387dd48d4b2fbfe22f36917ebc5
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Jan 22 20:47:01 2018 +0000
+
+    Fixed lit review
+
+commit b3d6c475b4f899cd02145b883e04635b00227ea2
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 20:49:37 2018 +0000
+
+    No changes
+
+commit 06d1e44958e0877e4afefa9b394f02769ebfc70a
+Merge: b3d6c475b 34fe5bad4
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 20:49:43 2018 +0000
+
+    Merge branch 'master' of https://github.com/jackdneilson/hons_project
+    
+    No changes
+
+commit 86b7692c89792dce3e86ef74bb86a4a4c57868ff
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Mon Jan 22 22:05:26 2018 +0000
+
+    More work on lit review, added papers
+
+commit 825d5810d0f69f52736859def70aa4ba38a736ec
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Tue Jan 23 20:19:08 2018 +0000
+
+    More work on lit review, added folder for resources
+
+commit 05a57e8bc544ed4df60bb2b47d71133b33c3e767
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Jan 24 15:13:25 2018 +0000
+
+    Built lit review
+
+commit 08803fb80218c31f57af0613bd39880e91199f33
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Wed Jan 24 16:43:15 2018 +0000
+
+    First draft of lit review intro
+
+commit 80bbafa7798cb574a48096697f2f8775cd0ecbdc
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Jan 24 17:05:46 2018 +0000
+
+    Built first draft of intro
+
+commit 9654811e69d0fc06be85c4b4ef9065e7aa08e7e8
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Fri Jan 26 16:00:34 2018 +0000
+
+    Reworded intro
+
+commit 582a452c6db1c1ad908aaafd86fa2680f7a38571
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Jan 30 13:08:52 2018 +0000
+
+    lit review, updated records
+
+commit c63b46f3fced5b7bce2dd3079eadb82fd7fda470
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Tue Jan 30 13:34:41 2018 +0000
+
+    lit review
+
+commit bd78daa9053a04baef9ae97ef57af87b3fa8a124
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Tue Jan 30 17:25:39 2018 +0000
+
+    lit review, papers
+
+commit 7cb504341da44b20dea0ea24e369a76a9351a496
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Wed Jan 31 15:38:07 2018 +0000
+
+    Lit review, papers
+
+commit baf6897c20fa1205c941865f410ec53ac6dce75f
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Wed Jan 31 15:44:36 2018 +0000
+
+    Lit review
+
+commit 5c9a84b2a31b68f6d6ac209c217e34427f2f9c4b
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Jan 31 15:46:30 2018 +0000
+
+    lit review build
+
+commit e961f3df3cb927f4b2df7fad4d729f49a9dcda5c
+Author: JACK NEILSON (1506801) <1506801@rgu.ac.uk>
+Date:   Wed Jan 31 16:32:45 2018 +0000
+
+    Lit review
+
+commit 7c6934dba01e46f4b43deb5fdea548ed4ef91702
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Feb 5 20:02:17 2018 +0000
+
+    Lit review, updated diary, added papers
+
+commit 38cd014bec8347a05c04dc3fa071633034aca8b1
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 6 17:31:18 2018 +0000
+
+    Added a draft requirements spec to the methodology section
+
+commit 9092a801e6ebcea972c5d7f6179e1e88cde0d104
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 6 17:34:08 2018 +0000
+
+    Small amendment to requirements spec
+
+commit c10d564b53d8879f91b9bef9da8fadb6078213c7
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 6 17:43:10 2018 +0000
+
+    Updated records, built report
+
+commit 43bbf7bb78c08887a0623372e35ff57dbc24955e
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Feb 7 16:48:27 2018 +0000
+
+    Small edits to report, started implementing
+
+commit 120998f6e83988c6659f672a735c3c785751f7ff
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Feb 8 18:38:35 2018 +0000
+
+    Work on facegather module, fixed imports and dir structure
+
+commit 034294156eacfed42662b4247324cb245441cc47
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 9 12:05:07 2018 +0000
+
+    Added todo
+
+commit 7f73fde5690878f78fd2a4ef37ac31a2ed3fe7d7
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 9 16:09:07 2018 +0000
+
+    Implemented command line args, consumer threads, looping for multiple face images
+
+commit 3a7fc664ebff1af7ba2616c73266eb9d00291329
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 9 16:37:05 2018 +0000
+
+    updated todo
+
+commit 7749622f5bbfadd694d4c63cf77828e42129a131
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Feb 14 16:44:39 2018 +0000
+
+    Fixed server implementation and face recognition, made demo for john.
+
+commit fe7356f468b017fb7263a2d74f108969e93304e8
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 20 16:41:42 2018 +0000
+
+    Added JSON representation of folder structure
+
+commit 21f7c12780cd1f9e7bc13c970c0437d9d51d7d13
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Feb 22 13:13:00 2018 +0000
+
+    Generated test data, fixed  webservers, started debugging threads
+
+commit 6662d715c9c375ab60bbd517e2fe118145df9727
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Feb 22 17:52:58 2018 +0000
+
+    Basic functionality completed
+
+commit 64d4098508ae8935df0493de5b6d01fa7f7d424e
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 23 15:44:42 2018 +0000
+
+    Fixed deadlock issues by using sentinel
+
+commit dde55f027e89f598e4a0f378feb02f193472421b
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 23 19:49:16 2018 +0000
+
+    More deadlocking bugs solved
+
+commit 7cdb4cc1d0efacd3ab85d24b699a52e5485354fa
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Feb 23 19:57:09 2018 +0000
+
+    Removed redundant imports, added todos in report
+
+commit 6d1bcfbaf2d88b24dadd491d2c150e6c29db81ff
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Feb 26 12:47:50 2018 +0000
+
+    Some work on implementation section of report
+
+commit ddcdb634e4619139497c608e02fbce8c6bc0c048
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 27 14:46:31 2018 +0000
+
+    Code refinements, added implementation section to report
+
+commit f1ac4046117d3a5f2e1df9f68db4e43b35fbbbe8
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Feb 27 15:49:26 2018 +0000
+
+    Meeting record
+
+commit c427911ae59daea769023e8688d96e687f2a209e
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Mar 1 16:41:23 2018 +0000
+
+    Added information gathering section to lit. review
+
+commit 27059125962b9e5e2caf1d8c3a5d0069ab795532
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Mar 2 16:22:19 2018 +0000
+
+    Added section on facial recognition
+
+commit 343ade2bb5080be1e123ccc9030f5aa04202001d
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 6 11:57:48 2018 +0000
+
+    Added watcher file to visualise results
+
+commit a168f741fc221f80ff604eef1533ab4dce987859
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 6 15:46:36 2018 +0000
+
+    Small changes to demo watcher
+
+commit b17c384a04cba0a53a6fad459e2c694ec3d263cf
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 6 16:59:40 2018 +0000
+
+    Increased font size (I'm SO productive)
+
+commit 9d9f12f90bc674d3dd8b242a68b9ca63573a801b
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 13 11:58:59 2018 +0000
+
+    Added current solutions and missing functionality section to lit. review of report
+
+commit 0b9324bb4f5af70cdb12ec1a6dbd99b4f463a16a
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 13 16:34:18 2018 +0000
+
+    Added UML diagram
+
+commit 3ac847144446a105b16552799242fa509743ca9d
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Sat Mar 17 19:43:08 2018 +0000
+
+    Annotated report with todos for completed project, found other data sets for comparison
+
+commit 3b60168fc9acac20dc52ce777b9b1b4582a2efb6
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 20 09:16:42 2018 +0000
+
+    Added SCFace release agreement
+
+commit 064624d5e6aca28334ec32bf30715e05c3875aaa
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 20 09:29:11 2018 +0000
+
+    Updated records
+
+commit 01b3571bfc6ed6ae3981f85009934b912c04c376
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 20 16:53:59 2018 +0000
+
+    Added to test generator script, now generates for essex dataset
+
+commit cb89cd54a1754d3a30c6696cbd968d58e53efc91
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 20 18:18:51 2018 +0000
+
+    Added placeholder for writing about testing section
+
+commit bcca0143916c9c42dbdfed1d8806646ca76155ad
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Mar 21 16:14:48 2018 +0000
+
+    New build of report
+
+commit a20d4b1d7729d326bfc2e74357acd3a2c99c2fe7
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Mar 26 12:44:12 2018 +0100
+
+    Added capability to compare to essex_cswww dataset
+
+commit 33d9057f0e7808e370b63e53e04218a6a8b7cf3b
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 10:07:51 2018 +0100
+
+    Added SCFace cover letter
+
+commit 770235943f10797e1275f5a00eeb30e243da834c
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:01:18 2018 +0100
+
+    Added new databases to server, began testing in earnest
+
+commit a5702620d5b7f07f60b368bf3221cca6407723a0
+Merge: 770235943 33d9057f0
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:03:42 2018 +0100
+
+    Merge branch 'master' of https://github.com/jackdneilson/hons_project
+    
+    Empty merge
+
+commit 498e3a7049f52ed1e6b07d73288c766b63363b0c
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:07:00 2018 +0100
+
+    Updated json records
+
+commit 82e7916ff1cdc17d70041005c96667ebdf5b7e77
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:34:44 2018 +0100
+
+    Bugfixes
+
+commit a7f3c7cdcf164fac398adb9f542566fc501b55d3
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:46:56 2018 +0100
+
+    Refreshed JSON data
+
+commit 75d097821f4c6434048dee988e981bc2e3e5212e
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:48:58 2018 +0100
+
+    Forgot http:// scheme
+
+commit 15d5766e998f6d6f03e3a7e4fa7e5c6f67127a76
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 14:49:52 2018 +0100
+
+    Forgot http scheme
+
+commit cd30a3c9e986cbfdba5699320dfc16447990f901
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Mar 27 16:22:12 2018 +0100
+
+    Added SCFace data set, bug fixes
+
+commit fdc1c1c201d1a00adce977d6ae378c9bd4aa7023
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Apr 2 17:12:06 2018 +0100
+
+    Added small section on testing methodology
+
+commit 7c15cc30c82326d7f4c5d28aa6584cc9500be3ac
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Apr 2 17:41:03 2018 +0100
+
+    Added png data set
+
+commit e5634e38502ced7eb2e3baf2e70b0f28cae5645f
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Tue Apr 3 13:52:41 2018 +0100
+
+    Finished draft of testing methodology and expected results, added abstract draft
+
+commit 94fc94f074e7fec6cd94d8a7f7c3e9b8f7e69db4
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 6 12:57:31 2018 +0100
+
+    Added first run of test, requirements file for pip
+
+commit 68d3eeef2ec6fe663161e3b694a2735167fd0c4f
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 6 15:05:14 2018 +0100
+
+    Added PNG files for testing to server
+
+commit 2a8e32db582fc8cb86607ea053c1ae328da5f079
+Merge: 68d3eeef2 94fc94f07
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 6 15:05:26 2018 +0100
+
+    Merge branch 'master' of github.com:jackdneilson/hons_project
+    
+    Merging changes with results
+
+commit 9a4c0c334558774c441068c9702092ab10890c9a
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 6 15:19:58 2018 +0100
+
+    Added multiple compression test
+
+commit 9b73d61b6d97a960e349319dfeebdf904def43fb
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed Apr 11 17:08:08 2018 +0100
+
+    Misc. bugfixes, added test for restricting by identifiable information
+
+commit a4623ab0c11069807d5662dc974c6c28b53e6fec
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Apr 12 15:25:36 2018 +0100
+
+    Added photo of table of results
+
+commit 9d2345a12a643967a996a98adc520da801a87d8c
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Apr 12 15:34:43 2018 +0100
+
+    Changed text size on demo
+
+commit 2d74d83d65824dbc6df483f2029d71a8fdd53dde
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Apr 12 15:35:58 2018 +0100
+
+    Made table of results more readable
+
+commit 75be085240c5d33eaacd420cf43a798d397b9c70
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Apr 12 16:14:35 2018 +0100
+
+    Added fake ID using socmint
+
+commit e085078c19deeb1d53d0f754015dbe6647efaa18
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu Apr 12 17:47:13 2018 +0100
+
+    Added image of help output
+
+commit ae240de015b3d9b214b2940542d0b1dfa616eecb
+Author:  <jack@RG-N519-05.rgu.ac.uk>
+Date:   Thu Apr 12 18:53:34 2018 +0100
+
+    Added test results for compression algorithms, poster draft
+
+commit 4b86b0177d61c0c68220023709dcd1816783fedd
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 13 19:11:01 2018 +0100
+
+    Added IR and IR_RGB tests and test data, changes to server to serve SCface database
+
+commit fd80ea6e394341a4ce0138a21c1ab0ef17a49ad8
+Author: root <root@RG-N519-05.rgu.ac.uk>
+Date:   Fri Apr 13 19:52:42 2018 +0100
+
+    Added final draft of poster, results for IR_image_test
+
+commit 13df87d1cb4be97d0e863bc3e26f5634deaa33ab
+Author: root <root@RG-N519-05.rgu.ac.uk>
+Date:   Sat Apr 14 17:10:08 2018 +0100
+
+    Removed IR_RGB test as pointless. Made changes to poster
+
+commit f329bb8e7b61d12ddf24c09544bcef214a4a9013
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Apr 23 18:58:04 2018 +0100
+
+    Added copy of full source code and testing results to report
+
+commit 0b0571e3107aad5280ab82cbdfb3d81ec3d448b3
+Merge: f329bb8e7 13df87d1c
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Apr 23 18:59:06 2018 +0100
+
+    Merge branch 'master' of github.com:jackdneilson/hons_project
+    
+    Merged to master
+
+commit 06a35ec20a55af5b0996d54c9e6fa9981a4c6be2
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Mon Apr 23 19:17:48 2018 +0100
+
+    Formatted report
+
+commit 8175240eda02b066092cf5ce6839ce43aa576703
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 27 16:03:28 2018 +0100
+
+    Added demo files
+
+commit b32661f27e7470638c16817a57924d4ee76863f0
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Fri Apr 27 21:37:22 2018 +0100
+
+    Finished first draft of report

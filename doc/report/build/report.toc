@@ -117,13 +117,13 @@
 \contentsline {section}{\numberline {C}Connection Graph}{52}
 \contentsline {section}{\numberline {D}Command Line Arguments}{52}
 \contentsline {section}{\numberline {E}GitHub Commit log}{52}
-\contentsline {section}{\numberline {F}Full Source Code}{53}
-\contentsline {subsection}{\numberline {F.1}facegather.py}{53}
-\contentsline {subsection}{\numberline {F.2}run.py}{56}
-\contentsline {subsection}{\numberline {F.3}server.py}{62}
-\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{64}
-\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{64}
-\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{65}
-\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{65}
-\contentsline {section}{\numberline {G}generate\_test\_data.py}{66}
-\contentsline {section}{\numberline {H}Example nginx configuration file}{68}
+\contentsline {section}{\numberline {F}Full Source Code}{69}
+\contentsline {subsection}{\numberline {F.1}facegather.py}{69}
+\contentsline {subsection}{\numberline {F.2}run.py}{73}
+\contentsline {subsection}{\numberline {F.3}server.py}{78}
+\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{80}
+\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{81}
+\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{81}
+\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{82}
+\contentsline {section}{\numberline {G}generate\_test\_data.py}{82}
+\contentsline {section}{\numberline {H}Example nginx configuration file}{84}

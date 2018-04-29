@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  27 APR 2018 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  27 APR 2018 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,10 +438,16 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks32
+\verbatim@line=\toks33
+\verbatim@in@stream=\read2
+)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count120
 \lst@gtempboxa=\box39
-\lst@token=\toks32
+\lst@token=\toks34
 \lst@length=\count121
 \lst@currlwidth=\dimen163
 \lst@column=\count122
@@ -469,18 +475,18 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (build/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -523,12 +529,12 @@ LaTeX Font Info:    ... okay on input line 37.
 \scratchbox=\box41
 \nofMPsegments=\count129
 \nofMParguments=\count130
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks35
 \MPscratchCnt=\count131
 \MPscratchDim=\dimen168
 \MPnumerator=\count132
 \makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -588,9 +594,9 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count134
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 40.
+(Font)              <14.4> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 40.
+(Font)              <7> on input line 39.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (build/report.toc
@@ -610,20 +616,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: res/facegather_uml.png Graphic file (type png)
 
 <use res/facegather_uml.png>
-Package pdftex.def Info: res/facegather_uml.png used on input line 357.
+Package pdftex.def Info: res/facegather_uml.png used on input line 356.
 (pdftex.def)             Requested size: 402.50276pt x 563.10237pt.
  [24] [25 <./res/facegather_uml.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 365.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 364.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 364.
  [26] [27] [28]
 [29] [30] [31]
-Overfull \hbox (33.04776pt too wide) in paragraph at lines 563--563
+Overfull \hbox (33.04776pt too wide) in paragraph at lines 562--562
 []\OT1/cmr/bx/n/14.4 Comparing Im-ages with Dif-fer-ent Com-pres-sion Al-go-rit
 hms 
  []
@@ -650,21 +656,21 @@ Missing character: There is no “ in font cmr12!
 File: res/threat_graph.png Graphic file (type png)
 
 <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 1067.
+Package pdftex.def Info: res/threat_graph.png used on input line 1066.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
 
 <res/boston_bomber.png, id=173, 447.92343pt x 607.89609pt>
 File: res/boston_bomber.png Graphic file (type png)
 
 <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 1072.
+Package pdftex.def Info: res/boston_bomber.png used on input line 1071.
 (pdftex.def)             Requested size: 358.33922pt x 486.31754pt.
  [50 <./res/threat_graph.png (PNG copy)>]
 <res/connection_klout.png, id=178, 1215.54124pt x 251.94125pt>
 File: res/connection_klout.png Graphic file (type png)
 
 <use res/connection_klout.png>
-Package pdftex.def Info: res/connection_klout.png used on input line 1078.
+Package pdftex.def Info: res/connection_klout.png used on input line 1077.
 (pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
  [51 <./res/boston_bomber.png>]
 <res/facegather_cmd_line_args.png, id=183, 790.955pt x 382.42876pt>
@@ -672,28 +678,105 @@ File: res/facegather_cmd_line_args.png Graphic file (type png)
 
 <use res/facegather_cmd_line_args.png>
 Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 10
-83.
+82.
 (pdftex.def)             Requested size: 443.57848pt x 214.47374pt.
- [52 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] [53] [5
-4] [55] [56]
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1275--1276
+File: res/git_log.txt  (verbatim)
+ [52 <./res/connection_klout.png> <./res/facegather_cmd_line_args.png>] [53]
+Overfull \hbox (130.69681pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Added more papers, finished plan, lit. review and biblio
+graphy in proposal, updated diary[] 
+ []
+
+[54]
+Overfull \hbox (19.54675pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Finished first draft of proposal, finished ethics form, 
+updated records[] 
+ []
+
+[55] [56]
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
+/hons_project[] 
+ []
+
+[57]
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
+/hons_project[] 
+ []
+
+[58] [59] [60]
+Overfull \hbox (81.29678pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Implemented command line args, consumer threads, looping
+ for multiple face images[] 
+ []
+
+
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Fixed server implementation and face recognition, made d
+emo for john.[] 
+ []
+
+[61] [62]
+Overfull \hbox (87.47179pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Added current solutions and missing functionality sectio
+n to lit. review of report[] 
+ []
+
+[63]
+Overfull \hbox (118.3468pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Annotated report with todos for completed project, found
+ other data sets for comparison[] 
+ []
+
+[64]
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
+/hons_project[] 
+ []
+
+[65]
+Overfull \hbox (75.12178pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Finished draft of testing methodology and expected resul
+ts, added abstract draft[] 
+ []
+
+[66]
+Overfull \hbox (13.37175pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Misc. bugfixes, added test for restricting by identifiab
+le information[] 
+ []
+
+[67]
+Overfull \hbox (93.64679pt too wide) in paragraph at lines 1086--1086
+[]    \OT1/cmtt/m/n/12 Added IR and IR_RGB tests and test data, changes to serv
+er to serve SCface database[] 
+ []
+
+[68] [69] [70] [71] [72]
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1274--1275
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1278--1279
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1277--1278
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[57] [58] [59] [60] [61] [62]
-Overfull \hbox (60.46074pt too wide) in paragraph at lines 1560--1561
+[73] [74] [75] [76] [77] [78] [79]
+Overfull \hbox (60.46074pt too wide) in paragraph at lines 1559--1560
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ]  
  []
 
-[63]
+[80]
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1600--1601
+[][][][][][][][][][]  
+ []
+
+
 Overfull \hbox (1.82442pt too wide) in paragraph at lines 1601--1602
 [][][][][][][][][][]  
  []
@@ -713,32 +796,27 @@ Overfull \hbox (1.82442pt too wide) in paragraph at lines 1604--1605
 [][][][][][][][][][]  
  []
 
-[64]
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1605--1606
-[][][][][][][][][][]  
- []
-
-[65] [66] [67] [68] (build/report.aux) ) 
+[81] [82] [83] [84] [85] (build/report.aux) ) 
 Here is how much of TeX's memory you used:
- 15422 strings out of 494902
- 295831 string characters out of 6179890
- 391843 words of memory out of 5000000
- 18420 multiletter control sequences out of 15000+600000
+ 15368 strings out of 494902
+ 294372 string characters out of 6179890
+ 386474 words of memory out of 5000000
+ 18362 multiletter control sequences out of 15000+600000
  10398 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,9n,76p,1105b,1662s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on build/report.pdf (68 pages, 4209435 bytes).
+ 62i,7n,72p,1105b,1574s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on build/report.pdf (85 pages, 4228281 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 325 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

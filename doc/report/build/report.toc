@@ -1,129 +1,150 @@
 \contentsline {section}{\numberline {1}Abstract}{6}
 \contentsline {section}{\numberline {2}Acknowledgements}{6}
-\contentsline {section}{\numberline {3}Literature Review}{7}
-\contentsline {subsection}{\numberline {3.1}Background}{7}
-\contentsline {subsubsection}{\numberline {3.1.1}SOCMINT}{7}
-\contentsline {subsubsection}{\numberline {3.1.2}Uses of SOCMINT}{7}
-\contentsline {subsubsection}{\numberline {3.1.3}Facial Recognition}{8}
-\contentsline {subsubsection}{\numberline {3.1.4}Uses of Facial Recognition}{8}
-\contentsline {subsubsection}{\numberline {3.1.5}Constrained vs Unconstrained}{8}
-\contentsline {subsection}{\numberline {3.2}Prior Knowledge Attacks}{9}
-\contentsline {subsubsection}{\numberline {3.2.1}Social Engineering}{9}
-\contentsline {subsubsection}{\numberline {3.2.2}Spearphishing}{9}
-\contentsline {subsection}{\numberline {3.3}Intelligence Gathering}{10}
-\contentsline {subsubsection}{\numberline {3.3.1}SOCMINT}{10}
-\contentsline {subsubsection}{\numberline {3.3.2}HUMINT}{10}
-\contentsline {subsubsection}{\numberline {3.3.3}Individual vs Group Data}{11}
-\contentsline {subsubsection}{\numberline {3.3.4}Quantity of Information}{11}
-\contentsline {subsubsection}{\numberline {3.3.5}Accessibility of Data}{12}
-\contentsline {subsubsection}{\numberline {3.3.6}Uses}{12}
-\contentsline {subsubsection}{\numberline {3.3.7}Challenges and Constraints}{12}
-\contentsline {subsection}{\numberline {3.4}Facial Recognition}{13}
-\contentsline {subsubsection}{\numberline {3.4.1}Current Applications}{13}
-\contentsline {subsubsection}{\numberline {3.4.2}Unconstrained Facial Recognition}{13}
-\contentsline {subsection}{\numberline {3.5}Existing Solutions}{14}
-\contentsline {subsubsection}{\numberline {3.5.1}pipl}{14}
-\contentsline {subsubsection}{\numberline {3.5.2}192}{14}
-\contentsline {subsubsection}{\numberline {3.5.3}Facebook}{14}
-\contentsline {subsubsection}{\numberline {3.5.4}Gaps in Functionality}{15}
-\contentsline {section}{\numberline {4}Methodology}{16}
-\contentsline {subsection}{\numberline {4.1}Overview}{16}
-\contentsline {subsection}{\numberline {4.2}Functional Requirements}{16}
-\contentsline {subsubsection}{\numberline {4.2.1}Face Recognition}{16}
-\contentsline {subsubsection}{\numberline {4.2.2}Social Media Integration}{16}
-\contentsline {subsubsection}{\numberline {4.2.3}Headless}{16}
-\contentsline {subsubsection}{\numberline {4.2.4}Multithreaded}{17}
-\contentsline {subsection}{\numberline {4.3}Non-functional Requirements}{17}
-\contentsline {subsubsection}{\numberline {4.3.1}Accuracy}{17}
-\contentsline {subsubsection}{\numberline {4.3.2}Usefulness}{17}
-\contentsline {subsubsection}{\numberline {4.3.3}Cross-Platform}{17}
-\contentsline {subsubsection}{\numberline {4.3.4}Imprecision Tolerance}{17}
-\contentsline {subsubsection}{\numberline {4.3.5}Usability}{17}
-\contentsline {subsubsection}{\numberline {4.3.6}Facial Recognition Libraries}{18}
-\contentsline {subsubsection}{\numberline {4.3.7}Language}{18}
-\contentsline {subsubsection}{\numberline {4.3.8}Time Spent}{18}
-\contentsline {subsubsection}{\numberline {4.3.9}Documentation}{18}
-\contentsline {subsubsection}{\numberline {4.3.10}Testing}{18}
-\contentsline {section}{\numberline {5}Implementation}{19}
-\contentsline {subsection}{\numberline {5.1}Face Recognition}{19}
-\contentsline {subsection}{\numberline {5.2}Test Server}{19}
-\contentsline {subsubsection}{\numberline {5.2.1}nginx}{19}
-\contentsline {subsubsection}{\numberline {5.2.2}cherrypy}{19}
-\contentsline {subsection}{\numberline {5.3}Portable Module}{19}
-\contentsline {subsection}{\numberline {5.4}Threading}{20}
-\contentsline {subsection}{\numberline {5.5}Command Line Interactivity}{20}
-\contentsline {subsection}{\numberline {5.6}Social Network Interactivity}{20}
-\contentsline {subsection}{\numberline {5.7}Challenges}{20}
-\contentsline {subsubsection}{\numberline {5.7.1}Loading Images from Memory}{20}
-\contentsline {subsubsection}{\numberline {5.7.2}Maximum Loaded Images}{21}
-\contentsline {subsubsection}{\numberline {5.7.3}Multiple Threads for Producing and Consuming}{22}
-\contentsline {subsubsection}{\numberline {5.7.4}Thread Object Access Control}{22}
-\contentsline {subsubsection}{\numberline {5.7.5}Result Retrieval}{23}
-\contentsline {subsubsection}{\numberline {5.7.6}Command Line Arguments}{23}
-\contentsline {subsubsection}{\numberline {5.7.7}Inter-Thread Communication}{23}
-\contentsline {subsubsection}{\numberline {5.7.8}Loading Greyscale Images}{24}
-\contentsline {subsubsection}{\numberline {5.7.9}UML Diagram}{25}
-\contentsline {section}{\numberline {6}Testing and Results}{26}
-\contentsline {subsection}{\numberline {6.1}Aims}{26}
-\contentsline {subsection}{\numberline {6.2}Testing Strategy}{26}
-\contentsline {subsubsection}{\numberline {6.2.1}Comparing Images from Different Data Sets}{26}
-\contentsline {subsubsection}{\numberline {6.2.2}Comparing Images with Different Compression Algorithms}{26}
-\contentsline {subsubsection}{\numberline {6.2.3}Comparing Images Taken in the Infra-Red Spectrum}{27}
-\contentsline {subsubsection}{\numberline {6.2.4}Restricting by Identifiable Information}{27}
-\contentsline {subsection}{\numberline {6.3}Expected Results}{27}
-\contentsline {subsubsection}{\numberline {6.3.1}Comparing Images from Different Data Sets}{27}
-\contentsline {subsubsection}{\numberline {6.3.2}Comparing Images with Different Compression Algorithms}{27}
-\contentsline {subsubsection}{\numberline {6.3.3}Comparing Images Taken in the Infra-Red Spectrum}{27}
-\contentsline {subsubsection}{\numberline {6.3.4}Restricting by Identifiable Information}{27}
-\contentsline {subsection}{\numberline {6.4}Comparing Images from Different Data Sets}{28}
-\contentsline {subsubsection}{\numberline {6.4.1}Test 1}{28}
-\contentsline {subsubsection}{\numberline {6.4.2}Test 2}{29}
-\contentsline {subsubsection}{\numberline {6.4.3}Test 3}{30}
-\contentsline {subsubsection}{\numberline {6.4.4}Test 4}{31}
-\contentsline {subsubsection}{\numberline {6.4.5}Test 5}{31}
-\contentsline {subsection}{\numberline {6.5}Comparing Images with Different Compression Algorithms}{32}
-\contentsline {subsubsection}{\numberline {6.5.1}Test 1}{32}
-\contentsline {subsubsection}{\numberline {6.5.2}Test 2}{32}
-\contentsline {subsubsection}{\numberline {6.5.3}Test 3}{33}
-\contentsline {subsubsection}{\numberline {6.5.4}Test 4}{33}
-\contentsline {subsubsection}{\numberline {6.5.5}Test 5}{33}
-\contentsline {subsection}{\numberline {6.6}Comparing Images Taken in the Infra-Red Spectrum}{36}
-\contentsline {subsubsection}{\numberline {6.6.1}Test 1}{36}
-\contentsline {subsubsection}{\numberline {6.6.2}Test 2}{36}
-\contentsline {subsubsection}{\numberline {6.6.3}Test 3}{37}
-\contentsline {subsubsection}{\numberline {6.6.4}Test 4}{37}
-\contentsline {subsubsection}{\numberline {6.6.5}Test 5}{37}
-\contentsline {subsection}{\numberline {6.7}Restricting by Identifiable Information}{37}
-\contentsline {subsubsection}{\numberline {6.7.1}Test 1}{38}
-\contentsline {subsubsection}{\numberline {6.7.2}Test 2}{38}
-\contentsline {subsubsection}{\numberline {6.7.3}Test 3}{39}
-\contentsline {subsubsection}{\numberline {6.7.4}Test 4}{40}
-\contentsline {subsubsection}{\numberline {6.7.5}Test 5}{41}
-\contentsline {section}{\numberline {7}Evaluation}{42}
-\contentsline {subsection}{\numberline {7.1}Design}{42}
-\contentsline {subsection}{\numberline {7.2}Implementation}{42}
-\contentsline {subsection}{\numberline {7.3}Results}{43}
-\contentsline {subsubsection}{\numberline {7.3.1}Comparing Images from Different Data Sets}{43}
-\contentsline {subsubsection}{\numberline {7.3.2}Comparing Images with Different Compression Algorithms}{43}
-\contentsline {subsubsection}{\numberline {7.3.3}Comparing Images Taken in the Infra-Red Spectrum}{43}
-\contentsline {subsubsection}{\numberline {7.3.4}Restricting by Identifiable Information}{44}
-\contentsline {section}{\numberline {8}Conclusion}{45}
-\contentsline {subsection}{\numberline {8.1}Overview}{45}
-\contentsline {subsection}{\numberline {8.2}Findings}{45}
-\contentsline {subsection}{\numberline {8.3}Future Work}{45}
-\contentsline {section}{Appendices}{50}
-\contentsline {section}{\numberline {A}Threat Graph}{50}
-\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{51}
-\contentsline {section}{\numberline {C}Connection Graph}{52}
-\contentsline {section}{\numberline {D}Command Line Arguments}{52}
-\contentsline {section}{\numberline {E}GitHub Commit log}{52}
-\contentsline {section}{\numberline {F}Full Source Code}{69}
-\contentsline {subsection}{\numberline {F.1}facegather.py}{69}
-\contentsline {subsection}{\numberline {F.2}run.py}{73}
-\contentsline {subsection}{\numberline {F.3}server.py}{78}
-\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{80}
-\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{81}
-\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{81}
-\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{82}
-\contentsline {section}{\numberline {G}generate\_test\_data.py}{82}
-\contentsline {section}{\numberline {H}Example nginx configuration file}{84}
+\contentsline {section}{\numberline {3}Introduction}{7}
+\contentsline {subsection}{\numberline {3.1}Overview}{7}
+\contentsline {subsection}{\numberline {3.2}Aims and Objectives}{7}
+\contentsline {subsection}{\numberline {3.3}Key Findings}{8}
+\contentsline {subsubsection}{\numberline {3.3.1}RGB vs. Greyscale Images}{8}
+\contentsline {subsubsection}{\numberline {3.3.2}Time Taken}{8}
+\contentsline {subsubsection}{\numberline {3.3.3}Accuracy}{8}
+\contentsline {subsection}{\numberline {3.4}Structure}{8}
+\contentsline {section}{\numberline {4}Literature Review}{10}
+\contentsline {subsection}{\numberline {4.1}Background}{10}
+\contentsline {subsubsection}{\numberline {4.1.1}SOCMINT}{10}
+\contentsline {subsubsection}{\numberline {4.1.2}Uses of SOCMINT}{10}
+\contentsline {subsubsection}{\numberline {4.1.3}Facial Recognition}{11}
+\contentsline {subsubsection}{\numberline {4.1.4}Uses of Facial Recognition}{11}
+\contentsline {subsubsection}{\numberline {4.1.5}Constrained vs Unconstrained}{12}
+\contentsline {subsection}{\numberline {4.2}Prior Knowledge Attacks}{13}
+\contentsline {subsubsection}{\numberline {4.2.1}Social Engineering}{13}
+\contentsline {subsubsection}{\numberline {4.2.2}Spearphishing}{13}
+\contentsline {subsection}{\numberline {4.3}Intelligence Gathering}{14}
+\contentsline {subsubsection}{\numberline {4.3.1}SOCMINT}{14}
+\contentsline {subsubsection}{\numberline {4.3.2}HUMINT}{14}
+\contentsline {subsubsection}{\numberline {4.3.3}Individual vs Group Data}{15}
+\contentsline {subsubsection}{\numberline {4.3.4}Quantity of Information}{15}
+\contentsline {subsubsection}{\numberline {4.3.5}Accessibility of Data}{16}
+\contentsline {subsubsection}{\numberline {4.3.6}Uses}{16}
+\contentsline {subsubsection}{\numberline {4.3.7}Challenges and Constraints}{17}
+\contentsline {subsection}{\numberline {4.4}Facial Recognition}{17}
+\contentsline {subsubsection}{\numberline {4.4.1}Current Applications}{17}
+\contentsline {subsubsection}{\numberline {4.4.2}Unconstrained Facial Recognition}{18}
+\contentsline {subsection}{\numberline {4.5}Existing Solutions}{18}
+\contentsline {subsubsection}{\numberline {4.5.1}pipl}{18}
+\contentsline {subsubsection}{\numberline {4.5.2}192}{18}
+\contentsline {subsubsection}{\numberline {4.5.3}Facebook}{19}
+\contentsline {subsubsection}{\numberline {4.5.4}Gaps in Functionality}{19}
+\contentsline {subsection}{\numberline {4.6}Objectives}{20}
+\contentsline {section}{\numberline {5}Methodology}{21}
+\contentsline {subsection}{\numberline {5.1}Overview}{21}
+\contentsline {subsection}{\numberline {5.2}Functional Requirements}{21}
+\contentsline {subsubsection}{\numberline {5.2.1}Face Recognition}{21}
+\contentsline {subsubsection}{\numberline {5.2.2}Social Media Integration}{21}
+\contentsline {subsection}{\numberline {5.3}Non-functional Requirements}{21}
+\contentsline {subsubsection}{\numberline {5.3.1}Accuracy}{21}
+\contentsline {subsubsection}{\numberline {5.3.2}Usefulness}{22}
+\contentsline {subsubsection}{\numberline {5.3.3}Cross-Platform}{22}
+\contentsline {subsubsection}{\numberline {5.3.4}Imprecision Tolerance}{22}
+\contentsline {subsubsection}{\numberline {5.3.5}Usability}{22}
+\contentsline {subsubsection}{\numberline {5.3.6}Facial Recognition Libraries}{22}
+\contentsline {subsubsection}{\numberline {5.3.7}Language}{22}
+\contentsline {subsubsection}{\numberline {5.3.8}Time Spent}{22}
+\contentsline {subsubsection}{\numberline {5.3.9}Documentation}{23}
+\contentsline {subsubsection}{\numberline {5.3.10}Testing}{23}
+\contentsline {subsubsection}{\numberline {5.3.11}Headless}{23}
+\contentsline {subsubsection}{\numberline {5.3.12}Multithreaded}{23}
+\contentsline {subsection}{\numberline {5.4}Development Methodology}{23}
+\contentsline {subsection}{\numberline {5.5}Final Design}{24}
+\contentsline {section}{\numberline {6}Impact}{25}
+\contentsline {subsection}{\numberline {6.1}Social}{25}
+\contentsline {subsection}{\numberline {6.2}Legal}{25}
+\contentsline {subsubsection}{\numberline {6.2.1}Computer Misuse Act}{25}
+\contentsline {subsubsection}{\numberline {6.2.2}Data Protection Act}{26}
+\contentsline {subsubsection}{\numberline {6.2.3}Terms and Coniditions}{26}
+\contentsline {subsection}{\numberline {6.3}Ethical}{26}
+\contentsline {section}{\numberline {7}Implementation}{28}
+\contentsline {subsection}{\numberline {7.1}Face Recognition}{28}
+\contentsline {subsection}{\numberline {7.2}Test Server}{28}
+\contentsline {subsubsection}{\numberline {7.2.1}nginx}{28}
+\contentsline {subsubsection}{\numberline {7.2.2}cherrypy}{28}
+\contentsline {subsection}{\numberline {7.3}Portable Module}{28}
+\contentsline {subsection}{\numberline {7.4}Threading}{29}
+\contentsline {subsection}{\numberline {7.5}Command Line Interactivity}{29}
+\contentsline {subsection}{\numberline {7.6}Social Network Interactivity}{30}
+\contentsline {subsection}{\numberline {7.7}Challenges}{30}
+\contentsline {subsubsection}{\numberline {7.7.1}Loading Images from Memory}{30}
+\contentsline {subsubsection}{\numberline {7.7.2}Maximum Loaded Images}{31}
+\contentsline {subsubsection}{\numberline {7.7.3}Multiple Threads for Producing and Consuming}{31}
+\contentsline {subsubsection}{\numberline {7.7.4}Thread Object Access Control}{32}
+\contentsline {subsubsection}{\numberline {7.7.5}Result Retrieval}{32}
+\contentsline {subsubsection}{\numberline {7.7.6}Command Line Arguments}{32}
+\contentsline {subsubsection}{\numberline {7.7.7}Inter-Thread Communication}{33}
+\contentsline {subsubsection}{\numberline {7.7.8}Loading Greyscale Images}{33}
+\contentsline {subsection}{\numberline {7.8}Implementation Methodology}{34}
+\contentsline {subsection}{\numberline {7.9}UML Diagram}{35}
+\contentsline {section}{\numberline {8}Testing and Results}{36}
+\contentsline {subsection}{\numberline {8.1}Aims}{36}
+\contentsline {subsection}{\numberline {8.2}Testing Strategy}{36}
+\contentsline {subsubsection}{\numberline {8.2.1}Comparing Images from Different Data Sets}{36}
+\contentsline {subsubsection}{\numberline {8.2.2}Comparing Images with Different Compression Algorithms}{36}
+\contentsline {subsubsection}{\numberline {8.2.3}Comparing Images Taken in the Infra-Red Spectrum}{37}
+\contentsline {subsubsection}{\numberline {8.2.4}Restricting by Identifiable Information}{37}
+\contentsline {subsection}{\numberline {8.3}Expected Results}{37}
+\contentsline {subsubsection}{\numberline {8.3.1}Comparing Images from Different Data Sets}{37}
+\contentsline {subsubsection}{\numberline {8.3.2}Comparing Images with Different Compression Algorithms}{37}
+\contentsline {subsubsection}{\numberline {8.3.3}Comparing Images Taken in the Infra-Red Spectrum}{37}
+\contentsline {subsubsection}{\numberline {8.3.4}Restricting by Identifiable Information}{37}
+\contentsline {subsection}{\numberline {8.4}Comparing Images from Different Data Sets}{38}
+\contentsline {subsubsection}{\numberline {8.4.1}Test 1}{38}
+\contentsline {subsubsection}{\numberline {8.4.2}Test 2}{39}
+\contentsline {subsubsection}{\numberline {8.4.3}Test 3}{40}
+\contentsline {subsubsection}{\numberline {8.4.4}Test 4}{41}
+\contentsline {subsubsection}{\numberline {8.4.5}Test 5}{41}
+\contentsline {subsection}{\numberline {8.5}Comparing Images with Different Compression Algorithms}{42}
+\contentsline {subsubsection}{\numberline {8.5.1}Test 1}{42}
+\contentsline {subsubsection}{\numberline {8.5.2}Test 2}{42}
+\contentsline {subsubsection}{\numberline {8.5.3}Test 3}{43}
+\contentsline {subsubsection}{\numberline {8.5.4}Test 4}{43}
+\contentsline {subsubsection}{\numberline {8.5.5}Test 5}{43}
+\contentsline {subsection}{\numberline {8.6}Comparing Images Taken in the Infra-Red Spectrum}{46}
+\contentsline {subsubsection}{\numberline {8.6.1}Test 1}{46}
+\contentsline {subsubsection}{\numberline {8.6.2}Test 2}{46}
+\contentsline {subsubsection}{\numberline {8.6.3}Test 3}{47}
+\contentsline {subsubsection}{\numberline {8.6.4}Test 4}{47}
+\contentsline {subsubsection}{\numberline {8.6.5}Test 5}{47}
+\contentsline {subsection}{\numberline {8.7}Restricting by Identifiable Information}{47}
+\contentsline {subsubsection}{\numberline {8.7.1}Test 1}{48}
+\contentsline {subsubsection}{\numberline {8.7.2}Test 2}{48}
+\contentsline {subsubsection}{\numberline {8.7.3}Test 3}{49}
+\contentsline {subsubsection}{\numberline {8.7.4}Test 4}{50}
+\contentsline {subsubsection}{\numberline {8.7.5}Test 5}{51}
+\contentsline {section}{\numberline {9}Evaluation}{52}
+\contentsline {subsection}{\numberline {9.1}Overview}{52}
+\contentsline {subsection}{\numberline {9.2}Design}{52}
+\contentsline {subsection}{\numberline {9.3}Implementation}{53}
+\contentsline {subsection}{\numberline {9.4}Results}{53}
+\contentsline {subsubsection}{\numberline {9.4.1}Comparing Images from Different Data Sets}{53}
+\contentsline {subsubsection}{\numberline {9.4.2}Comparing Images with Different Compression Algorithms}{54}
+\contentsline {subsubsection}{\numberline {9.4.3}Comparing Images Taken in the Infra-Red Spectrum}{54}
+\contentsline {subsubsection}{\numberline {9.4.4}Restricting by Identifiable Information}{54}
+\contentsline {subsubsection}{\numberline {9.4.5}False Positive vs. False Negative}{54}
+\contentsline {section}{\numberline {10}Conclusion}{56}
+\contentsline {subsection}{\numberline {10.1}Overview}{56}
+\contentsline {subsection}{\numberline {10.2}Findings}{56}
+\contentsline {subsection}{\numberline {10.3}Future Work}{56}
+\contentsline {section}{Appendices}{61}
+\contentsline {section}{\numberline {A}Threat Graph}{61}
+\contentsline {section}{\numberline {B}"Boston Bomber" Identification}{62}
+\contentsline {section}{\numberline {C}Connection Graph}{63}
+\contentsline {section}{\numberline {D}Command Line Arguments}{63}
+\contentsline {section}{\numberline {E}GitHub Commit log}{63}
+\contentsline {section}{\numberline {F}Full Source Code}{80}
+\contentsline {subsection}{\numberline {F.1}facegather.py}{80}
+\contentsline {subsection}{\numberline {F.2}run.py}{84}
+\contentsline {subsection}{\numberline {F.3}server.py}{89}
+\contentsline {subsection}{\numberline {F.4}compression\_algorithm\_test.sh}{91}
+\contentsline {subsection}{\numberline {F.5}identifying\_information\_restriction\_test.sh}{92}
+\contentsline {subsection}{\numberline {F.6}IR\_image\_test.sh}{92}
+\contentsline {subsection}{\numberline {F.7}multiple\_dataset\_test.sh}{93}
+\contentsline {section}{\numberline {G}generate\_test\_data.py}{93}
+\contentsline {section}{\numberline {H}Example nginx configuration file}{95}

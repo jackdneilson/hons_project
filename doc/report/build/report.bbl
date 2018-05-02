@@ -46,6 +46,11 @@ Charters, D.~A.  \harvardyearleft 2018\harvardyearright , `Professionalizing
   reconnaissance unit', {\em Intelligence and National Security} {\bf
   33}(1),~130--138.
 
+\harvarditem{{\em Computer Misuse Act}}{1990}{computermisuseact}
+{\em Computer Misuse Act}  \harvardyearleft 1990\harvardyearright ,
+  http://www.legislation.gov.uk/ukpga/1990/18/.
+\newblock Online, accessed 2nd May 2018.
+
 \harvarditem[Cui et~al.]{Cui, Li, Xu, Shan \harvardand\
   Chen}{2013}{faceregiondescriptors}
 Cui, Z., Li, W., Xu, D., Shan, S. \harvardand\ Chen, X.  \harvardyearleft
@@ -53,6 +58,11 @@ Cui, Z., Li, W., Xu, D., Shan, S. \harvardand\ Chen, X.  \harvardyearleft
   metric learning for face recognition in the wild, {\em in} `Proceedings of
   the IEEE Conference on Computer Vision and Pattern Recognition',
   pp.~3554--3561.
+
+\harvarditem{{\em Data Protection Act}}{1998}{dataprotectionact}
+{\em Data Protection Act}  \harvardyearleft 1998\harvardyearright ,
+  http://www.legislation.gov.uk/ukpga/1998/29/contents.
+\newblock Online, accessed 2nd May 2018.
 
 \harvarditem[Evans et~al.]{Evans, Meissner, Brandon, Russano \harvardand\
   Kleinman}{2010}{criminalvshumint}
@@ -79,6 +89,12 @@ Evans, J.~R., Meissner, C.~A., Brandon, S.~E., Russano, M.~B. \harvardand\
   suggest tags?}',
   \url{https://www.facebook.com/help/122175507864081?helpref=faq_content}.
 \newblock Online; accessed 2nd March 2018.
+
+\harvarditem{{\em Facebook Terms and
+  Conditions}}{n.d.}{facebooktermsconditions}
+{\em Facebook Terms and Conditions}  \harvardyearleft n.d.\harvardyearright ,
+  https://www.facebook.com/legal/terms.
+\newblock Online, accessed 2nd May 2018.
 
 \harvarditem{Gallagher}{2005}{policefacerecog}
 Gallagher, P.  \harvardyearleft 2005\harvardyearright , `Download festival:

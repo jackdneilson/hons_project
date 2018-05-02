@@ -54,17 +54,63 @@ Special thanks are due to Dr. John Isaacs of the Robert Gordon University, witho
 Thanks are also owed to Dr. Libor Spacek for use of the Essex Computer Vision database, Dr. Mislav Grgic for use of the SCFace database, and Gary B. Huang, Manu Ramesh, Tamara Berg, and Erik Learned-Miller for the use of the LFW database, respectively.
 
 \newpage
+\section{Introduction}
+\subsection{Overview}
+Social media intelligence (SOCMINT) is an emergent field in intelligence gathering where data is gathered from social media profiles. Massive amounts of data are added to social media services every day \citep{socmintoverview}, much of it personal, making social media sites a potentially valuable resource when gathering information about groups or individuals \citep{gchqmasssurveillance}. Social networks have also been used as a means of communication between persons of interest to the security services, making mining intelligence from their profiles a high priority \citep{socmintoverview}\citep{policesocmint}.
+
+Social media intelligence has been shown to have many uses, from detecting potential insider threads (Kandias and Stavrou, 2015) to increasing the effectiveness of prior knowledge attacks. The second point is particularly relevant, as it allows an adversary with no privileged information (OSINT only) to potentially gain access to networks or sensitive information by means of a spearphishing or social engineering attack.
+
+Although the usefulness of social media intelligence has been established, gathering and analysing it may not be as easy as it first appears. The problem for would-be analysts is the sheer amount of data contained within social media platforms – for example, 250 million photos are added to Facebook every day (Omand et. al., 2012). To find useful information about a single person of interest in such a large data set is extremely challenging. Success rates increase dramatically if some starting point is known, such as a first name, a date of birth, or a place of work.
+
+There has been little speculation on the use of artificial intelligence when gathering or analysing SOCMINT, particularly in the case of gathering information about a single person of interest. Being able to restrict a search for such a subject by their face has a high potential for intelligence agencies, e.g. when the only information they may have is a mugshot. The following paper investigates the feasibility of implementing such a system.
+
+\subsection{Aims and Objectives}
+The main aim of this project is to implement a system that allows a user to search a social networking service by a test image, through facial recognition. A list of objectives may be found below:
+
+\begin{center}
+\begin{enumerate}
+\item{Implement a system that can search social networks using face mappings generated from a test image.}
+\begin{enumerate}
+\item{Gather requirements for the system}
+\item{Implement basic matching functionality using a facial recognition library}
+\item{Generate a test data set}
+\item{Implement a RESTful server to serve test data}
+\item{Implement basic client functionality to retrieve data from the server}
+\item{Implement face matching functionality using test data retrieved from the server}
+\item{Refactor current system into a thread-based architecture}
+
+\end{enumerate}
+\end{enumerate}
+\end{center}
+
+\subsection{Key Findings}
+\subsubsection{RGB vs. Greyscale Images}
+While comparing images stored as Red-Green-Blue, accuracy rates were consistently over 90%. This dropped considerably when comparing greyscale images, such as the ones from the SCFace database. It is theorised that the facial recognition algorithm was less successful at finding facial descriptors in these images because of the lack of colour.
+
+\subsubsection{Time Taken}
+When searching over the entire data set, tests took over 2 hours to complete. The data set is meant to simulate a social networking service, however it is a fraction of the size. The time taken to search the dataset was reduced by several orders of magnitude when the search was restricted by some identifying information, in this case a subject's first name. To obtain results in a reasonable timescale in real-world applications the data set must be restricted in some way, or vastly more processing power must be utilised.
+
+\subsubsection{Accuracy}
+The application managned to achieve a high accuracy rate (over 90\%) when searching the test data with full-colour images. While the rates shown may be optimistic for real-world use, they certainly demonstrate the efficacy of facial recognition when searching social networking services.
+
+\subsection{Structure}
+The report includes a literature review which presents an overview of the current state of the art in both social media intelligence and facial recognition, as well as holes in functionality that could potentially be filled by this project. It then moves on to a description of the methodology used when researching, designing and implementing. Following this is a discussion of the ethical implications of the project, then a section describing the implementation of the design and problems that arose. The testing strategy and results are then described, followed by an evaluation of each part of the project. Finally, a conclusion which summarises the project is provided before a list of references and appendices.
+
+\newpage
 \section{Literature Review}
 \subsection{Background}
 \subsubsection{SOCMINT}
-Social media intelligence (SOCMINT) is an emergent field in intelligence gathering where data is gathered from social media profiles. Massive amounts of data are added to social media services every day \citep{socmintoverview}, much of it personal, making social media sites a potentially valuable resource when gathering information about groups or individuals \citep{gchqmasssurveillance}. Social networks have also been used as a means of communication between persons of interest to the security services, making mining intelligence from their profiles a high priority \citep{socmintoverview}\citep{policesocmint}.
-
 After the 2011 riots in London that were organised in large part on social media, Her Majesty's Inspectorate of Constabulary stated that the police services were "insufficiently equipped" to effectively use SOCMINT in their response \citep{socmintpublicsafety} which suggests that social media intelligence sources may be woefully underutilised \citep{socmintoverview}. This is not to say that the value of SOCMINT is not realised however, as many intelligence agencies are investing in tools to effectively gather and analyse SOCMINT \citep{socmintpublicsafety} or are performing case studies in to potential uses \citep{bostonbombingcasestudy}.
 
 While traditional human intelligence (HUMINT) focuses on building rapport and a foundation of trust in order to extract information from people of interest \citep{humintinterrogators}, users of social networking websites are much more likely to divulge personal information due to a misplaced senes of privacy \citep{socialmediacontent}. This makes SOCMINT attractive when attempting to gather data with little investment. The amount of data available to gather is vast in comparison to HUMINT sources \citep{socmintoverview}, making mass collection and analysis viable \citep{prismslides}. The nature of SOCMINT makes it easier to analyse than HUMINT, which relies on "tells" and small social cues \citep{humintinterrogators}.
 
 \subsubsection{Uses of SOCMINT}
 As previously stated, SOCMINT has seen some emergent use particularly in the security services. The Greek Ministry of Defence has developed a framework to identify individuals fitting certain psychiatric profiles from their social media accounts to allow for early identification of potential insider threats \citep{behaviourdetection}. By identifying factors that multiple intelligence agencies agree make a person more likely to pose an insider threat or negatively influence society (See appendix \ref{appendix:threatgraph}), they were able to map usage habits (intensity, content, popularity) to these factors to draw conclusions about clusters of users. So far, the research has been helpful in insider threat prevention, delinquent behaviour prediction and forensic analysis support.
+
+\begin{center}
+\includegraphics[width=\linewidth]{res/threat_graph.png}
+\textit{Graph of insider threat factors \citep{behaviourdetection}.}
+\end{center}
 
 \subsubsection{Facial Recognition}
 Facial recognition is a much more mature area of research than SOCMINT with many examples of industry usage. Facebook uses facial recognition to automate "tagging" photos with the identity of the persons pictured \citep{facebookfacialrecog}, and large companies are now releasing datasets such as YouTube Faces \citep{faceregiondescriptors} in an effort to advance the field.
@@ -75,6 +121,12 @@ This is not to say that facial recognition is not without controversy however, a
 Facial recognition has many practical applications that are already being realised. As noted previously, Facebook uses facial recognition when "tagging" photos. This is presumably done to allow advertisers to more effectively target individual users - for example, a person identified in a photo with a barbeque may receive adverts for propane gas.
 
 Facial recognition is also enjoying a heavy amount of attention from the security services due to it's use in identifying persons of interest. Case studies have been performed using images released to the public to ascertain how effective facial recognition is when looking for a specific person. In particular, Joshua Klontz and Anil Jain performed a case study using the images of the "Boston Bombers" against a set of test data \citep{bostonbombingcasestudy}. Their approach was successful in recognising one of the perpetrators from a picture taken from his social media account (See appendix \ref{appendix:bostonbomber}).
+
+\begin{center}
+\includegraphics[scale=0.5]{res/boston_bomber.png}
+
+\textit{Table of potential matches, note the correct identification from the picture taken from social media with similar pose and lighting \citep{bostonbombingcasestudy}.}
+\end{center}
 
 \subsubsection{Constrained vs Unconstrained}
 While facial recognition software has come a long way, achieving accuracy rates of up to 99\% on small, consistent data sets \citep{facialrecogidentifyingpoi}, it is still in it's infancy when it comes to identifying people in "unconstrained" images. Images taken in the wild may have large variations in pose, facial occlusion and ambient lighting. This makes it difficult to identify facial features or markers (such as iris distinace, nasal distance, blemishes) which in turn has a negative impact on accuracy rates \citep{unconstrainedfacialrecogbenchmark}. When looking at applications of face recognition software with unconstrained datasets, matches are typically achieved when the test image has similar pose, facial occlusion and lighting as the sample image (See appendix \ref{appendix:bostonbomber}).
@@ -129,6 +181,12 @@ In April 2013, Edward Snowden leaked a deck of slides used by the NSA to brief p
 
 As mentioned previously, Kandias and Stavrou have developed a framework for using social media intelligence for predicting and mitigating insider threats while working at the Information Security and Critical Infrastructure Protection Lab at the University of Athens \citep{behaviourdetection}. The framework focuses on analysing the psychology of the subjects using their social media posting habits. It shows that seemingly inconsequential data such as posting frequency may still be useful when analysing social media intelligence. An example graph to find the amount of "klout" a social media user may have in the Nereus framework is referenced in Appendix \ref{appendix:connectiongraph}.
 
+\begin{center}
+\includegraphics[width=\linewidth]{res/connection_klout.png}
+
+\textit{Graph of social media connections and klout score in the Nereus framework\citep{behaviourdetection}.}
+\end{center}
+
 \subsubsection{Challenges and Constraints}
 There are several challenges to consider when collecting and analysing data for social networking services. First is the issue of privacy. Many people see social media profiles in a similar setting as a meeting between friends, and as such post things which they perhaps would not say or show in public \citep{socialmediacontent}. The chilling effect of public scrutiny, or even direct surveillance, does not seem to put a damper on this.
 
@@ -166,6 +224,9 @@ With the exception of Facebook, the services listed aggregate social media profi
 
 A potentially large gap in functionality is that lack of "soft" comparisons. The services above perform well when doing direct comparisons, such as having a specific name or a name matching a regular expression. They do not offer search functionality allowing for some margin of error such as a name matching a regular expression or having a Hebbian distance of 1, or having a face harvested from a profile picture be similar to a test image.
 
+\subsection{Objectives}
+As mentioned in the introduction, the objective of this project is to create a system which allows users to search social network profiles using facial recognition. Should it be successful, it fills the gaps in functionality raised in the previous section. The search can be restricted by personally identifiable information, and since the project is open-source an end user may add search vectors directly. It collects the entire profile (or at least, everything that is exposed publicly). It allows for the seaching of regular expressions, as well as thresholding face comparisons to adjust levels of sensitivity.
+
 \newpage
 \section{Methodology}
 \subsection{Overview}
@@ -179,12 +240,6 @@ The software must implement a method of facial recognition, to rank a set of fac
 
 \subsubsection{Social Media Integration}
 The software must have the ability to use social networking websites as it's data set when comparing a test face. It would be desirable for the software to have the capability to use other identifying information alongside the test image to narrow the search space. Due to limited time and resources, test accounts may be used as a proof of concept.
-
-\subsubsection{Headless}
-The software should be able to function without a GUI, since the requirement of being able to use extremely large data sets may require deployment to a large server cluster or to a cloud.
-
-\subsubsection{Multithreaded}
-Where applicable, the software should make full use of parallelisation to increase its speed and resource utilisation. This is particularly important when working with large data sets.
 
 \subsection{Non-functional Requirements}
 \subsubsection{Accuracy}
@@ -217,6 +272,60 @@ The software should have at a minimum a man page and usage information. More doc
 \subsubsection{Testing}
 The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the Essex Facial Recognition database and the SCFace database.
 
+\subsubsection{Headless}
+The software should be able to function without a GUI, since the requirement of being able to use extremely large data sets may require deployment to a large server cluster or to a cloud.
+
+\subsubsection{Multithreaded}
+Where applicable, the software should make full use of parallelisation to increase its speed and resource utilisation. This is particularly important when working with large data sets.
+
+\subsection{Development Methodology}
+The project was developed using an agile methodology. The requirements were gathered and then analysed to create a formal requirements specification. An initial design was then created from the requirements, and refined as more features were added. After each objective was reached, the design was reviewed and current functionality was tested to ensure no regressions or new bugs entered the code base. This was continued until the first version of the project was complete.
+
+Testing was then done iteratively to ensure the correctness of the program. Starting with basic functionality (comparing one image against one data set), each requirement was tested independant of each other. This further ties in to the desire for a modular code base, as each test can be ran against a single part of the program without touching the rest of the code (and that module can then be used with some degree of confidence that it is bug free).
+
+This methodology continued into the testing used for data gathering. Debug messages were left in for "dry runs" of the tests to ensure the program was working as intended, and results were checked for correctness. Any problems could then be corrected, and the test re-ran. After several of these iterations to remove an error that could be introduced by the program to the results, the test was then ran and the results captured.
+
+\subsection{Final Design}
+\includegraphics[width=\linewidth]{res/final_design}
+
+\newpage
+\section{Impact}
+\subsection{Social}
+Social media intelligence has recently received a large amount of exposure. In particular, the revelation of consultancy Cambridge Analytica using data obtained through Facebook to influence U.S. elections has focused public attention sharply on what data facebook collects and subsequently shares with advertisers or data analytics firms. As a byproduct, users are becoming acutely more aware of what data they provide Facebook.
+
+The introduction of the General Data Protection Regulation by the EU, a regulation intended to protect the human right to privacy, has also brought SOCMINT to the public attention. Many websites did not comply with the directive when it was introduced but none moreso than social networking websites. Every major social networking service including Facebook, Twitter, Instagram etc. have been forced to refactor their websites to allow users to opt-out of some data gathering practices lest they attract the ire of the European Court.
+
+This project would have the potential for a large social impact if not for a few limiting factors. Should it grant individuals the ability to gather SOCMINT on arbitrary persons of interest, it would allow users to view what information could be gathered about themselves using SOCMINT through facial recognition. It could also having a chilling effect on persons using social media as many would be reticent in broadcasting their thoughts if they knew they could be viewed by anyone with an image of their face. These scenarii are unlikely however, as the resources required to run such searches would be incredibly difficult for a single person to obtain. As well as the significant time and cost required for a search, an individual would have to access the entire data set held by a social media service - no easy task.
+
+\subsection{Legal}
+There are two laws in the UK which may apply to this project; the Computer Misuse Act (1990) and the Data Protection Act (1998). An analysis of how the project may interact with these laws may be found below.
+
+\subsubsection{Computer Misuse Act}
+The Computer Misuse Act prohibits unauthorised access to a computer system \citep{computermisuseact}. Some may argue that the program developed as part of this project could breach the computer misuse act as it accesses private data without the authorisation or consent of the subject, however this is simply not the case. The data analysed by the program has been released to the public by the social media service with the user's consent, and access has been implicitly authorised by the social networking service. In the case of information shared by the social networking service in a privileged context (e.g. advertisers paying for more information) authorisation is granted explicitly, and again the end user has agreed that data gathered about them may be used in such a manner.
+
+\subsubsection{Data Protection Act}
+The Data Protection Act offers several safeguards to consumers to ensure their private data is being used in a responsible way in accordance with their wishes. In particular, it allows users to request a copy of all information a service has stored about them, and request that any incorrect data be corrected (and offers redress in the case that it is not). As well as requiring a data controller to provide these services, the act also mandates that the data stored must not be used in a way which may cause damage or distress, and that the data stored must not be used for direct marketing \citep{dataprotectionact}.
+
+There are more detailed principles detailed in the act which have been excluded here for brevity. The main condition of this act that applies to this project is that the data subject has consented to the processing of their data. Again, arguments that this project violates the conditions of this act are unconvincing. All potential data subjects whose data may be analysed must necessarily have agreed to have their information either published in the public domain, or used by a third party.
+
+\subsubsection{Terms and Coniditions}
+In the course of this project no production social networking website was searched. Leaving aside the ethical implications this could have (described in the next section), the use of this application is against many social networking websites terms and conditions. For example, Facebook's terms and conditions states that "You will not collect users' content or information, or otherwise access Facebook, using automated means (such as harvesting bots, robots, spiders or scrapers) without our prior permission" \citep{facebooktermsconditions}. In a real-world application, express permission of the social networking service would need to be obtained before any search was attempted.
+
+\subsection{Ethical}
+There are several ethical issues associated with this project, some of which have been outlined below:
+
+\begin{enumerate}
+\item{Users may not realise information they send to social networking websites may be made public.}
+\item{Users may not realise how much information is exposed about themselves on social networking services, leading to them making sensitive information public.}
+\item{Users may not realise the scale on which exposed information can be gathered and analysed.}
+\item{Users may not realise how much information can be gainend from analysing data they have made available.}
+\item{Users may not realise they are identifiable from specific pieces of information.}
+\end{enumerate}
+
+Mitigations to these issues exist, however some may not be fully mitigated. The ethical issues are one of the driving reasons behind generating a test data set from publicly available sources that are already in use in the field of computer vision - it allows the efficacy and correctness of the implementation to be tested without the potential for infringing on other persons privacy or the terms and conditions of a social networking service.
+
+There is no way to fully protect against unethical use of the implementation in a real-life scenario. The issues listed above depend on the user being aware of the data they expose about themselves and the impact it may have, which is not possible for the entire population of a social networking service. It is therefore suggested that the use of this tool be restricted to organisations with heavy oversight, such as academic institutions or intelligence agencies.
+
 \newpage
 \section{Implementation}
 \subsection{Face Recognition}
@@ -245,6 +354,12 @@ The producer / consumer consumer model was useful when developing the applicatio
 
 \subsection{Command Line Interactivity}
 Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX $>>$ operator).
+
+\begin{center}
+\includegraphics[width=\linewidth]{res/facegather_cmd_line_args.png}
+
+\textit{A help page showing the command line arguments that can be supplied.}
+\end{center}
 
 One potential issue when using an application without a GUI is presenting the results. The application persists its results in a JSON format for use by other applications or for direct consumption by the end user.
 
@@ -352,7 +467,10 @@ The import function for loading images from memory described above failed when a
             return fr.face_encodings(numpy.array(img.convert('RGB')))
 \end{lstlisting}
 
-\subsubsection{UML Diagram}
+\subsection{Implementation Methodology}
+The agile methodology described in the methodology section was continued during implementation. Each piece of functionality was tested during implementation, then re-tested after completion for error-handling and robustness.
+
+\subsection{UML Diagram}
 \includegraphics[scale=1]{res/facegather_uml.png}
 
 \section{Testing and Results}
@@ -394,8 +512,9 @@ Ideally, photos taken in infra-red should be matched at a similar accuracy as th
 \subsubsection{Restricting by Identifiable Information}
 Searches against a restricted data set give less opportunities for false positives, and increase the ratio of matching images to non-matching images. Therefore, it is expected that the accuracy and speed of the search should be superior to an unrestricted search.
 
-
 \subsection{Comparing Images from Different Data Sets}
+The facial recognition algorithm used has been trained against only the LFW data set. By combining this data set with others that it hasn't been trained on, a closer approximation of accuracy to searches in a production social networking service may be obtained. Tests 1 through 4 use a test image from the Essex Computer Vision data set, test 5 uses an image from the LFW data set. All searches were done against a union of theh LFW data set, the SCFace data set and the Essex Computer Vision data set.
+
 \begin{center}
 \begin{tabular}{cccc}
 Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
@@ -560,6 +679,8 @@ Aaron\_Peirsol\_0004.jpg & 0.41244297976804756 & No \\
 
 \newpage
 \subsection{Comparing Images with Different Compression Algorithms}
+Social networks may store images in different formats, typically Portable Network Graphic (PNG). Most commercial cameras store their images a JPEG files. This test compares a JPEG image against a PNG data set, to find if there are any significant differences in accuracy or time taken when comparing images in different formats.
+
 \begin{center}
 \begin{tabular}{cccc}
 Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
@@ -773,6 +894,8 @@ Tony\_Blair\_0143.png & 0.44663782899819965 & No\\
 \end{center}
 
 \subsection{Comparing Images Taken in the Infra-Red Spectrum}
+The SCFace includes images of each subject taken in the infra-red spectrum, using a camera without an IR filter. These images may be captured in low-light conditions as they use infra-red radiation as opposed to visible light during exposure. This test compares these images against a data set of RGB images, taken in varied lighting conditions.
+
 \begin{center}
 \begin{tabular}{cccc}
 Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
@@ -846,6 +969,8 @@ Image & Distance & False Positive \\
 
 
 \subsection{Restricting by Identifiable Information}
+It is useful when searching social networking services to restrict the search by multiple vectors, to reduce the search space and thereby increase accuracy of the search and the speed of any following searches. The purpose of this test is to ascertain the improvement in both accuracy and speed when restricting a search by the subject's name.
+
 \begin{center}
 \begin{tabular}{cccc}
 Test Number & Accuracy & False Positives & Time Elapsed (Hours) \\
@@ -1001,9 +1126,15 @@ glen\_exp.19.jpg & 0.1574033445984365 & No \\
 glen\_exp.20.jpg & 0.171147992496858 & No \\
 \end{tabular}
 \end{center}
+\vspace{2cm}
+
+An evaluation of these results can be found overleaf.
 
 \newpage
 \section{Evaluation}
+\subsection{Overview}
+The project overall was a success, given its limitations. The design conforms to industry best practices, and was refined iteratively without transforming unrecognisably. The implementation succeeds in fulfilling all requirements set, as well as the primary objective of searching a social networking service by face. It successfully fills the gaps in current functionality outline in the literature review, with the restriction that it is a proof-of-concept raher than a feature complete, production ready system. Testing, while not conclusive, certainly showed promising results and is encouraging should further research be done. By adapting an agile approach throughout the project could be refined several times before completion, 
+
 \subsection{Design}
 The overall design of the implementation was sound. In particular the producer-consumer model suited the project well as it allows for a thread-based implementation with multiple queues, allowing the computational cost of searching the data set to be spread across multiple CPU cores.
 
@@ -1036,6 +1167,9 @@ The implementation performed slightly better when comparing images in the infra-
 The results obtained by this set of tests are the most promising in the entire project. The implementation achieved an accuracy of 0.934, the highest in any of the sets of tests. This is to be expected, as by supplying a name to restrict the search by the number of false negatives is reduced from several thousand to at most several hundred. Most impressive is the time saved by restricting the search - the average time taken to search was improved from over 2 hours to just 26 seconds, a time save of over 27,000\%.
 
 An interesting note is that the false positive in test 1, where the test image provided was of George H.W. Bush, was a picture of George W. Bush - the subject's son. If the application behaves similarly in a real-life applications this could be a useful unintended side-effect as gathering information on family members (sons, fathers etc.) would be valuable.
+
+\subsubsection{False Positive vs. False Negative}
+In the context of this application, false negatives are much less desirable than false positives. Since the application can feed-forward search results to a post-processing application or to a human operator, the result set should be as complete as possible. Provided the accuracy is above an acceptable baseline, the number of false positives is almost inconsequential so long as recall is high. To that end the threshold for a match is set to be fairly forgiving.
 
 \newpage
 \section{Conclusion}

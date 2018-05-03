@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  2 MAY 2018 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  3 MAY 2018 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,24 +469,71 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count128
+\U@D=\dimen167
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2016/12/28 v5.2 context-sensitive quotations (JAW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count129
+)
+\csq@reset=\count130
+\csq@gtype=\count131
+\csq@glevel=\count132
+\csq@qlevel=\count133
+\csq@maxlvl=\count134
+\csq@tshold=\count135
+\csq@ltx@everypar=\toks35
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2016/12/28 v5.2 csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+Package csquotes Info: Redefining alias 'english' -> 'english/american'.
+)
+Package csquotes Info: Allocating character ".
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+
 (build/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -524,17 +571,17 @@ LaTeX Font Info:    ... okay on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen167
+\scratchcounter=\count136
+\scratchdimen=\dimen168
 \scratchbox=\box41
-\nofMPsegments=\count129
-\nofMParguments=\count130
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen168
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks36
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen169
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -592,20 +639,21 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count134
+\c@lstlisting=\count142
+Package csquotes Info: Making character " active on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 39.
+(Font)              <14.4> on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 39.
+(Font)              <7> on input line 44.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (build/report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 5.
  [2] [3] [4])
 \tf@toc=\write4
 \openout4 = `report.toc'.
@@ -619,21 +667,21 @@ Missing character: There is no “ in font cmr12!
 File: res/threat_graph.png Graphic file (type png)
 
 <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 111.
+Package pdftex.def Info: res/threat_graph.png used on input line 115.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
  [10] [11 <./res/threat_graph.png (PNG copy)>]
 <res/boston_bomber.png, id=45, 447.92343pt x 607.89609pt>
 File: res/boston_bomber.png Graphic file (type png)
 
 <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 126.
+Package pdftex.def Info: res/boston_bomber.png used on input line 130.
 (pdftex.def)             Requested size: 223.96117pt x 303.9473pt.
  [12 <./res/boston_bomber.png>] [13] [14] [15]
 <res/connection_klout.png, id=61, 1215.54124pt x 251.94125pt>
 File: res/connection_klout.png Graphic file (type png)
 
 <use res/connection_klout.png>
-Package pdftex.def Info: res/connection_klout.png used on input line 185.
+Package pdftex.def Info: res/connection_klout.png used on input line 189.
 (pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
  [16] [17 <./res/connection_klout.png>] [18]
 [19] [20] [21] [22] [23]
@@ -641,10 +689,10 @@ Package pdftex.def Info: res/connection_klout.png used on input line 185.
 File: res/final_design.png Graphic file (type png)
 
 <use res/final_design.png>
-Package pdftex.def Info: res/final_design.png used on input line 289.
+Package pdftex.def Info: res/final_design.png used on input line 293.
 (pdftex.def)             Requested size: 443.57848pt x 277.50677pt.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 289--290
+Overfull \hbox (30.0pt too wide) in paragraph at lines 293--294
 [] 
  []
 
@@ -653,28 +701,28 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 289--290
 File: res/facegather_cmd_line_args.png Graphic file (type png)
 
 <use res/facegather_cmd_line_args.png>
-Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 35
-9.
+Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 36
+3.
 (pdftex.def)             Requested size: 443.57848pt x 214.47374pt.
  [29 <./res/facegather_cmd_line_args.png>] [30] [31] [32] [33]
 <res/facegather_uml.png, id=127, 402.50375pt x 563.10374pt>
 File: res/facegather_uml.png Graphic file (type png)
 
 <use res/facegather_uml.png>
-Package pdftex.def Info: res/facegather_uml.png used on input line 474.
+Package pdftex.def Info: res/facegather_uml.png used on input line 486.
 (pdftex.def)             Requested size: 402.50276pt x 563.10237pt.
  [34] [35 <./res/facegather_uml.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 482.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 494.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 482.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 494.
  [36] [37] [38]
 [39] [40] [41]
-Overfull \hbox (33.04776pt too wide) in paragraph at lines 681--681
+Overfull \hbox (33.04776pt too wide) in paragraph at lines 693--693
 []\OT1/cmr/bx/n/14.4 Comparing Im-ages with Dif-fer-ent Com-pres-sion Al-go-rit
 hms 
  []
@@ -700,162 +748,481 @@ Missing character: There is no “ in font cmr12!
 ) [60]
 File: res/threat_graph.png Graphic file (type png)
  <use res/threat_graph.png>
-Package pdftex.def Info: res/threat_graph.png used on input line 1200.
+Package pdftex.def Info: res/threat_graph.png used on input line 1212.
 (pdftex.def)             Requested size: 443.57848pt x 313.67224pt.
 File: res/boston_bomber.png Graphic file (type png)
  <use res/boston_bomber.png>
-Package pdftex.def Info: res/boston_bomber.png used on input line 1205.
+Package pdftex.def Info: res/boston_bomber.png used on input line 1217.
 (pdftex.def)             Requested size: 358.33922pt x 486.31754pt.
  [61]
 File: res/connection_klout.png Graphic file (type png)
 
 <use res/connection_klout.png>
-Package pdftex.def Info: res/connection_klout.png used on input line 1211.
+Package pdftex.def Info: res/connection_klout.png used on input line 1223.
 (pdftex.def)             Requested size: 443.57848pt x 91.93665pt.
  [62]
 File: res/facegather_cmd_line_args.png Graphic file (type png)
  <use res/facegather_cmd_line_args.png>
 Package pdftex.def Info: res/facegather_cmd_line_args.png used on input line 12
-16.
+28.
 (pdftex.def)             Requested size: 443.57848pt x 214.47374pt.
 File: res/git_log.txt  (verbatim)
 
 [63] [64]
-Overfull \hbox (130.69681pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (130.69681pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Added more papers, finished plan, lit. review and biblio
 graphy in proposal, updated diary[] 
  []
 
 [65]
-Overfull \hbox (19.54675pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (19.54675pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Finished first draft of proposal, finished ethics form, 
 updated records[] 
  []
 
 [66] [67]
-Overfull \hbox (7.19675pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
 /hons_project[] 
  []
 
 [68]
-Overfull \hbox (7.19675pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
 /hons_project[] 
  []
 
 [69] [70] [71]
-Overfull \hbox (81.29678pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (81.29678pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Implemented command line args, consumer threads, looping
  for multiple face images[] 
  []
 
 
-Overfull \hbox (7.19675pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Fixed server implementation and face recognition, made d
 emo for john.[] 
  []
 
 [72] [73]
-Overfull \hbox (87.47179pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (87.47179pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Added current solutions and missing functionality sectio
 n to lit. review of report[] 
  []
 
 [74]
-Overfull \hbox (118.3468pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (118.3468pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Annotated report with todos for completed project, found
  other data sets for comparison[] 
  []
 
 [75]
-Overfull \hbox (7.19675pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (7.19675pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Merge branch 'master' of https://github.com/jackdneilson
 /hons_project[] 
  []
 
 [76]
-Overfull \hbox (75.12178pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (75.12178pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Finished draft of testing methodology and expected resul
 ts, added abstract draft[] 
  []
 
 [77]
-Overfull \hbox (13.37175pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (13.37175pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Misc. bugfixes, added test for restricting by identifiab
 le information[] 
  []
 
 [78]
-Overfull \hbox (93.64679pt too wide) in paragraph at lines 1220--1220
+Overfull \hbox (93.64679pt too wide) in paragraph at lines 1233--1233
 []    \OT1/cmtt/m/n/12 Added IR and IR_RGB tests and test data, changes to serv
 er to serve SCface database[] 
  []
 
 [79] [80] [81] [82] [83]
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1408--1409
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1421--1422
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (69.20418pt too wide) in paragraph at lines 1411--1412
+Overfull \hbox (69.20418pt too wide) in paragraph at lines 1424--1425
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [84] [85] [86] [87] [88] [89] [90]
-Overfull \hbox (60.46074pt too wide) in paragraph at lines 1693--1694
+Overfull \hbox (60.46074pt too wide) in paragraph at lines 1706--1707
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ]  
  []
 
 [91]
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1734--1735
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1747--1748
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1735--1736
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1748--1749
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1736--1737
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1749--1750
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1737--1738
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1750--1751
 [][][][][][][][][][]  
  []
 
 
-Overfull \hbox (1.82442pt too wide) in paragraph at lines 1738--1739
+Overfull \hbox (1.82442pt too wide) in paragraph at lines 1751--1752
 [][][][][][][][][][]  
  []
 
-[92] [93] [94] [95] [96] (build/report.aux) ) 
+[92] [93] [94] [95] [96]
+
+pdfTeX warning: pdflatex (file ./res/1506801_poster.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<res/1506801_poster.pdf, id=330, 2392.13695pt x 3382.2361pt>
+File: res/1506801_poster.pdf Graphic file (type pdf)
+
+<use res/1506801_poster.pdf>
+Package pdftex.def Info: res/1506801_poster.pdf used on input line 1866.
+(pdftex.def)             Requested size: 2392.13113pt x 3382.22789pt.
+
+
+pdfTeX warning: pdflatex (file ./res/1506801_poster.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+File: res/1506801_poster.pdf Graphic file (type pdf)
+<use res/1506801_poster.pdf>
+Package pdftex.def Info: res/1506801_poster.pdf used on input line 1866.
+(pdftex.def)             Requested size: 2392.13113pt x 3382.22789pt.
+
+
+pdfTeX warning: pdflatex (file ./res/1506801_poster.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./res/1506801_poster.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<res/1506801_poster.pdf, id=333, page=1, 2392.13695pt x 3382.2361pt>
+File: res/1506801_poster.pdf Graphic file (type pdf)
+
+<use res/1506801_poster.pdf, page 1>
+Package pdftex.def Info: res/1506801_poster.pdf, page1 used on input line 1866.
+
+(pdftex.def)             Requested size: 2392.13113pt x 3382.22789pt.
+File: res/1506801_poster.pdf Graphic file (type pdf)
+ <use res/1506801_poster.pdf, page 1>
+Package pdftex.def Info: res/1506801_poster.pdf, page1 used on input line 1866.
+
+(pdftex.def)             Requested size: 1794.09834pt x 2536.67091pt.
+File: res/1506801_poster.pdf Graphic file (type pdf)
+
+<use res/1506801_poster.pdf, page 1>
+Package pdftex.def Info: res/1506801_poster.pdf, page1 used on input line 1866.
+
+(pdftex.def)             Requested size: 1794.09834pt x 2536.67091pt.
+File: res/1506801_poster.pdf Graphic file (type pdf)
+ <use res/1506801_poster.pdf, page 1>
+Package pdftex.def Info: res/1506801_poster.pdf, page1 used on input line 1866.
+
+(pdftex.def)             Requested size: 1794.09834pt x 2536.67091pt.
+File: res/1506801_poster.pdf Graphic file (type pdf)
+
+<use res/1506801_poster.pdf, page 1>
+Package pdftex.def Info: res/1506801_poster.pdf, page1 used on input line 1866.
+
+(pdftex.def)             Requested size: 1794.09834pt x 2536.67091pt.
+ [97 <./res/1506801_poster.pdf>]
+<res/1506801_ethics_form.pdf, id=403, 597.23125pt x 845.1575pt>
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf>
+Package pdftex.def Info: res/1506801_ethics_form.pdf used on input line 1868.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+ <use res/1506801_ethics_form.pdf>
+Package pdftex.def Info: res/1506801_ethics_form.pdf used on input line 1868.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<res/1506801_ethics_form.pdf, id=406, page=1, 597.23125pt x 845.1575pt>
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 1>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page1 used on input line 
+1868.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 1>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page1 used on input line 
+1868.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 1>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page1 used on input line 
+1868.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 1>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page1 used on input line 
+1868.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 1>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page1 used on input line 
+1868.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [98 <./res/1506801_ethics_form.pdf>]
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf>
+Package pdftex.def Info: res/1506801_ethics_form.pdf used on input line 1869.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+ <use res/1506801_ethics_form.pdf>
+Package pdftex.def Info: res/1506801_ethics_form.pdf used on input line 1869.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<res/1506801_ethics_form.pdf, id=447, page=2, 597.23125pt x 845.1575pt>
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 2>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page2 used on input line 
+1869.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 2>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page2 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 2>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page2 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 2>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page2 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 2>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page2 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [99 <./res/1506801_ethics_form.pdf>]
+<res/1506801_ethics_form.pdf, id=452, page=3, 597.23125pt x 845.1575pt>
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 3>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page3 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 3>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page3 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 3>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page3 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [100 <./res/1506801_ethics_form.pdf>] <res/1506801_ethics_form.pdf, id=457, pa
+ge=4, 597.23125pt x 845.1575pt>
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 4>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page4 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 4>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page4 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: res/1506801_ethics_form.pdf Graphic file (type pdf)
+
+<use res/1506801_ethics_form.pdf, page 4>
+Package pdftex.def Info: res/1506801_ethics_form.pdf, page4 used on input line 
+1869.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [101 <./res/1506801_ethics_form.pdf>] <res/1506801_proposal.pdf, id=462, 597.2
+3125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf>
+Package pdftex.def Info: res/1506801_proposal.pdf used on input line 1871.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf>
+Package pdftex.def Info: res/1506801_proposal.pdf used on input line 1871.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<res/1506801_proposal.pdf, id=465, page=1, 597.23125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 1>
+Package pdftex.def Info: res/1506801_proposal.pdf, page1 used on input line 187
+1.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 1>
+Package pdftex.def Info: res/1506801_proposal.pdf, page1 used on input line 187
+1.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 1>
+Package pdftex.def Info: res/1506801_proposal.pdf, page1 used on input line 187
+1.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 1>
+Package pdftex.def Info: res/1506801_proposal.pdf, page1 used on input line 187
+1.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 1>
+Package pdftex.def Info: res/1506801_proposal.pdf, page1 used on input line 187
+1.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+ [102 <./res/1506801_proposal.pdf>]
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf>
+Package pdftex.def Info: res/1506801_proposal.pdf used on input line 1872.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf>
+Package pdftex.def Info: res/1506801_proposal.pdf used on input line 1872.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<res/1506801_proposal.pdf, id=503, page=2, 597.23125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 2>
+Package pdftex.def Info: res/1506801_proposal.pdf, page2 used on input line 187
+2.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 2>
+Package pdftex.def Info: res/1506801_proposal.pdf, page2 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 2>
+Package pdftex.def Info: res/1506801_proposal.pdf, page2 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 2>
+Package pdftex.def Info: res/1506801_proposal.pdf, page2 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 2>
+Package pdftex.def Info: res/1506801_proposal.pdf, page2 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+ [103 <./res/1506801_proposal.pdf>]
+<res/1506801_proposal.pdf, id=509, page=3, 597.23125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 3>
+Package pdftex.def Info: res/1506801_proposal.pdf, page3 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 3>
+Package pdftex.def Info: res/1506801_proposal.pdf, page3 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 3>
+Package pdftex.def Info: res/1506801_proposal.pdf, page3 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+ [104 <./res/1506801_proposal.pdf>]
+<res/1506801_proposal.pdf, id=514, page=4, 597.23125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 4>
+Package pdftex.def Info: res/1506801_proposal.pdf, page4 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 4>
+Package pdftex.def Info: res/1506801_proposal.pdf, page4 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 4>
+Package pdftex.def Info: res/1506801_proposal.pdf, page4 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+ [105 <./res/1506801_proposal.pdf>]
+<res/1506801_proposal.pdf, id=519, page=5, 597.23125pt x 845.1575pt>
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 5>
+Package pdftex.def Info: res/1506801_proposal.pdf, page5 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+ <use res/1506801_proposal.pdf, page 5>
+Package pdftex.def Info: res/1506801_proposal.pdf, page5 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+File: res/1506801_proposal.pdf Graphic file (type pdf)
+
+<use res/1506801_proposal.pdf, page 5>
+Package pdftex.def Info: res/1506801_proposal.pdf, page5 used on input line 187
+2.
+(pdftex.def)             Requested size: 567.36647pt x 802.89508pt.
+ [106 <./res/1506801_proposal.pdf>]
+(build/report.aux) ) 
 Here is how much of TeX's memory you used:
- 15382 strings out of 494902
- 294730 string characters out of 6179890
- 386474 words of memory out of 5000000
- 18375 multiletter control sequences out of 15000+600000
+ 16674 strings out of 494902
+ 313464 string characters out of 6179890
+ 421919 words of memory out of 5000000
+ 19640 multiletter control sequences out of 15000+600000
  10398 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,7n,72p,1105b,1574s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on build/report.pdf (96 pages, 4259751 bytes).
+ 62i,19n,72p,1101b,1573s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on build/report.pdf (106 pages, 4933894 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
+ 555 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,6 +10,11 @@
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{color}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -34,7 +39,7 @@
 \bibliographystyle{agsm}
 
 \begin{document}
-\title{Using Facial Recognition to gather Social Media Intelligence}
+\title{Using Facial Recognition to Gather Social Media Intelligence}
 \author{Jack Neilson}
 \maketitle
 \newpage
@@ -42,14 +47,14 @@
 \newpage
 
 \section{Abstract}
-Social Media Intelligence is an emergent sector in Open Source Intelligence that examines gathering information via publicly available social network profiles. It is viewed by many to be an extremely important aspect of information gathering, with several intelligence agencies including the UK Ministry of Defence and the US Federal Bureau of Investigation recently investing in tools to gather and analyse Social Media Intelligence \citep{socmintpublicsafety}.
+Social Media Intelligence is an emergent sector in Open Source Intelligence that examines gathering information via publicly available social network profiles. It is viewed by many to be an extremely important aspect of information gathering - several intelligence agencies including the UK Ministry of Defence and the US Federal Bureau of Investigation have recently invested in tools to gather and analyse Social Media Intelligence \citep{socmintpublicsafety}.
 
-A relatively unexplored method of gathering social media intelligence is by using facial recognition. By allowing a search using a person's face, a completely unknown person of interest could be identified and several important pieces of personal information gained.
+A relatively unexplored method of gathering social media intelligence is by using facial recognition. By allowing a search using a person's face, a completely unknown person of interest could be identified and several important pieces of personal information obtained.
 
 \textit{Keywords}: SOCMINT; Facial Recognition; OSINT; Social Media; Artificial Intelligence
 
 \section{Acknowledgements}
-Special thanks are due to Dr. John Isaacs of the Robert Gordon University, without whom this project would not have been possible.
+Special thanks are owed to Dr. John Isaacs of the Robert Gordon University, without whom this project would not have been possible.
 
 Thanks are also owed to Dr. Libor Spacek for use of the Essex Computer Vision database, Dr. Mislav Grgic for use of the SCFace database, and Gary B. Huang, Manu Ramesh, Tamara Berg, and Erik Learned-Miller for the use of the LFW database, respectively.
 
@@ -68,8 +73,8 @@ There has been little speculation on the use of artificial intelligence when gat
 The main aim of this project is to implement a system that allows a user to search a social networking service by a test image, through facial recognition. A list of objectives may be found below:
 
 \begin{center}
-\begin{enumerate}
-\item{Implement a system that can search social networks using face mappings generated from a test image.}
+\textbf{Implement a system that can search social networks using face mappings generated from a test image.}
+
 \begin{enumerate}
 \item{Gather requirements for the system}
 \item{Implement basic matching functionality using a facial recognition library}
@@ -79,7 +84,6 @@ The main aim of this project is to implement a system that allows a user to sear
 \item{Implement face matching functionality using test data retrieved from the server}
 \item{Refactor current system into a thread-based architecture}
 
-\end{enumerate}
 \end{enumerate}
 \end{center}
 
@@ -100,12 +104,12 @@ The report includes a literature review which presents an overview of the curren
 \section{Literature Review}
 \subsection{Background}
 \subsubsection{SOCMINT}
-After the 2011 riots in London that were organised in large part on social media, Her Majesty's Inspectorate of Constabulary stated that the police services were "insufficiently equipped" to effectively use SOCMINT in their response \citep{socmintpublicsafety} which suggests that social media intelligence sources may be woefully underutilised \citep{socmintoverview}. This is not to say that the value of SOCMINT is not realised however, as many intelligence agencies are investing in tools to effectively gather and analyse SOCMINT \citep{socmintpublicsafety} or are performing case studies in to potential uses \citep{bostonbombingcasestudy}.
+After the 2011 riots in London which were organised in large part on social media, Her Majesty's Inspectorate of Constabulary stated that the police services were "insufficiently equipped" to effectively use SOCMINT in their response \citep{socmintpublicsafety}, which suggests that social media intelligence sources may be woefully underutilised \citep{socmintoverview}. This is not to say that the value of SOCMINT is not realised however, as many intelligence agencies are investing in tools to effectively gather and analyse SOCMINT \citep{socmintpublicsafety} or are performing case studies into potential uses \citep{bostonbombingcasestudy}.
 
 While traditional human intelligence (HUMINT) focuses on building rapport and a foundation of trust in order to extract information from people of interest \citep{humintinterrogators}, users of social networking websites are much more likely to divulge personal information due to a misplaced senes of privacy \citep{socialmediacontent}. This makes SOCMINT attractive when attempting to gather data with little investment. The amount of data available to gather is vast in comparison to HUMINT sources \citep{socmintoverview}, making mass collection and analysis viable \citep{prismslides}. The nature of SOCMINT makes it easier to analyse than HUMINT, which relies on "tells" and small social cues \citep{humintinterrogators}.
 
 \subsubsection{Uses of SOCMINT}
-As previously stated, SOCMINT has seen some emergent use particularly in the security services. The Greek Ministry of Defence has developed a framework to identify individuals fitting certain psychiatric profiles from their social media accounts to allow for early identification of potential insider threats \citep{behaviourdetection}. By identifying factors that multiple intelligence agencies agree make a person more likely to pose an insider threat or negatively influence society (See appendix \ref{appendix:threatgraph}), they were able to map usage habits (intensity, content, popularity) to these factors to draw conclusions about clusters of users. So far, the research has been helpful in insider threat prevention, delinquent behaviour prediction and forensic analysis support.
+As previously stated SOCMINT has seen some emergent use, particularly in the security services. The Greek Ministry of Defence has developed a framework to identify individuals fitting certain psychiatric profiles from their social media accounts to allow for early identification of potential insider threats \citep{behaviourdetection}. By identifying factors which multiple intelligence agencies agree make a person more likely to pose an insider threat or negatively influence society (See appendix \ref{appendix:threatgraph}), they were able to map usage habits (intensity, content, popularity) to these factors to draw conclusions about clusters of users. So far, the research has been helpful in insider threat prevention, delinquent behaviour prediction and forensic analysis support.
 
 \begin{center}
 \includegraphics[width=\linewidth]{res/threat_graph.png}
@@ -115,7 +119,7 @@ As previously stated, SOCMINT has seen some emergent use particularly in the sec
 \subsubsection{Facial Recognition}
 Facial recognition is a much more mature area of research than SOCMINT with many examples of industry usage. Facebook uses facial recognition to automate "tagging" photos with the identity of the persons pictured \citep{facebookfacialrecog}, and large companies are now releasing datasets such as YouTube Faces \citep{faceregiondescriptors} in an effort to advance the field.
 
-This is not to say that facial recognition is not without controversy however, as many privacy advocates have pointed out that accurate face regonition could infringe on their right to privacy \citep{gchqmasssurveillance}. David Wood and Lucas Introne have posed that accurate facial recognition could lead to increased levels of surveillance, with no way to "opt out" \citep{facialrecogpolitics}\citep{facialrecogsecurityvsprivacy}.
+This is not to say that facial recognition is not without controversy however, as many privacy advocates have pointed out that accurate face recognition could infringe on individuals' right to privacy \citep{gchqmasssurveillance}. David Wood and Lucas Introne have posed that accurate facial recognition could lead to increased levels of surveillance, with no way to "opt out" \citep{facialrecogpolitics}\citep{facialrecogsecurityvsprivacy}.
 
 \subsubsection{Uses of Facial Recognition}
 Facial recognition has many practical applications that are already being realised. As noted previously, Facebook uses facial recognition when "tagging" photos. This is presumably done to allow advertisers to more effectively target individual users - for example, a person identified in a photo with a barbeque may receive adverts for propane gas.
@@ -129,20 +133,20 @@ Facial recognition is also enjoying a heavy amount of attention from the securit
 \end{center}
 
 \subsubsection{Constrained vs Unconstrained}
-While facial recognition software has come a long way, achieving accuracy rates of up to 99\% on small, consistent data sets \citep{facialrecogidentifyingpoi}, it is still in it's infancy when it comes to identifying people in "unconstrained" images. Images taken in the wild may have large variations in pose, facial occlusion and ambient lighting. This makes it difficult to identify facial features or markers (such as iris distinace, nasal distance, blemishes) which in turn has a negative impact on accuracy rates \citep{unconstrainedfacialrecogbenchmark}. When looking at applications of face recognition software with unconstrained datasets, matches are typically achieved when the test image has similar pose, facial occlusion and lighting as the sample image (See appendix \ref{appendix:bostonbomber}).
+While facial recognition software has come a long way, achieving accuracy rates of up to 99\% on small, consistent data sets \citep{facialrecogidentifyingpoi}, it is still in it's infancy when it comes to identifying people in "unconstrained" images. Images taken in the wild may have large variations in pose, facial occlusion and ambient lighting. This makes it difficult to identify facial features or markers (such as iris distance, nasal distance, blemishes) which in turn has a negative impact on accuracy rates \citep{unconstrainedfacialrecogbenchmark}. When looking at applications of face recognition software with unconstrained datasets, matches are typically achieved when the test image has similar pose, facial occlusion and lighting as the sample image (See appendix \ref{appendix:bostonbomber}).
 
 \subsection{Prior Knowledge Attacks}
 \subsubsection{Social Engineering}
 Social engineering in the context of information security refers to the ability of a person to gain access to information or control systems through a user or administrator, rather than through any technical oversight \citep{socialengineeringvulnerabilites}. It is a popular technique against "hardened" targets as technical prevention measures have proven to be ineffective \citep{advancedsocialengineering} making the human users and administrators the weakest link in the proverbial chain. In addition, it is difficult to train users in defenses against social engineering attacks. People believe they would not fall for such a trick despite research showing that humans perform poorly when attempting to detect deception \citep{advancedsocialengineering}\citep{socialengineeringvulnerabilites}. 
 
-Social engineering using e-mail as a medium is ubiquitous \citep{socialengineeringvulnerabilites}. As a generel strategy, the person wishing to gather information will send one or more people an e-mail in hopes of a response (whether that be in the form of visiting a website, replying with their username or password, opening a file etc). Recent studies in realistic environments have had success rates of up to 23\% \citep{socialengineeringvulnerabilites} - this is especially worrying given that even 1 repsondant could compromise an entire company.
+Social engineering using e-mail as a medium is ubiquitous \citep{socialengineeringvulnerabilites}. As a generel strategy, the person wishing to gather information will send one or more people an e-mail in hopes of a response (whether that be in the form of visiting a website, replying with their username or password, opening a file etc). Recent studies in realistic environments have had success rates of up to 23\% \citep{socialengineeringvulnerabilites}. This is especially worrying given that even one respondant could compromise an entire company.
 
-Examples of social engineering are not hard to find. In his book \textit{The Art of Deception} Kevin Mitnick describes a young Stanley Rifkin using social engineering to make the biggest bank heist of all time, stealing over 10,000,000 USD \citep{mitnick}. Social engineering attacks are certainly not difficult to perform - recently, a 13 your old child used social engineering to breach the private e-mail of the then-chief of the CIA, John Brennen \citep{cia13yearold}
+Examples of social engineering are not hard to find. In his book \textit{The Art of Deception} Kevin Mitnick describes a young Stanley Rifkin using social engineering to make the biggest bank heist of all time, stealing over 10,000,000 USD \citep{mitnick}. Social engineering attacks are certainly not difficult to perform - recently, a 13 year old child used social engineering to breach the private e-mail of the then-chief of the CIA, John Brennen \citep{cia13yearold}
 
 \subsubsection{Spearphishing}
 Spearphish attacks are a subsection of social engineering attacks wherein an attacker sends a malicous e-mail to a user that has been crafted using information that would make it seem authentic \citep{spearphishing}. For example, a normal social engineering attack using e-mail might send boilerplate messages to all personnel in a department to attempt to gain access to a network account. By contrast, a spearphish attack may use the names of specific people in the department, the location of the department, a spoofed e-mail header to make it seem as if the message came from within the department, and so on.
 
-Social engineering attacks have proven to be effective at accessing sensitive information even when significant effort has been expended to secure it. A recent spearphishing campaign was conducted against 500 US military cadets - over 80\% clicked the link in the e-mail \citep{spearphishing}. Spearphish attacks are even more effective than "blind" phishing because of the additional information included in the e-mail which lulls the user in to a false sense of security (particularly when the information could be wrongfully considered "sensitive", for example including a manager's name and phone number).
+Social engineering attacks have proven to be effective at accessing sensitive information even when significant effort has been expended to secure it. A recent spearphishing campaign was conducted against 500 US military cadets - over 80\% clicked the link in the e-mail \citep{spearphishing}. Spearphish attacks are even more effective than "blind" phishing because of the additional information included in the e-mail which lulls the user into a false sense of security (particularly when the information could be wrongfully considered "sensitive", for example including a manager's name and phone number).
 
 Spearphish attacks in particular are difficult to mitigate against. They target the human element in information security making technological defenses insufficient \citep{spearphishing}. Education on spearphishing is not adequate to mitigate the potential threat either, as shown by William Pelgrin's exercise. He sent 10,000 New York State employees a phishing e-mail, and had a success rate of 15\% (that is, 15\% of users clicked the link in the e-mail then attempted to enter their passwords). The experiment was repeated after four months, with some success shown as the experiment had a success rate of 8\% \citep{spearphishingresults}. It must be remembered however that even a single successful spearphish attack could lead to a breach of information security.
 
@@ -155,9 +159,9 @@ Human intelligence (HUMINT) pertains to the gathering of intelligence from indiv
 
 Non-consensual information gathering via interview or interrogation has only recently become a subject of study for the general public \citep{humintinterrogators}. 
 
-Consensual information gathering sits in a much more grey area. Presenting yourself as somebody else may not be illegal depending on the circumstances, however it poses several moral questions. Clandestine intelligence gathering is still an extremely effective strategy, particularly when attempting to gather sensitive information which may be more heavily protected e.g. airgapped, firewalled \citep{clandestinehumint}. This makes it attractive during wartime or times of civil unrest \citep{humintni}\citep{humintcyberage}
+Consensual information gathering sits in a much more grey area. Presenting yourself as somebody else may not be illegal depending on the circumstances, however it poses several moral questions. Clandestine intelligence gathering is still an extremely effective strategy, particularly when attempting to gather sensitive information which may be more heavily protected - for example, networks which have been airgapped or firewalled \citep{clandestinehumint}. This makes it attractive during wartime or times of civil unrest \citep{humintni}\citep{humintcyberage}.
 
-Using a human intelligence approaches when gathering information has several downsides. It is a high risk strategy, as should a person be found out the consequences can be severe \citep{humintni}. The potential reward of sensitive information may be deemed to not be worth the risk. It goes without saying that HUMINT does not scale particularly well - it is a useful tool when attempting to extract information from a single person or small group, but it is much less useful when gathering information about larger groups. It relies on trust being built and may be ineffective when attempting to gather information from targets trained in tradecraft \citep{humintni}\citep{clandestinehumint}\citep{humintcyberage}.
+Using a human intelligence approach when gathering information has several downsides. It is a high risk strategy, as should a person be found out the consequences can be severe \citep{humintni}. The potential reward of sensitive information may be deemed to not be worth the risk. It goes without saying that HUMINT does not scale particularly well - it is a useful tool when attempting to extract information from a single person or small group, but it is much less useful when gathering information about larger groups. It relies on trust being built and may be ineffective when attempting to gather information from targets trained in tradecraft \citep{humintni}\citep{clandestinehumint}\citep{humintcyberage}.
 
 \subsubsection{Individual vs Group Data}
 Much of the research done on social media intelligence has focused on group trends or finding subsets of a population \citep{socmintpublicsafety}\citep{socmintoverview}. Comparatively, fairly little research has been done on identifying a single person of interest from a social network service.
@@ -167,17 +171,17 @@ A practical example of where SOCMINT has been used in the real world is the fram
 \subsubsection{Quantity of Information}
 Having limited information is not a problem when gathering social media intelligence. Rather, the opposite is true - 250,000,000 photos are added to Facebook every day \citep{socmintoverview}. The vast amount of data is what makes searching for social media so difficult (and nigh on impossible in real time).
 
-While the total amount of data added to social networking websites is extremely large, the information about a single user may be fairly small especially if the user has been trained to release as little information as possible \citep{behaviourdetection}. This may make targeting single persons of interest less valuable, however should information "leakage" occur the potential payoff is high. It should be remembered that scanning social media profiles incurs little to no risk, something that cannot be said of human intelligence.
+While the total amount of data added to social networking websites is extremely large, the information about a single user may be fairly small, especially if the user has been trained to release as little information as possible \citep{behaviourdetection}. This may make targeting single persons of interest less valuable, however should information "leakage" occur the potential payoff is high. It should be remembered that scanning social media profiles incurs little or no risk, something that cannot be said of human intelligence.
 
 \subsubsection{Accessibility of Data}
 As discussed previously the amount of data pushed to social networking websites is massive. This does not mean that all social networking data is readily accessible. Users may set privacy settings to disallow unauthorised parties from viewing their profile, or particular parts of it. This can be mitigated by having the service allow access, however acquiring access as a party of one may prove difficult.
 
-Several social networking services also impose rate limits on their interfaces (for example, Facebook imposes a limit of 100 API calls per user of an application as well as limits on CPU time used). These limits obviously make searching through the entire data set of profiles unfeasible without allowances made on the side of the social network. 
+Several social networking services also impose rate limits on their interfaces (for example, Facebook imposes a limit of 100 API calls per user of an application as well as limits on CPU time used). These limits obviously make searching through the entire data set of profiles unfeasible without allowances being made on the side of the social network. 
 
 \subsubsection{Uses}
 Usage of social media intelligence has been limited in large part due to the difficulty in analysing such large amounts of data for small snippets of useful information \citep{socmintoverview}. There are, however, some interesting case studies available.
 
-In April 2013, Edward Snowden leaked a deck of slides used by the NSA to brief people on the "PRISM" program \citep{prismslides}. These slides detailed how the NSA uses mass surveillance with cooperation from companies including Google, Facebook, and Apple, to conduct surveillance against persons of interest. As a government agency enabled by the oversight committee, the NSA has the power to require large social networking services like the ones listed to allow them access to their data.
+In April 2013, Edward Snowden leaked a deck of slides used by the National Security Agency (NSA) to brief people on the "PRISM" program \citep{prismslides}. These slides detailed how the NSA uses mass surveillance with cooperation from companies including Google, Facebook, and Apple, to conduct covert surveillance of persons of interest. As a government agency enabled by the oversight committee the NSA has the power to require large social networking services, including the ones listed, to allow them access to their data.
 
 As mentioned previously, Kandias and Stavrou have developed a framework for using social media intelligence for predicting and mitigating insider threats while working at the Information Security and Critical Infrastructure Protection Lab at the University of Athens \citep{behaviourdetection}. The framework focuses on analysing the psychology of the subjects using their social media posting habits. It shows that seemingly inconsequential data such as posting frequency may still be useful when analysing social media intelligence. An example graph to find the amount of "klout" a social media user may have in the Nereus framework is referenced in Appendix \ref{appendix:connectiongraph}.
 
@@ -190,7 +194,7 @@ As mentioned previously, Kandias and Stavrou have developed a framework for usin
 \subsubsection{Challenges and Constraints}
 There are several challenges to consider when collecting and analysing data for social networking services. First is the issue of privacy. Many people see social media profiles in a similar setting as a meeting between friends, and as such post things which they perhaps would not say or show in public \citep{socialmediacontent}. The chilling effect of public scrutiny, or even direct surveillance, does not seem to put a damper on this.
 
-There are some that feel that police surveillance of social networks is too pervasive \citep{socmintlawenforcement}, and encroaches on their right to privacy. Despite the effectiveness of social media intelligence gathering, it may be harmful to law enforcement's public image if it continues to utilise SOCMINT.
+There are some who feel that police surveillance of social networks is too pervasive \citep{socmintlawenforcement}, and encroaches on their right to privacy. Despite the effectiveness of social media intelligence gathering, it may be harmful to law enforcement's public image if it continues to utilise SOCMINT.
 
 As far as the law is concerned, information posted on social networking sites is considered to be in the public domain. This makes it legal for law enforcement to gather social media intelligence, provided they do it the same way an unprivileged user would. Several social networks have clauses against mass data collection in their Terms of Service, however it is theorised that this is to prevent competition from other companies when selling said information to advertisers.
 
@@ -201,24 +205,24 @@ Police and military uptake of face recognition technology is widespread. For ins
 Facebook also uses face recognition on photos uploaded to its service \citep{facebookfacerecog}. By comparing face mappings to the known face mappings of yourself and immediate friends, it can suggest "tags" of who is in the image which presumably makes the information contained within the image more valuable to advertisers.
 
 \subsubsection{Unconstrained Facial Recognition}
-Unconstraned facial recognition is a subset of facial recognition which focuses on identifying faces in images with variations in pose, lighting, and facial occlusion. It is significantly more difficult than facial recongition which imposes constraints on these conditions.
+Unconstrained facial recognition is a subset of facial recognition which focuses on identifying faces in images with variations in pose, lighting, and facial occlusion. It is significantly more difficult than facial recognition which imposes constraints on these conditions.
 
 Unconstrained facial recognition is typically used in situations where a subject is unaware or unwilling. As already mentioned, it was used in a case study by Klontz and Jain where they compared the images released by the FBI of Tamerlan and Dzhokhar Tsarnaev (the "Boston Bombers"). They found that by comparing the released images taken from security cameras to images on social media in an unconstrained setting, they could positively identify one of the brothers \citep{bostonbombingcasestudy} (see Appendix \ref{appendix:bostonbomber}).
 
 \subsection{Existing Solutions}
 \subsubsection{pipl}
-\url{pipl.com} is a popular web service that allows users to search a database of people by name, e-mail, social media username, phone number, or location. It is aimed at de-anonymising people that use pseudonyms or that do not publicly associate identifying information with their e-mail or social media username by cross-referencing information from several sources. For example, a person may associate their e-mail but not their phone number with a username on a social media service, and then associate the same username with their phone number but not their e-mail address on a different social media service. With this method pipl can effectively collate identifying data about a large sample of people and make it searchable, which is evidently useful for many business applications (particularly within advertisement, as it allows for targeted adverts to be sent to the same person over several social media networks). It's list of clients include large companies within the social media and personal data sectors such as Twitter, equifax and Experian \citep{pipl}.
+\url{pipl.com} is a popular web service that allows users to search a database of people by name, e-mail, social media username, phone number, or location. It is aimed at de-anonymising people who use pseudonyms or who do not publicly associate identifying information with their e-mail or social media username by cross-referencing information from several sources. For example, a person may associate their e-mail but not their phone number with a username on a social media service, and then associate the same username with their phone number but not their e-mail address on a different social media service. With this method pipl can effectively collate identifying data about a large sample of people and make it searchable, which is evidently useful for many business applications (particularly within advertising, as it allows for targeted adverts to be sent to the same person over several social media networks). It's list of clients include large companies within the social media and personal data sectors such as Twitter, equifax and Experian \citep{pipl}.
 
 \subsubsection{192}
 \url{192.com} is a similar service to pipl, however it allows for a more advaced search with more terms to restrict or search on. As well as using social media profiles it uses publicly available information (OSINT) such as the electoral register to enhance its data set. It claims to have 750 million records, far less than pipl's over 3 billion (although the records kept by 192 are much more detailed). The main feature of 192 is that it allows users to search for details about entities other than people, such as schools or businesses.
 
 \subsubsection{Facebook}
-Facebook itself offers fairly primitive search functionality, allowing users to search for posts, people, photos, videos, pages, places, groups, and events. While this may seem to be fairly extensive, it should be noted that the intended use of the search function is to allow userse to make more connections. The searches users can perform will therefore be tightly restricted - for example, when searching for people the search may only show those people that are indirectly connected through other friends, known connections, or people in close proximity \citep{facebookpeoplesearch}. The Graph API that Facebook exposes allows users to search outside of these restrictions, however as discussed previously it is difficult for a party of one to use the Graph API for large-scale searches due to rate limits and Facebook's privacy settings \citep{facebookgraphapi}. 
+Facebook itself offers fairly primitive search functionality, allowing users to search for posts, people, photos, videos, pages, places, groups, and events. While this may seem to be fairly extensive, it should be noted that the intended use of the search function is to allow users to make more connections. The searches which users can perform will therefore be tightly restricted - for example, when searching for people the search may only show those people who are indirectly connected through other friends, known connections, or people in close proximity \citep{facebookpeoplesearch}. The Graph API that Facebook exposes allows users to search outside of these restrictions, however as discussed previously it is difficult for a party of one to use the Graph API for large-scale searches due to rate limits and Facebook's privacy settings \citep{facebookgraphapi}. 
 
 Even with these limitations, Facebook is still a very useful service for enumerating identifiable information about a person of interest provided the user has some basic information such as the person of interest's full name.
 
 \subsubsection{Gaps in Functionality}
-The services listed above are extremely useful when attempting to gather more information about a person of interest. Given some basic identifying information such as username, given name, e-mail address etc. they can be used to effectively build a profile of searchable person. Where they fall short however is when a person of interest needs to be identified from a collection - the amount of data returned when searching for location or place of residence alone is far too large to sift through. Even Facebook's search falls short when trying to identify a single person from a potentially large collection, as the lack of customisable search restrictions means that the result of a search is unlikely to be able to be processed in a reasonable amount of time.
+The services listed above are extremely useful when attempting to gather more information about a person of interest. Given some basic identifying information such as username, given name, e-mail address etc., they can be used to effectively build a profile of a searchable person. Where they fall short however is when a person of interest needs to be identified from a collection - the amount of data returned when searching for location or place of residence alone is far too large to sift through. Even Facebook's search falls short when trying to identify a single person from a potentially large collection, as the lack of customisable search restrictions means that the result of a search is unlikely to be able to be processed in a reasonable amount of time.
 
 With the exception of Facebook, the services listed aggregate social media profiles in order to hold as much meaningful information about individuals as is feasible. This necessitates that some information must be omitted when collating from several social media networks. One of the pitfalls of these services is that several of the omitted items can be very useful when restricting searches - for example, a profile picture may prove useful for identification if a user has a reference image of a person of interest.
 
@@ -279,11 +283,11 @@ The software should be able to function without a GUI, since the requirement of 
 Where applicable, the software should make full use of parallelisation to increase its speed and resource utilisation. This is particularly important when working with large data sets.
 
 \subsection{Development Methodology}
-The project was developed using an agile methodology. The requirements were gathered and then analysed to create a formal requirements specification. An initial design was then created from the requirements, and refined as more features were added. After each objective was reached, the design was reviewed and current functionality was tested to ensure no regressions or new bugs entered the code base. This was continued until the first version of the project was complete.
+The project will be developed using an agile methodology. The requirements are to be gathered and analysed to create a formal requirements specification. An initial design will then be created from the requirements, and refined as more features are added. After each objective is reached, the design will be reviewed and current functionality tested to ensure no regressions or new bugs enter the code base. This will continue until the first version of the project was complete.
 
-Testing was then done iteratively to ensure the correctness of the program. Starting with basic functionality (comparing one image against one data set), each requirement was tested independant of each other. This further ties in to the desire for a modular code base, as each test can be ran against a single part of the program without touching the rest of the code (and that module can then be used with some degree of confidence that it is bug free).
+Testing will then be done iteratively to ensure the correctness of the program. Starting with basic functionality (comparing one image against one data set), each requirement will be tested independant of each other. This further ties in to the desire for a modular code base, as each test can be ran against a single part of the program without touching the rest of the code (and that module can then be used with some degree of confidence that it is bug free).
 
-This methodology continued into the testing used for data gathering. Debug messages were left in for "dry runs" of the tests to ensure the program was working as intended, and results were checked for correctness. Any problems could then be corrected, and the test re-ran. After several of these iterations to remove an error that could be introduced by the program to the results, the test was then ran and the results captured.
+This methodology should continue into the testing used for data gathering. Debug messages will be left in for "dry runs" of the tests to ensure the program was working as intended, and results will be checked for correctness. Any problems can then be corrected, and the test re-ran. After several of these iterations to remove an error that could be introduced by the program to the results, the test will be ran a final time and the results captured.
 
 \subsection{Final Design}
 \includegraphics[width=\linewidth]{res/final_design}
@@ -468,7 +472,15 @@ The import function for loading images from memory described above failed when a
 \end{lstlisting}
 
 \subsection{Implementation Methodology}
-The agile methodology described in the methodology section was continued during implementation. Each piece of functionality was tested during implementation, then re-tested after completion for error-handling and robustness.
+The agile methodology described in the methodology section was continued during implementation. The iterative refinement typical of agile development was applied first to requirements capturing - using gaps in knowledge identified from background research a general set of features could be created and expanded upon, gaining more granularity with each iteration. 
+
+From the requirements specification, an initial concept design was created. It included only a running program, which would use a face recognition module. This design solved all of the essential "must-have" features that were captured in the requirements specification. From here, the design was iterated upon to increase specificity and to include "should-haves" and eventually "could-haves" from the requirements.
+
+This design was then referred to throughout the implementation, and was retroactively modified when it became clear the design would not translate to a successful implementation. Each stage of the implementation was tested for correctness before new functionality was added.
+
+Testing of the program was conducted throughout the implementation, and continued after a fully-featured working version of the program was implemented. The program was tested using a black box methodology, with the requirements specification as a guide. Each requirement was tested against the program, and the results checked for correctness.
+
+The agile nature of this project is evidenced by a git version control repository. Each commit adds some level of functionality, and has a description of what was changed as well as the timestamp of the commit. The full log may be found in appendix \ref{appendix:githubcommitlog}.
 
 \subsection{UML Diagram}
 \includegraphics[scale=1]{res/facegather_uml.png}
@@ -1217,6 +1229,7 @@ Graph of social media connections and klout score in the Nereus framework\citep{
 A help page showing the command line arguments that can be supplied.
 
 \section{GitHub Commit log}
+\label{appendix:githubcommitlog}
 \verbatiminput{res/git_log.txt}
 
 \section{Full Source Code}
@@ -1758,7 +1771,7 @@ python3 run.py ./test/essex_cswww/grimace/glen/glen_exp.16.jpg test_multiple_db 
 python3 run.py ./test/lfw/Aaron_Peirsol/Aaron_Peirsol_0001.jpg test_multiple_db --pthreads=2 --cthreads=2 --maxload=200 --output_location=./test/results/multiple_dataset_test;
 \end{lstlisting}
 
-\section{generate\_test\_data.py}
+\subsection{generate\_test\_data.py}
 \begin{lstlisting}
 import glob
 
@@ -1848,5 +1861,15 @@ generate_data('.')
 		}
 	}
 \end{lstlisting}
+
+\newpage
+\includepdf[scale=0.75,pagecommand=\section{Poster}, offset=0 -0.5cm]{res/1506801_poster}
+
+\includepdf[pages=1,pagecommand=\section{Ethics Form}, offset=0 -3cm]{res/1506801_ethics_form}
+\includepdf[pages=2-4]{res/1506801_ethics_form}
+
+\includepdf[scale=0.95,pages=1,pagecommand=\section{Proposal}, offset=0 -0.5cm]{res/1506801_proposal}
+\includepdf[scale=0.95,pages=2-5]{res/1506801_proposal}
+
 \end{appendices}
 \end{document}

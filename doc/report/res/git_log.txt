@@ -714,3 +714,21 @@ Author: Jack Neilson <jackdneilson@gmail.com>
 Date:   Fri Apr 27 21:37:22 2018 +0100
 
     Finished first draft of report
+
+commit 6805f2b78366b13de13b8a6fbbdd783ae37f819d
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Sun Apr 29 13:56:08 2018 +0100
+
+    Added git log to report
+
+commit c20776f8afa99edc897baafb2e6a6ee0f0fd88c4
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Wed May 2 21:13:21 2018 +0100
+
+    Further work on report
+
+commit 8b0451504002fb237ba0939cae2160410175f440
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu May 3 23:04:58 2018 +0100
+
+    Multiple changes to report for second draft, updated meeting log.

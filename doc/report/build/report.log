@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  3 MAY 2018 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.16)  3 MAY 2018 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -840,7 +840,7 @@ Overfull \hbox (93.64679pt too wide) in paragraph at lines 1233--1233
 er to serve SCface database[] 
  []
 
-[79] [80] [81] [82] [83]
+[79] [80] [81] [82] [83] [84]
 Overfull \hbox (69.20418pt too wide) in paragraph at lines 1421--1422
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
@@ -852,7 +852,7 @@ Overfull \hbox (69.20418pt too wide) in paragraph at lines 1424--1425
 ][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[84] [85] [86] [87] [88] [89] [90]
+[85] [86] [87] [88] [89] [90]
 Overfull \hbox (60.46074pt too wide) in paragraph at lines 1706--1707
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ]  
@@ -878,12 +878,12 @@ Overfull \hbox (1.82442pt too wide) in paragraph at lines 1750--1751
 [][][][][][][][][][]  
  []
 
-
+[92]
 Overfull \hbox (1.82442pt too wide) in paragraph at lines 1751--1752
 [][][][][][][][][][]  
  []
 
-[92] [93] [94] [95] [96]
+[93] [94] [95] [96]
 
 pdfTeX warning: pdflatex (file ./res/1506801_poster.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
@@ -1206,11 +1206,11 @@ Package pdftex.def Info: res/1506801_proposal.pdf, page5 used on input line 187
 Here is how much of TeX's memory you used:
  16674 strings out of 494902
  313464 string characters out of 6179890
- 421919 words of memory out of 5000000
+ 425919 words of memory out of 5000000
  19640 multiletter control sequences out of 15000+600000
  10398 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 62i,19n,72p,1101b,1573s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,72p,1101b,1571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -1219,7 +1219,7 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on build/report.pdf (106 pages, 4933894 bytes).
+Output written on build/report.pdf (106 pages, 4934051 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  348 compressed objects within 4 object streams

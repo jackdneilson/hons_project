@@ -236,7 +236,7 @@ As mentioned in the introduction, the objective of this project is to create a s
 \subsection{Overview}
 The software implemented will be in the form of a Python command line program, which allows users to specify an input image and data set to check it against. Additional identifying information such as name, date of birth etc. should also be utilised if given. The data sets the software references must come from social networking websites (or in the case of this proof of concept, a data set which is an accurate representation).
 
-As its output, the software must show the five most similar faces in the data set to allow for human verification. They should be presented with information that was gained from their social media profiles such as age, gender, name etc., as well as the similarity to the test image. In the case that the software is being ran headlessly, the results should be available in a file format which includes an image of the match and a representation of their social media profile.
+As its output, the software must show the five most similar faces in the data set to allow for human verification. They should be presented with information which was gained from their social media profiles such as age, gender, name etc., as well as the similarity to the test image. In the case that the software is being ran headlessly, the results should be available in a file format which includes an image of the match and a representation of their social media profile.
 
 \subsection{Functional Requirements}
 \subsubsection{Face Recognition}
@@ -247,7 +247,7 @@ The software must have the ability to use social networking websites as it's dat
 
 \subsection{Non-functional Requirements}
 \subsubsection{Accuracy}
-The software should have a \textit{relatively} high success rate when identifying a person from a social media collection. Note that typical facial reocgnition performance in unconstrained environments achieve a maximum success rate of ~30\%.
+The software should have a relatively high success rate when identifying a person from a social media collection. Note that unconstrained facial recognition is by no means a solved problem, and unoptimised solutions have less than stellar accuracy rates.
 
 \subsubsection{Usefulness}
 The information gained by using the software should help when crafting prior-knowledge attacks, increasing their effectiveness.
@@ -271,13 +271,13 @@ The software should be written in Python to allow for easy use of face recogniti
 The software must be able to complete the above task in the same time or less than a human.
 
 \subsubsection{Documentation}
-The software should have at a minimum a man page and usage information. More documentation would be beneficial.
+The software should have as a minimum a man page and usage information. More documentation would be beneficial.
 
 \subsubsection{Testing}
 The software will be tested using a comination of publicly available face recognition datasets including Labeled Faces in the Wild, the Essex Facial Recognition database and the SCFace database.
 
 \subsubsection{Headless}
-The software should be able to function without a GUI, since the requirement of being able to use extremely large data sets may require deployment to a large server cluster or to a cloud.
+The software should be able to function without a Graphical User Interface (GUI), since the requirement of being able to use extremely large data sets may require deployment to a large server cluster or to a cloud.
 
 \subsubsection{Multithreaded}
 Where applicable, the software should make full use of parallelisation to increase its speed and resource utilisation. This is particularly important when working with large data sets.
@@ -339,11 +339,11 @@ The application has been developed using the face recognition module created by 
 
 It is an easy to use facial recognition library build on top of dlib. It exposes a python API, making it ideal for this project. It also boasts an accuracy rate of up to 99.38\% on the LFW data set.
 
-Alternate libraries (such as dlib) that were investigated were found to either have a much higher barrier to entry, or a much lower accuracy.
+Alternate libraries (such as dlib) which were investigated were found to either have a much higher barrier to entry, or a much lower accuracy.
 
 \subsection{Test Server}
 \subsubsection{nginx}
-To test the application, nginx is used to serve static content as well as as a reverse proxy. Nginx was chosen over Apache or another native Python webserver due to its capability at handling massive concurrent requests, its flexibility, and its speed at server static content. Since the application makes several connections simultaneusly and requests large amounts of images, nginx was ideal.
+To test the application, nginx is used to serve static content as well as a reverse proxy. Nginx was chosen over Apache or another native Python webserver due to its capability at handling massive concurrent requests, its flexibility, and its speed at server static content. Since the application makes several connections simultaneusly and requests large amounts of images, nginx was ideal.
 
 \subsubsection{cherrypy}
 To serve a dynamic description of where profiles and their respective images are located, a cherrypy server was implemented which expands a glob from the test directory (which contains the test data sets) then returns a json representation of them. As noted earlier, nginx acts as a reverse proxy to this service
@@ -354,10 +354,10 @@ The application has been developed in a modular fashion. To this end, a run file
 \subsection{Threading}
 The application has been developed to make use of multiple threads. The main thread in \textit{facegather.py} controls these threads and their results using locks, thread-safe queues, semaphores, and the thread.join() method.
 
-The producer / consumer consumer model was useful when developing the application. In this context, the producers retrieve profiles from the social networking service and the consumers compare the retrieved profiles to the test data given and store the result.
+The producer / consumer model was useful when developing the application. In this context, the producers retrieve profiles from the social networking service and the consumers compare the retrieved profiles to the test data given and store the result.
 
 \subsection{Command Line Interactivity}
-Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration in to scripts (for example, appending logs to a log file using the POSIX $>>$ operator).
+Rather than use a graphical user interface (GUI), the application makes use of command line arguments (see Appendix \ref{appendix:commandlineargs}). There are several reasons for this; it cuts down on needless computational cost by eliminating the overhead of a GUI, it allows the OS the application is running on to be "headless" (i.e. run with only a command line or remote connection for user interactivity) again cutting down on overhead, and it allows for easier integration into scripts (for example, appending logs to a log file using the POSIX $>>$ operator).
 
 \begin{center}
 \includegraphics[width=\linewidth]{res/facegather_cmd_line_args.png}
@@ -374,10 +374,10 @@ Since this project has been done on a fairly small scale in a short time frame, 
 \subsubsection{Loading Images from Memory}
 Since the application retrieves images remotely over the internet, it makes sense to manipulate the images directly from memory. This avoids filesystem reads and writes, which are several magnitudes slower than memory reads and writes. The time save is massive, especially when repeated over thousands of images.
 
-Unfortunately the face recognition library does not support loading images from memory, instead providing a method (load\_image\_file(uri)) to load images from the local file system. Upon inspection this method loads an image file from disk in to a Python Imaging Library (PIL) Image object, then casts it to a numpy array to allow for encoding operations. To mirror this method for use with images loaded to memory, the application uses the PIL Image.open() method on the raw response stream from the social network web server to create an Image object, then casts it to a numpy array. This achieves the same result as loading the image from the local file system significantly more efficiently.
+Unfortunately the face recognition library does not support loading images from memory, instead providing a method (load\_image\_file(uri)) to load images from the local file system. Upon inspection this method loads an image file from disk into a Python Imaging Library (PIL) Image object, then casts it to a numpy array to allow for encoding operations. To mirror this method for use with images loaded to memory, the application uses the PIL Image.open() method on the raw response stream from the social network web server to create an Image object, then casts it to a numpy array. This achieves the same result as loading the image from the local file system significantly more efficiently.
 
 \begin{lstlisting}
-# Load an image in to memory from local or remote sources
+# Load an image into memory from local or remote sources
 def load_images(uri, remote=True):
     if remote:
         print('Retrieving image from ' + uri)
@@ -393,7 +393,7 @@ def load_images(uri, remote=True):
 \textit{Above: A function with an optional keyword parameter to load an image from either a local or remote source.}
 
 \subsubsection{Maximum Loaded Images}
-A potential problem when using the producer / consumer model is that producers may produce too much data, filling all available memory and leading to a crash. To solve this a maximum loaded images parameter can be supplied when running the application, which will cap the number of face encodings loaded into memory at that number. This has been implemented using a semaphore initialised with the maximum number of face encodings to be loaded. Each producer thread calls acquire() before loading a set of encodings in to memory, and each consumer thread calls release() when the encoding has been compared and the memory can be freed.
+A potential problem when using the producer / consumer model is that producers may produce too much data, filling all available memory and leading to a crash. To solve this, a maximum loaded images parameter can be supplied when running the application, which will cap the number of face encodings loaded into memory at that number. This has been implemented using a semaphore initialised with the maximum number of face encodings to be loaded. Each producer thread calls acquire() before loading a set of encodings into memory, and each consumer thread calls release() when the encoding has been compared and the memory can be freed.
 
 \begin{lstlisting}
 # Producer thread
@@ -409,15 +409,15 @@ A potential problem when using the producer / consumer model is that producers m
             ---
 			self.counter.release()
 \end{lstlisting}
-\textit{Above: The producer thread calls acquire() on the semaphore before loading mappings in to memory, and the consumer thread calls release() on the semaphore after the memory used for mappings has been freed.}
+\textit{Above: The producer thread calls acquire() on the semaphore before loading mappings into memory, and the consumer thread calls release() on the semaphore after the memory used for mappings has been freed.}
 
 \subsubsection{Multiple Threads for Producing and Consuming}
-As it stands, the application has been developed with mulitple threads in mind. The user can define how many threads should be used for downloading images and producing face mappings via the --cthreads argument, and how many threads should be used to compare face mappings via the --pthreads argument. This allows for much higher processor utilisation than a single threaded application, as all CPU cores can be utilised.
+As it stands, the application has been developed with multiple threads in mind. The user can define how many threads should be used for downloading images and producing face mappings via the --cthreads argument, and how many threads should be used to compare face mappings via the --pthreads argument. This allows for much higher processor utilisation than a single threaded application, as all CPU cores can be utilised.
 
 While the application processes images orders of magnitude faster than it would had it been single-threaded, it may still be too inefficient for use on particularly large data sets. It is also difficult to scale due to its singleton nature. In the future it may be worth refactoring to make use of a discrete GPU, or to make use of specialised libraries for big data processing such as MapReduce.
 
 \subsubsection{Thread Object Access Control}
-To control object access between threads two Queue objects are used. One contains a JSON representation of all of the profiles in the search spaces and is only accessed by the producer threads, and the other is used by producer threads to send face mappings of profiles to consumer threads. These objects are guaranteed to be threadsafe, meaning that both the put() and get() operations are atomic. To control access to the result object that multiple consumer threads may try to access, a Lock() is passed in the consumer constructor. Before a consumer accesses the result object it must first call lock.acquire() which will block if another thread has acquired the lock first. After a consumer has finished writing to the result object it releases the lock by calling lock.release(), allowing other consumer threads access.
+To control object access between threads two Queue objects are used. One contains a JSON representation of all of the profiles in the search spaces and is only accessed by the producer threads, and the other is used by producer threads to send face mappings of profiles to consumer threads. These objects are guaranteed to be threadsafe, meaning that both the put() and get() operations are atomic. To control access to the result object which multiple consumer threads may try to access, a Lock() is passed in the consumer constructor. Before a consumer accesses the result object it must first call lock.acquire() which will block if another thread has acquired the lock first. After a consumer has finished writing to the result object it releases the lock by calling lock.release(), allowing other consumer threads access.
 
 \begin{lstlisting}
 				self.result_lock.acquire()
@@ -430,7 +430,7 @@ To control object access between threads two Queue objects are used. One contain
 Having a "top 5" result as was initially planned would require many comparison and list traversal operations. It would also make having multiple consumers pointless, as only one thread would be able to do comparisons at a time. Rather than having the top 5 matches, the result returned is now all faces that match the test face within a given threshold (by default, face distance $<$ 0.6).
 
 \subsubsection{Command Line Arguments}
-The application can take many command line arguments to customise its use. Having the user fill out and remember every one of these arguments would make the application unintuituve and difficult to use. Therefore, the decision was made to make heavy use of optional keyword arguments both when running the program (e.g. --cthreads=1) and in functions within the application. This allows the user to specify some, all, or none of the optional parameters and still have the application function correctly. 
+The application can take many command line arguments to customise its use. Having the user fill out and remember every one of these arguments would make the application unintuitive and difficult to use. Therefore, the decision was made to make heavy use of optional keyword arguments both when running the program (e.g. --cthreads=1) and in functions within the application. This allows the user to specify some, all, or none of the optional parameters and still have the application function correctly. 
 
 \begin{lstlisting}
 def search(test_face_location,
@@ -444,7 +444,7 @@ def search(test_face_location,
 \textit{Above: The search function uses several keyword arguments with default arguments, then checks and loads with defaults if not supplied before continuing.}
 
 \subsubsection{Inter-Thread Communication}
-The only inter-thread communication required by the application is for the consumer threads to be signalled when there are no more face mappings to compare. To this end, the main thread which spawns both the producer and consumer threads blocks by calling producer.join() on all producer threads. One all producer threads have returned, the main thread pushes a sentinel object on to the end of the face mapping queue. It then blocks by calling consumer.join() on all consumer threads. Once a consumer thread pops the sentinel object, it adds another sentinel to the end of the queue (for further consumer threads to consume) then returns. This guarantees that there is no unconsumed data, and that the consumer threads do not terminate prematurely.
+The only inter-thread communication required by the application is for the consumer threads to be signalled when there are no more face mappings to compare. To this end, the main thread which spawns both the producer and consumer threads blocks by calling producer.join() on all producer threads. Once all producer threads have returned, the main thread pushes a sentinel object on to the end of the face mapping queue. It then blocks by calling consumer.join() on all consumer threads. Once a consumer thread pops the sentinel object, it adds another sentinel to the end of the queue (for further consumer threads to consume) then returns. This guarantees that there is no unconsumed data, and that the consumer threads do not terminate prematurely.
 
 \begin{lstlisting}
 	# Main thread
@@ -491,19 +491,19 @@ The aim of the application is to allow a user to query a dataset and find the so
 
 \begin{itemize}
 
-\item{Even when comparing over multiple data sets that have been generated using different methods, a reasonable accuracy should still be maintained.}
-\item{Images that have been compressed with different algorithms should still match, given that they are of the same person.}
-\item{Success rates across abnormal data sets - for example, the SCFace IR images - should be tested to gather insight in to how effectively or otherwise these images could be used in facial recognition when gathering social media intelligence.}
+\item{Even when comparing over multiple data sets which have been generated using different methods, a reasonable accuracy should still be maintained.}
+\item{Images which have been compressed with different algorithms should still match, given that they are of the same person.}
+\item{Success rates across abnormal data sets - for example, the SCFace IR images - should be tested to gather insight into how effectively or otherwise these images could be used in facial recognition when gathering social media intelligence.}
 \item{The restrictions on search terms should work as expected, and exclude profiles which do not meet the search criteria.}
 \item{Testing done across data sets which have not been used in training should have a reasonable accuracy.}
 \end{itemize}
 
 \subsection{Testing Strategy}
 \subsubsection{Comparing Images from Different Data Sets}
-To compare images from different data sets five images were selected from the total pool of images. One was taken from each of the seperate categories in the Essex data set, and one was taken from the LFW data set. The number of correct matches was then compared against the number of expected correct matches, and the number of false positives.
+To compare images from different data sets, five images were selected from the total pool of images. One was taken from each of the separate categories in the Essex data set, and one was taken from the LFW data set. The number of correct matches was then compared against the number of expected correct matches, and the number of false positives.
 
 \subsubsection{Comparing Images with Different Compression Algorithms}
-A data set that uses a different compression algorithm than JPEG could not be located, so instead a new data set was generated from the LFW data set by compressing the images using the Portable Network Graphic (PNG) algorithm. A comparison was then made between the accuracy of an image compared with the same compression algorithm, and an image compared using two different compression algorithms.
+A data set which uses a different compression algorithm than JPEG could not be located, so instead a new data set was generated from the LFW data set by compressing the images using the Portable Network Graphic (PNG) algorithm. A comparison was then made between the accuracy of an image compared with the same compression algorithm, and an image compared using two different compression algorithms.
 
 \subsubsection{Comparing Images Taken in the Infra-Red Spectrum}
 Images taken from the SCFace data set were compared to the IR images contained within the database, and the accuracy rate noted.
@@ -1178,7 +1178,7 @@ The implementation performed slightly better when comparing images in the infra-
 \subsubsection{Restricting by Identifiable Information}
 The results obtained by this set of tests are the most promising in the entire project. The implementation achieved an accuracy of 0.934, the highest in any of the sets of tests. This is to be expected, as by supplying a name to restrict the search by the number of false negatives is reduced from several thousand to at most several hundred. Most impressive is the time saved by restricting the search - the average time taken to search was improved from over 2 hours to just 26 seconds, a time save of over 27,000\%.
 
-An interesting note is that the false positive in test 1, where the test image provided was of George H.W. Bush, was a picture of George W. Bush - the subject's son. If the application behaves similarly in a real-life applications this could be a useful unintended side-effect as gathering information on family members (sons, fathers etc.) would be valuable.
+An interesting note is that the false positive in test 1, where the test image provided was of George H.W. Bush, was a picture of George W. Bush - the subject's son. If the application behaves similarly in a real-life applications this could be a useful unintended side-effect as gathering information on family members (sons, fathers etc.) could be valuable.
 
 \subsubsection{False Positive vs. False Negative}
 In the context of this application, false negatives are much less desirable than false positives. Since the application can feed-forward search results to a post-processing application or to a human operator, the result set should be as complete as possible. Provided the accuracy is above an acceptable baseline, the number of false positives is almost inconsequential so long as recall is high. To that end the threshold for a match is set to be fairly forgiving.
@@ -1193,12 +1193,12 @@ The emergence of social media intelligence has been helped by several controvers
 \subsection{Findings}
 The application was tested using the Labeled Faces in the Wild, Essex University Computer Vision and SCFace databases. It was tested against datasets it was not trained against, data sets using different compression algorithms, data sets captured in the infra-red spectrum, and data sets that had been restricted using identifiable information (in this case, the person of interest's name). 
 
-The results are encouraging overall. The application had accuracy rates of over 90\% in tests covering multiple datasets, which closely mirror images representative of typical social media profile photos. Importantly, there was only 1 false negative giving a recall of over 95\%. The most realistic text, wherein the search space was restricted by name, had an accuracy of 93.4\%.
+The results are encouraging overall. The application had accuracy rates of over 90\% in tests covering multiple datasets, which closely mirror images representative of typical social media profile photos. Importantly, there was only 1 false negative giving a recall of over 95\%. The most realistic test, wherein the search space was restricted by name, had an accuracy of 93.4\%.
 
 The tests including different compression algorithms and infra-red images were less succesful, although they do offer areas for improvement. These searches test non-essential functionality of the program, and can be considered important for continued improvement but niche in a real-word setting.
 
 \subsection{Future Work}
-There are several improvements that could be made over the current implementation. While facial recognition technology improves, so too will this application. It can be considered a wrapper for whichever face recogntion implementation is performing best at the current time. The main improvement that could be made is to have GPUs compare face mappings in batches, rather than the current implementation comparing them one-by-one over multiple CPU cores.
+There are several improvements that could be made over the current implementation. While facial recognition technology improves, so too will this application. It can be considered a wrapper for whichever face recognition implementation is performing best at the current time. The main improvement that could be made is to have GPUs compare face mappings in batches, rather than the current implementation comparing them one-by-one over multiple CPU cores.
 
 The application certainly warrants further research. The initial findings are promising, but an improved implementation tested against an actual social media service (or a data set truly representative of one) could prove groundbreaking for intelligence gathering communities.
 
@@ -1252,7 +1252,7 @@ profile_queue = queue.Queue()
 img_queue = queue.Queue()
 
 
-# Load an image in to memory from local or remote sources
+# Load an image into memory from local or remote sources
 def load_images(uri, remote=True):
     if remote:
         resp = requests.get(uri, stream=True)
@@ -1359,7 +1359,7 @@ class ImageProcessor(threading.Thread):
                 img_queue.put([img, profile[1]])
 
 
-# Class based thread to take images loaded in to memory and rank them in terms of similarity to the test image.
+# Class based thread to take images loaded into memory and rank them in terms of similarity to the test image.
 class FaceRecogniser(threading.Thread):
     finished_flag = False
 

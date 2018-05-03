@@ -732,3 +732,9 @@ Author: Jack Neilson <jackdneilson@gmail.com>
 Date:   Thu May 3 23:04:58 2018 +0100
 
     Multiple changes to report for second draft, updated meeting log.
+
+commit 196873390f072837adad2c6a75b7f0aac2eaac94
+Author: Jack Neilson <jackdneilson@gmail.com>
+Date:   Thu May 3 23:30:53 2018 +0100
+
+    Corrected report, final commit
